@@ -1,0 +1,5 @@
+# LinuxFlow : accès à /dev/uinput pour injecter les touches de collage.
+# NON installée par défaut : à activer avec `install.sh --with-uinput-rule` (root).
+# ATTENTION : toute application de la session ou du groupe `input` pourra créer
+# un clavier virtuel et donc simuler des frappes. Ne l'activez que si vous en avez besoin.
+KERNEL=="uinput", GROUP="input", MODE="0660", TAG+="uaccess"

@@ -1,0 +1,47 @@
+[package]
+name = "linuxflow"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "LinuxFlow: local voice dictation for Linux"
+
+[lints]
+workspace = true
+
+[features]
+default = []
+# Vulkan GPU (needs the Vulkan headers at build time): forwards the engine feature.
+vulkan = ["linuxflow-stt/vulkan"]
+# Development tools (renders the pages to PNG on a private Broadway server). Disabled in production.
+dev-tools = []
+
+[dependencies]
+linuxflow-core = { workspace = true }
+linuxflow-audio = { workspace = true }
+linuxflow-stt = { workspace = true }
+linuxflow-models = { workspace = true }
+linuxflow-platform = { workspace = true }
+linuxflow-i18n = { workspace = true }
+linuxflow-gtk = { workspace = true }
+gtk4 = { workspace = true, features = ["v4_12"] }
+gdk4 = { workspace = true, features = ["v4_12"] }
+libadwaita = { workspace = true, features = ["v1_4"] }
+async-channel = { workspace = true }
+clap = { workspace = true }
+directories = { workspace = true }
+hound = { workspace = true }
+libc = { workspace = true }
+serde_json = { workspace = true }
+time = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+tracing-appender = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }
+linuxflow-core = { workspace = true, features = ["testing"] }
+tempfile = { workspace = true }

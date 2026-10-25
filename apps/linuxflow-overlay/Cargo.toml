@@ -1,0 +1,16 @@
+[package]
+name = "linuxflow-overlay"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "LinuxFlow recording pill (layer-shell) in a separate process"
+
+[lints]
+workspace = true
+
+[dependencies]
+# The only program that depends on libgtk4-layer-shell: the main application starts without it.
+linuxflow-gtk = { workspace = true, features = ["layer-shell"] }

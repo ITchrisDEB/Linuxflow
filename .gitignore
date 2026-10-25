@@ -1,0 +1,16 @@
+# Build output (cargo and `cargo xtask`: release archive, AppImage, caches)
+target/
+
+# Internal working notes, not part of the project
+/plan/
+
+# Logs and local environment
+*.log
+.env
+
+# Editors and operating system
+*.swp
+*~
+.idea/
+.vscode/
+.DS_Store

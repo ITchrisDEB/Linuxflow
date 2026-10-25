@@ -1,0 +1,8 @@
+# Distribution build: whisper.cpp must NEVER be built with -march=native
+# (on an AVX-512 CPU that produces code that raises SIGILL elsewhere). Level x86-64-v3.
+# The x86-64-v2 variant (CPU without AVX2) is built by `cargo xtask dist`.
+[env]
+GGML_NATIVE = "OFF"
+
+[alias]
+xtask = "run --quiet --release --manifest-path xtask/Cargo.toml --"

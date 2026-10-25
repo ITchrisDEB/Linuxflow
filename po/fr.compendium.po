@@ -1,0 +1,1446 @@
+# Mémoire de traduction anglais -> français de LinuxFlow (instantané de po/fr.po validé).
+# scripts/update-po.sh l'utilise comme compendium de msgmerge : les msgid déjà traduits sont
+# repris tels quels, sans passer par le mécanisme « fuzzy ». Une entrée qui ne correspond à aucun
+# msgid actuel est inoffensive.
+msgid ""
+msgstr ""
+"Project-Id-Version: LinuxFlow\n"
+"Report-Msgid-Bugs-To: none\n"
+"POT-Creation-Date: 2026-01-01 00:00+0000\n"
+"PO-Revision-Date: 2026-10-24 00:00+0000\n"
+"Last-Translator: ITchrisDEB\n"
+"Language-Team: French\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#, rust-format
+msgid "{} {}"
+msgstr "{} {}"
+
+msgid "Voice dictation, 100% local"
+msgstr "Dictée vocale, 100 % en local"
+
+#, rust-format
+msgid "LinuxFlow could not start: {}"
+msgstr "LinuxFlow n’a pas pu démarrer : {}"
+
+msgid "Usage:"
+msgstr "Utilisation :"
+
+msgid "Options:"
+msgstr "Options :"
+
+msgid "Local voice dictation"
+msgstr "Dictée vocale locale"
+
+msgid "Print help"
+msgstr "Afficher l’aide"
+
+msgid "Print version"
+msgstr "Afficher la version"
+
+msgid "Start or stop dictation in the running instance"
+msgstr "Démarrer ou arrêter la dictée dans l’instance en cours"
+
+msgid "Start dictation"
+msgstr "Démarrer la dictée"
+
+msgid "Stop dictation and transcribe"
+msgstr "Arrêter la dictée et transcrire"
+
+msgid "Cancel the current dictation"
+msgstr "Annuler la dictée en cours"
+
+msgid "Open the main window on this page"
+msgstr "Ouvrir la fenêtre principale sur cette page"
+
+msgid "Quit the running instance"
+msgstr "Quitter l’instance en cours"
+
+msgid "Start without showing the main window"
+msgstr "Démarrer sans afficher la fenêtre principale"
+
+msgid "First name shown in the greeting"
+msgstr "Prénom affiché dans le message d’accueil"
+
+msgid "Configuration folder"
+msgstr "Dossier de configuration"
+
+msgid "Data folder"
+msgstr "Dossier de données"
+
+msgid "Cache folder"
+msgstr "Dossier de cache"
+
+msgid "State and logs folder"
+msgstr "Dossier d’état et des journaux"
+
+msgid "Models folder"
+msgstr "Dossier des modèles"
+
+msgid "Interface-only mode: no transcription engine"
+msgstr "Mode interface seule : pas de moteur de transcription"
+
+msgid "Test tool: transcribe a WAV file without pasting"
+msgstr "Outil de test : transcrire un fichier WAV sans coller le texte"
+
+msgid "With --test-pipeline: exit after the result"
+msgstr "Avec --test-pipeline : quitter après le résultat"
+
+msgid "Development tool: render the pages to PNG files (Broadway only)"
+msgstr "Outil de développement : générer les pages en fichiers PNG (Broadway uniquement)"
+
+#, rust-format
+msgid "Invalid command line: {}"
+msgstr "Ligne de commande invalide : {}"
+
+msgid "Try --help for the list of options."
+msgstr "Essaie --help pour voir la liste des options."
+
+msgid "No speech model is installed yet."
+msgstr "Aucun modèle vocal n’est encore installé."
+
+msgid "CUDA and ROCm are not supported. Use \"gpu\" (Vulkan) or \"cpu\"."
+msgstr "CUDA et ROCm ne sont pas pris en charge. Utilise « gpu » (Vulkan) ou « cpu »."
+
+msgid "Invalid device setting. Expected auto, cpu, gpu, gpu:N or a number."
+msgstr "Réglage de périphérique invalide. Valeurs attendues : auto, cpu, gpu, gpu:N ou un nombre."
+
+msgid "No usable Vulkan GPU was found (software drivers are ignored)."
+msgstr "Aucun GPU Vulkan utilisable n’a été trouvé (les pilotes logiciels sont ignorés)."
+
+msgid "The requested GPU does not exist."
+msgstr "Le GPU demandé n’existe pas."
+
+msgid "This build has no Vulkan support."
+msgstr "Cette version n’est pas compilée avec la prise en charge de Vulkan."
+
+msgid "Interface-only mode: transcription is turned off."
+msgstr "Mode interface seule : la transcription est désactivée."
+
+msgid "This processor is too old for the transcription engine."
+msgstr "Ce processeur est trop ancien pour le moteur de transcription."
+
+msgid "The installed models need a GPU, which is not available. Download a lighter model."
+msgstr "Les modèles installés ont besoin d’un GPU, qui n’est pas disponible. Télécharge un modèle plus léger."
+
+msgid "No installed model can run on this machine."
+msgstr "Aucun modèle installé ne peut fonctionner sur cet ordinateur."
+
+msgid "The transcription engine could not start."
+msgstr "Le moteur de transcription n’a pas pu démarrer."
+
+msgid "The transcription engine took too long to start."
+msgstr "Le moteur de transcription a mis trop de temps à démarrer."
+
+msgid "This model is not in the catalog."
+msgstr "Ce modèle n’est pas dans le catalogue."
+
+msgid "This file is not a transcription model."
+msgstr "Ce fichier n’est pas un modèle de transcription."
+
+msgid "This model needs a usable GPU, which is not available on this machine."
+msgstr "Ce modèle a besoin d’un GPU utilisable, absent de cet ordinateur."
+
+msgid "No global shortcut mechanism is available here. Bind a desktop shortcut to the LinuxFlow command line instead."
+msgstr "Aucun mécanisme de raccourci global n’est disponible ici. Associe plutôt un raccourci du bureau à la ligne de commande de LinuxFlow."
+
+msgid "Enter a word first."
+msgstr "Saisis d’abord un mot."
+
+msgid "Enter a trigger first."
+msgstr "Saisis d’abord un déclencheur."
+
+#, rust-format
+msgid "LinuxFlow could not find its folders: {}"
+msgstr "LinuxFlow n’a pas trouvé ses dossiers : {}"
+
+#, rust-format
+msgid "LinuxFlow could not create its folders: {}"
+msgstr "LinuxFlow n’a pas pu créer ses dossiers : {}"
+
+msgid "There is no running download for this model."
+msgstr "Aucun téléchargement en cours pour ce modèle."
+
+msgid "The model file is intact."
+msgstr "Le fichier du modèle est intact."
+
+msgid "The model file is corrupted. Delete it and download it again."
+msgstr "Le fichier du modèle est corrompu. Supprime-le et télécharge-le à nouveau."
+
+msgid "This model has no reference checksum, so it cannot be verified."
+msgstr "Ce modèle n’a pas de somme de contrôle de référence : il ne peut pas être vérifié."
+
+msgid "Press at least one key combination."
+msgstr "Appuie sur au moins une combinaison."
+
+msgid "Use only one regular key in a shortcut."
+msgstr "Utilise une seule touche ordinaire dans un raccourci."
+
+msgid "With modifier keys only, you need at least two (e.g. Ctrl + Super)."
+msgstr "Avec seulement des touches de modification, il en faut au moins deux (ex. Ctrl + Super)."
+
+msgid "Add Ctrl, Alt, Shift or Super (or use an F1 to F12 key)."
+msgstr "Ajoute Ctrl, Alt, Maj ou Super (ou utilise une touche F1 à F12)."
+
+#, rust-format
+msgid "The key “{}” is not recognised in hold-to-talk mode."
+msgstr "La touche « {} » n’est pas reconnue en mode « maintenir pour parler »."
+
+msgid "Unsupported interface language."
+msgstr "Langue d’interface non prise en charge."
+
+msgid "That model could not be loaded. The previous one is back."
+msgstr "Ce modèle n’a pas pu être chargé. Le précédent a été rétabli."
+
+msgid "Could not change the launch-at-login setting."
+msgstr "Impossible de modifier le lancement à l’ouverture de session."
+
+msgid "Already used by another application."
+msgstr "Déjà utilisé par une autre application."
+
+msgid "This model is not installed."
+msgstr "Ce modèle n’est pas installé."
+
+msgid "This build has no GPU support: transcription runs on the CPU."
+msgstr "Cette version n’a pas de prise en charge du GPU : la transcription s’exécute sur le CPU."
+
+msgid "The folder could not be opened."
+msgstr "Le dossier n’a pas pu être ouvert."
+
+#, rust-format
+msgid "Model downloading · {}%"
+msgstr "Modèle en téléchargement · {} %"
+
+msgid "Model downloading…"
+msgstr "Modèle en téléchargement…"
+
+msgid "Model is loading…"
+msgstr "Modèle en cours de chargement…"
+
+msgid "Transcription engine unavailable"
+msgstr "Moteur de transcription indisponible"
+
+msgid "Nothing heard"
+msgstr "Rien entendu"
+
+#, rust-format
+msgid "Microphone unavailable ({})"
+msgstr "Micro indisponible ({})"
+
+msgid "Microphone unavailable"
+msgstr "Micro indisponible"
+
+msgid "Paste blocked — text copied to the clipboard"
+msgstr "Collage bloqué — texte copié dans le presse-papiers"
+
+#, rust-format
+msgid "Dictation failed: {}"
+msgstr "La dictée a échoué : {}"
+
+msgid "No microphone found"
+msgstr "Aucun micro trouvé"
+
+#, rust-format
+msgid "Unsupported microphone sample format: {}"
+msgstr "Format d’échantillon du micro non pris en charge : {}"
+
+msgid "System default microphone"
+msgstr "Micro par défaut du système"
+
+msgid "Recording was cancelled"
+msgstr "L’enregistrement a été annulé"
+
+msgid "Audio was lost because the system was too busy; please try again"
+msgstr "De l’audio a été perdu car le système était trop occupé ; réessaie"
+
+#, rust-format
+msgid "Microphone error during recording: {}"
+msgstr "Erreur du micro pendant l’enregistrement : {}"
+
+#, rust-format
+msgid "Could not start audio capture: {}"
+msgstr "Impossible de démarrer la capture audio : {}"
+
+msgid "The microphone did not respond in time"
+msgstr "Le micro n’a pas répondu à temps"
+
+msgid "No recording in progress"
+msgstr "Aucun enregistrement en cours"
+
+msgid "The audio thread stopped unexpectedly"
+msgstr "Le fil audio s’est arrêté de façon inattendue"
+
+#, rust-format
+msgid "Audio resampling failed: {}"
+msgstr "Le rééchantillonnage audio a échoué : {}"
+
+msgid "Cancel"
+msgstr "Annuler"
+
+#, rust-format
+msgid "Good morning, {}"
+msgstr "Bonjour, {}"
+
+msgid "Good morning"
+msgstr "Bonjour"
+
+#, rust-format
+msgid "Good evening, {}"
+msgstr "Bonsoir, {}"
+
+msgid "Good evening"
+msgstr "Bonsoir"
+
+#, rust-format
+msgid "{} s"
+msgstr "{} s"
+
+msgid "Loading model…"
+msgstr "Chargement du modèle…"
+
+msgid "Downloading…"
+msgstr "Téléchargement…"
+
+#, rust-format
+msgid "Downloading model · {}"
+msgstr "Téléchargement du modèle · {}"
+
+#, rust-format
+msgid "Downloading · {}"
+msgstr "Téléchargement · {}"
+
+#, rust-format
+msgid "Downloading model · {} ({} / {})"
+msgstr "Téléchargement du modèle · {} ({} / {})"
+
+msgid "GPU"
+msgstr "GPU"
+
+msgid "CPU"
+msgstr "CPU"
+
+msgid "Listening…"
+msgstr "Écoute…"
+
+#, rust-format
+msgid "{} · {} · ready"
+msgstr "{} · {} · prêt"
+
+msgid "Engine unavailable"
+msgstr "Moteur indisponible"
+
+msgid "Ready"
+msgstr "Prêt"
+
+msgid "Error"
+msgstr "Erreur"
+
+msgid "Loading…"
+msgstr "Chargement…"
+
+#, rust-format
+msgid "GPU ({})"
+msgstr "GPU ({})"
+
+msgid "Listening… click to stop"
+msgstr "Écoute… clique pour arrêter"
+
+msgid "Transcribing…"
+msgstr "Transcription…"
+
+msgid "Formatting…"
+msgstr "Mise en forme…"
+
+msgid "Done"
+msgstr "Terminé"
+
+#, rust-format
+msgid "Dictation in progress ({})"
+msgstr "Dictée en cours ({})"
+
+#, rust-format
+msgid "{} word"
+msgid_plural "{} words"
+msgstr[0] "{} mot"
+msgstr[1] "{} mots"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Shift"
+msgstr "Maj"
+
+msgid "Super"
+msgstr "Super"
+
+msgid "Space"
+msgstr "Espace"
+
+msgid "Enter"
+msgstr "Entrée"
+
+msgid "Backspace"
+msgstr "Retour"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Insert"
+msgstr "Inser"
+
+msgid "Caps Lock"
+msgstr "Verr. Maj"
+
+msgid "Home"
+msgstr "Accueil"
+
+msgid "History"
+msgstr "Historique"
+
+msgid "Dictionary"
+msgstr "Dictionnaire"
+
+msgid "Snippets"
+msgstr "Snippets"
+
+msgid "Models"
+msgstr "Modèles"
+
+msgid "Settings"
+msgstr "Paramètres"
+
+msgid "Without a usable GPU, the lighter model runs on the CPU."
+msgstr "Sans GPU utilisable, le modèle léger s’exécute sur le CPU."
+
+msgid "Session type"
+msgstr "Type de session"
+
+msgid "Wayland or X11."
+msgstr "Wayland ou X11."
+
+msgid "Desktop"
+msgstr "Bureau"
+
+msgid "The desktop environment in use."
+msgstr "L’environnement de bureau utilisé."
+
+msgid "Global shortcut portal"
+msgstr "Portail de raccourcis globaux"
+
+msgid "Lets the shortcut work while other applications are focused."
+msgstr "Permet au raccourci de fonctionner quand une autre application a le focus."
+
+msgid "Remote desktop portal"
+msgstr "Portail de bureau à distance"
+
+msgid "Used to simulate the paste key in the active application."
+msgstr "Sert à simuler la touche de collage dans l’application active."
+
+msgid "Clipboard portal"
+msgstr "Portail du presse-papiers"
+
+msgid "Used to copy the text and restore your clipboard."
+msgstr "Sert à copier le texte et à restaurer ton presse-papiers."
+
+msgid "Layer shell"
+msgstr "Layer shell"
+
+msgid "Lets the recording pill float above other windows."
+msgstr "Permet à la pastille d’enregistrement de flotter au-dessus des autres fenêtres."
+
+msgid "Clipboard data control"
+msgstr "Contrôle des données du presse-papiers"
+
+msgid "Alternative clipboard access on Wayland."
+msgstr "Accès alternatif au presse-papiers sous Wayland."
+
+msgid "Vulkan GPU"
+msgstr "GPU Vulkan"
+
+msgid "PipeWire"
+msgstr "PipeWire"
+
+msgid "Audio server; ALSA is used when it is missing."
+msgstr "Serveur audio ; ALSA est utilisé en son absence."
+
+msgid "Notification area"
+msgstr "Zone de notification"
+
+msgid "Tray icon support."
+msgstr "Prise en charge de l’icône de notification."
+
+msgid "Direct input access (uinput)"
+msgstr "Accès direct à la saisie (uinput)"
+
+msgid "Optional: key simulation without a portal."
+msgstr "Facultatif : simulation de touches sans portail."
+
+msgid "Input group membership"
+msgstr "Appartenance au groupe input"
+
+msgid "Optional: reading keys for hold-to-talk."
+msgstr "Facultatif : lecture des touches pour « maintenir pour parler »."
+
+msgid "GTK version"
+msgstr "Version de GTK"
+
+msgid "libadwaita version"
+msgstr "Version de libadwaita"
+
+msgid "Compatibility"
+msgstr "Compatibilité"
+
+msgid "State of each system component LinuxFlow relies on, and how to fix what is missing."
+msgstr "État de chaque composant système utilisé par LinuxFlow, et comment corriger ce qui manque."
+
+msgid "Back to settings"
+msgstr "Retour aux paramètres"
+
+msgid "Refresh"
+msgstr "Actualiser"
+
+msgid "How to fix"
+msgstr "Comment corriger"
+
+msgid "Available"
+msgstr "Disponible"
+
+msgid "Not available"
+msgstr "Non disponible"
+
+msgid "Add"
+msgstr "Ajouter"
+
+msgid "Save"
+msgstr "Enregistrer"
+
+msgid "The correct word, and what the model hears instead: “cooper nettys” becomes “Kubernetes”. Capitals, accents, hyphens and “eight” / “8” are handled automatically."
+msgstr "Le mot correct, et ce que le modèle entend à la place : « cooper nettys » devient « Kubernetes ». Majuscules, accents, tirets et « huit » / « 8 » sont gérés tout seuls."
+
+msgid "Correct word (e.g. Kubernetes)"
+msgstr "Mot correct (ex. Kubernetes)"
+
+msgid "What the model hears, comma-separated (e.g. cooper nettys, kuber neties)"
+msgstr "Ce que le modèle entend, séparé par des virgules (ex. cooper nettys, kuber neties)"
+
+msgid "Test"
+msgstr "Tester"
+
+msgid "Type a sentence the way the model would hear it: I deploy with cooper nettys"
+msgstr "Tape une phrase comme le modèle l’entendrait : je déploie avec cooper nettys"
+
+msgid "The corrected result appears here."
+msgstr "Le résultat corrigé s’affiche ici."
+
+msgid "Restore default words"
+msgstr "Remettre les mots par défaut"
+
+msgid "No words yet. Add the names the model gets wrong."
+msgstr "Aucun mot pour le moment. Ajoute les noms que le modèle écorche."
+
+msgid "Default words added"
+msgstr "Mots par défaut ajoutés"
+
+msgid "case only"
+msgstr "casse uniquement"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Word added"
+msgstr "Mot ajouté"
+
+msgid "Word updated"
+msgstr "Mot mis à jour"
+
+msgid "Your latest dictations, most recent first."
+msgstr "Tes dernières dictées, les plus récentes en premier."
+
+msgid "Clear all"
+msgstr "Tout effacer"
+
+msgid "No dictation yet. Press the shortcut and speak."
+msgstr "Aucune dictée pour le moment. Appuie sur le raccourci et parle."
+
+#, rust-format
+msgid "→ {}"
+msgstr "→ {}"
+
+msgid "Copy"
+msgstr "Copier"
+
+msgid "Copied"
+msgstr "Copié"
+
+msgid "Clear the whole history?"
+msgstr "Effacer tout l’historique ?"
+
+msgid "All saved dictations will be deleted. This cannot be undone."
+msgstr "Toutes les dictées enregistrées seront supprimées. Cette action est irréversible."
+
+msgid "Speak, and LinuxFlow writes. Everything happens on your machine: nothing leaves your computer."
+msgstr "Parle, LinuxFlow écrit. Tout se passe sur ta machine : rien ne sort du PC."
+
+msgid "Words today"
+msgstr "Mots aujourd'hui"
+
+msgid "Total words"
+msgstr "Mots au total"
+
+msgid "Average speed"
+msgstr "Vitesse moyenne"
+
+msgid "words/min"
+msgstr "mots/min"
+
+msgid "Dictations"
+msgstr "Dictées"
+
+msgid "How to use"
+msgstr "Comment utiliser"
+
+msgid "Put the cursor where you want to write (email, chat, editor…)."
+msgstr "Place le curseur là où tu veux écrire (mail, Slack, VS Code…)."
+
+msgid "Try it here"
+msgstr "Essayer ici"
+
+msgid "Click the microphone, then speak. The text is inserted in the box below, without touching other windows."
+msgstr "Clique sur le micro puis parle. Le texte s'insère dans la zone ci-dessous, sans toucher aux autres fenêtres."
+
+msgid "Dictate in this box"
+msgstr "Dicter dans cette zone"
+
+msgid "Dictated text will appear here…"
+msgstr "Le texte dicté apparaîtra ici…"
+
+#, rust-format
+msgid "Press {}: the pill appears at the bottom of the screen and starts listening."
+msgstr "Appuie sur {} : la pastille apparaît en bas de l’écran et écoute."
+
+msgid "Press it again to stop: the text is transcribed, formatted and pasted."
+msgstr "Appuie à nouveau pour arrêter : le texte est transcrit, mis en forme et collé."
+
+#, rust-format
+msgid "Press and hold {}: the pill appears at the bottom of the screen and starts listening."
+msgstr "Maintiens {} enfoncé : la pastille apparaît en bas de l’écran et écoute."
+
+msgid "Release the key to stop: the text is transcribed, formatted and pasted."
+msgstr "Relâche la touche pour arrêter : le texte est transcrit, mis en forme et collé."
+
+msgid "Automatic pasting is on. The clipboard is restored right after."
+msgstr "Collage automatique activé. Le presse-papiers est restauré juste après."
+
+msgid "Automatic pasting is off: the text is copied to the clipboard, paste it with Ctrl+V."
+msgstr "Collage automatique désactivé : le texte est copié dans le presse-papiers, colle-le avec Ctrl+V."
+
+msgid "Automatic detection"
+msgstr "Détection automatique"
+
+msgid "English"
+msgstr "Anglais"
+
+msgid "French"
+msgstr "Français"
+
+msgid "German"
+msgstr "Allemand"
+
+msgid "Spanish"
+msgstr "Espagnol"
+
+msgid "Italian"
+msgstr "Italien"
+
+msgid "Portuguese"
+msgstr "Portugais"
+
+msgid "Dutch"
+msgstr "Néerlandais"
+
+msgid "Polish"
+msgstr "Polonais"
+
+msgid "Russian"
+msgstr "Russe"
+
+msgid "Ukrainian"
+msgstr "Ukrainien"
+
+msgid "Turkish"
+msgstr "Turc"
+
+msgid "Arabic"
+msgstr "Arabe"
+
+msgid "Hebrew"
+msgstr "Hébreu"
+
+msgid "Hindi"
+msgstr "Hindi"
+
+msgid "Chinese"
+msgstr "Chinois"
+
+msgid "Japanese"
+msgstr "Japonais"
+
+msgid "Korean"
+msgstr "Coréen"
+
+msgid "Vietnamese"
+msgstr "Vietnamien"
+
+msgid "Thai"
+msgstr "Thaï"
+
+msgid "Indonesian"
+msgstr "Indonésien"
+
+msgid "Swedish"
+msgstr "Suédois"
+
+msgid "Danish"
+msgstr "Danois"
+
+msgid "Norwegian"
+msgstr "Norvégien"
+
+msgid "Finnish"
+msgstr "Finnois"
+
+msgid "Czech"
+msgstr "Tchèque"
+
+msgid "Greek"
+msgstr "Grec"
+
+msgid "Hungarian"
+msgstr "Hongrois"
+
+msgid "Romanian"
+msgstr "Roumain"
+
+msgid "Default microphone"
+msgstr "Micro par défaut"
+
+msgid "Shortcut, mode, language, pasting and microphone."
+msgstr "Raccourci, mode, langue, collage et micro."
+
+msgid "Shortcut"
+msgstr "Raccourci"
+
+msgid "Press to start / stop"
+msgstr "Appuyer pour démarrer / arrêter"
+
+msgid "Hands-free: one press starts listening, another ends it."
+msgstr "Mains libres : une pression lance l'écoute, une autre la termine."
+
+msgid "Hold to talk"
+msgstr "Maintenir pour parler"
+
+msgid "Keep the key held while you speak; a short press switches to hands-free."
+msgstr "Garde la touche enfoncée pendant que tu parles ; un appui bref passe en mains libres."
+
+msgid "Transcription"
+msgstr "Transcription"
+
+msgid "Language"
+msgstr "Langue"
+
+msgid "Microphone"
+msgstr "Micro"
+
+msgid "Paste the text automatically into the active application"
+msgstr "Coller automatiquement le texte dans l'application active"
+
+#, rust-format
+msgid "Launch {} when I log in"
+msgstr "Lancer {} à l’ouverture de session"
+
+msgid "Interface"
+msgstr "Interface"
+
+msgid "Interface language"
+msgstr "Langue de l’interface"
+
+msgid "Automatic"
+msgstr "Automatique"
+
+msgid "Local engine"
+msgstr "Moteur local"
+
+msgid "State"
+msgstr "État"
+
+msgid "Hardware"
+msgstr "Matériel"
+
+msgid "Model"
+msgstr "Modèle"
+
+msgid "Precision"
+msgstr "Précision"
+
+msgid "Average latency"
+msgstr "Latence moyenne"
+
+msgid "Load time"
+msgstr "Temps de chargement"
+
+msgid "Manage models"
+msgstr "Gérer les modèles"
+
+msgid "Compatibility report"
+msgstr "Rapport de compatibilité"
+
+msgid "Open logs folder"
+msgstr "Ouvrir le dossier des journaux"
+
+msgid "Open data folder"
+msgstr "Ouvrir le dossier de données"
+
+msgid "Unavailable: key releases cannot be read on this system (see the compatibility report)."
+msgstr "Indisponible : le relâchement des touches ne peut pas être lu sur ce système (voir le rapport de compatibilité)."
+
+msgid "default location"
+msgstr "emplacement par défaut"
+
+#, rust-format
+msgid "Models folder: {}"
+msgstr "Dossier des modèles : {}"
+
+#, rust-format
+msgid "{} version {}"
+msgstr "{} version {}"
+
+msgid "Say a trigger phrase, LinuxFlow writes the full text."
+msgstr "Dis une phrase déclencheur, LinuxFlow écrit le texte complet."
+
+msgid "Trigger (e.g. “my signature”)"
+msgstr "Phrase déclencheur"
+
+msgid "Text inserted instead (e.g. “Have a great day and talk soon!”)"
+msgstr "Texte inséré à la place (ex. « Bonne journée et à très vite ! »)"
+
+msgid "Add snippet"
+msgstr "Ajouter le snippet"
+
+msgid "No snippets yet. Example: “my signature” → “Have a great day and talk soon!”."
+msgstr "Aucun snippet pour le moment. Exemple : « ma signature » → « Bonne journée et à très vite ! »."
+
+msgid "Snippet added"
+msgstr "Snippet ajouté"
+
+msgid "Download"
+msgstr "Télécharger"
+
+msgid "Pause"
+msgstr "Pause"
+
+msgid "Resume"
+msgstr "Reprendre"
+
+msgid "Verify integrity"
+msgstr "Vérifier l’intégrité"
+
+msgid "Use this model"
+msgstr "Utiliser ce modèle"
+
+msgid "Not installed"
+msgstr "Non installé"
+
+msgid "Paused"
+msgstr "En pause"
+
+msgid "Installed"
+msgstr "Installé"
+
+msgid "Installed, not verified (checksum unknown)"
+msgstr "Installé, non vérifié (somme de contrôle inconnue)"
+
+#, rust-format
+msgid "Error: {}"
+msgstr "Erreur : {}"
+
+#, rust-format
+msgid "{} min"
+msgstr "{} min"
+
+#, rust-format
+msgid "{} h {} min"
+msgstr "{} h {} min"
+
+#, rust-format
+msgid "{} / {}"
+msgstr "{} / {}"
+
+#, rust-format
+msgid "{}/s"
+msgstr "{}/s"
+
+#, rust-format
+msgid "{} · {} · {} left"
+msgstr "{} · {} · il reste {}"
+
+#, rust-format
+msgid "{} · {}"
+msgstr "{} · {}"
+
+#, rust-format
+msgid "Download {} · On disk {} · Memory ≈ {}"
+msgstr "Téléchargement {} · Sur disque {} · Mémoire ≈ {}"
+
+msgid "Speech recognition models run on this computer. Nothing is sent anywhere except the download you ask for."
+msgstr "Les modèles de reconnaissance vocale tournent sur cet ordinateur. Rien n’est envoyé ailleurs, hormis le téléchargement que tu demandes."
+
+msgid "Choose a local file…"
+msgstr "Choisir un fichier local…"
+
+msgid "No model in the catalog."
+msgstr "Aucun modèle dans le catalogue."
+
+#, rust-format
+msgid "Disk space used by models: {}"
+msgstr "Espace disque utilisé par les modèles : {}"
+
+msgid "Recommended for this computer"
+msgstr "Recommandé pour cet ordinateur"
+
+msgid "In use"
+msgstr "Utilisé"
+
+#, rust-format
+msgid "Delete “{}”?"
+msgstr "Supprimer « {} » ?"
+
+msgid "The downloaded file is removed from this computer. You can download it again later."
+msgstr "Le fichier téléchargé est supprimé de cet ordinateur. Tu pourras le télécharger à nouveau plus tard."
+
+msgid "Integrity check started"
+msgstr "Vérification de l’intégrité lancée"
+
+msgid "Model selected"
+msgstr "Modèle sélectionné"
+
+msgid "Choose a model file"
+msgstr "Choisir un fichier de modèle"
+
+msgid "Model file selected"
+msgstr "Fichier de modèle sélectionné"
+
+msgid "Listening"
+msgstr "Écoute"
+
+msgid "Transcribing"
+msgstr "Transcription"
+
+msgid "Formatting"
+msgstr "Mise en forme"
+
+#, rust-format
+msgid "Done · {} s"
+msgstr "Terminé · {} s"
+
+msgid "With modifier keys only, at least two are needed (for example Ctrl + Super)."
+msgstr "Avec seulement des touches de modification, il en faut au moins deux (ex. Ctrl + Super)."
+
+msgid "Add Ctrl, Alt, Shift or Super (or use a function key such as F9)."
+msgstr "Ajoute Ctrl, Alt, Maj ou Super (ou utilise une touche de fonction comme F9)."
+
+#, rust-format
+msgid "The key “{}” is not supported."
+msgstr "La touche « {} » n’est pas prise en charge."
+
+msgid "Press the combination you want (you can start over). Click Stop when it is right, then Confirm."
+msgstr "Appuie sur la combinaison voulue (tu peux recommencer). Clique sur Arrêter quand c’est bon, puis sur Confirmer."
+
+msgid "New shortcut ready: click Confirm to use it."
+msgstr "Nouveau raccourci prêt : clique sur Confirmer pour l’utiliser."
+
+msgid "Shortcut active. Click Record to choose another one."
+msgstr "Raccourci actif. Clique sur Enregistrer pour en choisir un autre."
+
+msgid "This shortcut does not work (already used by another application?). Record another one."
+msgstr "Ce raccourci ne fonctionne pas (déjà pris par une autre application ?). Enregistres-en un autre."
+
+msgid "Press your keys…"
+msgstr "Appuie sur tes touches…"
+
+msgid "Record"
+msgstr "Enregistrer"
+
+msgid "Confirm"
+msgstr "Confirmer"
+
+#, rust-format
+msgid "“{}” is not available."
+msgstr "« {} » est indisponible."
+
+#, rust-format
+msgid "Shortcut: {}"
+msgstr "Raccourci : {}"
+
+msgid "Stop"
+msgstr "Arrêter"
+
+msgid "Recommended"
+msgstr "Recommandé"
+
+msgid "Lighter"
+msgstr "Plus léger"
+
+msgid "More accurate"
+msgstr "Plus précis"
+
+#, rust-format
+msgid "Graphics card detected: {}. A more accurate model can run on it."
+msgstr "Carte graphique détectée : {}. Un modèle plus précis peut y fonctionner."
+
+msgid "No usable graphics card detected. A lighter model that runs on the processor is recommended."
+msgstr "Aucune carte graphique utilisable détectée. Un modèle plus léger, exécuté sur le processeur, est recommandé."
+
+#, rust-format
+msgid "Space required: {} · available: {}"
+msgstr "Espace requis : {} · disponible : {}"
+
+#, rust-format
+msgid "Space required: {}"
+msgstr "Espace requis : {}"
+
+#, rust-format
+msgid "Welcome to {}"
+msgstr "Bienvenue dans {}"
+
+msgid "Voice dictation that runs entirely on this computer. Let's set it up in a minute."
+msgstr "Une dictée vocale qui fonctionne entièrement sur cet ordinateur. Configurons-la en une minute."
+
+msgid "Your computer"
+msgstr "Ton ordinateur"
+
+msgid "Detecting your hardware…"
+msgstr "Détection de ton matériel…"
+
+msgid "Choose a speech model"
+msgstr "Choisis un modèle vocal"
+
+msgid "The model is downloaded once and stays on your computer."
+msgstr "Le modèle est téléchargé une seule fois et reste sur ton ordinateur."
+
+msgid "Use a file I already have…"
+msgstr "Utiliser un fichier que j’ai déjà…"
+
+msgid "Skip for now (dictation stays unavailable until a model is installed)"
+msgstr "Passer pour l’instant (la dictée reste indisponible tant qu’aucun modèle n’est installé)"
+
+msgid "Choose your shortcut"
+msgstr "Choisis ton raccourci"
+
+msgid "The key combination that starts and stops dictation, in any application."
+msgstr "La combinaison de touches qui démarre et arrête la dictée, dans n’importe quelle application."
+
+msgid "All set"
+msgstr "Tout est prêt"
+
+msgid "Here is what will happen when you finish."
+msgstr "Voici ce qui se passera quand tu auras terminé."
+
+msgid "Back"
+msgstr "Retour"
+
+msgid "Next"
+msgstr "Suivant"
+
+msgid "Finish"
+msgstr "Terminer"
+
+#, rust-format
+msgid "Step {} of {}"
+msgstr "Étape {} sur {}"
+
+msgid "The model file you selected will be used."
+msgstr "Le fichier de modèle que tu as choisi sera utilisé."
+
+#, rust-format
+msgid "The model “{}” will be downloaded."
+msgstr "Le modèle « {} » sera téléchargé."
+
+msgid "No model will be downloaded now. You can install one later from the Models page."
+msgstr "Aucun modèle ne sera téléchargé maintenant. Tu pourras en installer un plus tard depuis la page Modèles."
+
+#, rust-format
+msgid "Your shortcut: {}"
+msgstr "Ton raccourci : {}"
+
+# --- Formats localisés (crates/linuxflow-i18n/src/lib.rs) ---
+# Espace insécable (U+00A0) entre le nombre et l'unité.
+#, rust-format
+msgid "{} B"
+msgstr "{} o"
+
+#, rust-format
+msgid "{} KB"
+msgstr "{} Ko"
+
+#, rust-format
+msgid "{} MB"
+msgstr "{} Mo"
+
+#, rust-format
+msgid "{} GB"
+msgstr "{} Go"
+
+#, rust-format
+msgid "{} TB"
+msgstr "{} To"
+
+msgid "Jan"
+msgstr "janv."
+
+msgid "Feb"
+msgstr "févr."
+
+msgid "Mar"
+msgstr "mars"
+
+msgid "Apr"
+msgstr "avr."
+
+msgid "May"
+msgstr "mai"
+
+msgid "Jun"
+msgstr "juin"
+
+msgid "Jul"
+msgstr "juil."
+
+msgid "Aug"
+msgstr "août"
+
+msgid "Sep"
+msgstr "sept."
+
+msgid "Oct"
+msgstr "oct."
+
+msgid "Nov"
+msgstr "nov."
+
+msgid "Dec"
+msgstr "déc."
+
+msgid "just now"
+msgstr "à l’instant"
+
+#, rust-format
+msgid "{} min ago"
+msgstr "il y a {} min"
+
+#, rust-format
+msgid "today at {}"
+msgstr "aujourd’hui à {}"
+
+#. TRANSLATORS: date courte avec année. {0} = mois abrégé, {1} = jour, {2} = année.
+#. Réordonner librement (ex. fr : « {1} {0} {2} »).
+#, rust-format
+msgid "{0} {1} {2}"
+msgstr "{1} {0} {2}"
+
+#. TRANSLATORS: date courte. {0} = mois abrégé, {1} = jour du mois (ex. « Oct 24 »).
+#, rust-format
+msgid "{0} {1}"
+msgstr "{1} {0}"
+
+#. TRANSLATORS: date puis heure. {0} = date courte, {1} = heure HH:MM.
+#, rust-format
+msgid "{0}, {1}"
+msgstr "{0}, {1}"
+
+msgid "Offline mode is on: nothing can be downloaded. Choose a local model file or turn offline mode off."
+msgstr "Le mode hors ligne est activé : rien ne peut être téléchargé. Choisis un fichier de modèle local ou désactive le mode hors ligne."
+
+msgid "This model is already being downloaded."
+msgstr "Ce modèle est déjà en cours de téléchargement."
+
+#, rust-format
+msgid "Not enough disk space: {} needed, {} available. Free some space or pick a lighter model."
+msgstr "Espace disque insuffisant : {} nécessaires, {} disponibles. Libère de l’espace ou choisis un modèle plus léger."
+
+msgid "Download cancelled."
+msgstr "Téléchargement annulé."
+
+msgid "The downloaded file is corrupted (checksum mismatch). Try again or change the download source."
+msgstr "Le fichier téléchargé est corrompu (somme de contrôle incorrecte). Réessaie ou change la source de téléchargement."
+
+#, rust-format
+msgid "The server refused or does not have this file (HTTP {}). Check the download source."
+msgstr "Le serveur a refusé ou n’a pas ce fichier (HTTP {}). Vérifie la source de téléchargement."
+
+#, rust-format
+msgid "The server answered with an error (HTTP {}). Try again later."
+msgstr "Le serveur a répondu par une erreur (HTTP {}). Réessaie plus tard."
+
+msgid "Network problem. Check your connection (and proxy settings) and try again."
+msgstr "Problème réseau. Vérifie ta connexion (et les réglages de proxy) puis réessaie."
+
+msgid "Permission denied in the models folder. Choose another folder."
+msgstr "Permission refusée dans le dossier des modèles. Choisis un autre dossier."
+
+msgid "The disk is full. Free some space and try again."
+msgstr "Le disque est plein. Libère de l’espace puis réessaie."
+
+msgid "A file error occurred in the models folder."
+msgstr "Une erreur de fichier s’est produite dans le dossier des modèles."
+
+msgid "This file cannot be used as a model: it does not match the expected one."
+msgstr "Ce fichier ne peut pas servir de modèle : il ne correspond pas à celui attendu."
+
+msgid "This model is busy. Stop the download or switch model first."
+msgstr "Ce modèle est occupé. Arrête d’abord le téléchargement ou change de modèle."
+
+msgid "The file has an unexpected size. Verify it or delete it."
+msgstr "Le fichier a une taille inattendue. Vérifie-le ou supprime-le."
+
+msgid "No graphical session was detected. Control LinuxFlow from the command line instead."
+msgstr "Aucune session graphique détectée. Pilote LinuxFlow en ligne de commande à la place."
+
+msgid "The session D-Bus is not reachable: portals and the tray icon are unavailable."
+msgstr "Le bus D-Bus de session est inaccessible : les portails et l’icône de notification sont indisponibles."
+
+msgid "The GlobalShortcuts portal is missing. Bind a compositor shortcut to the LinuxFlow command line, or enable the optional keyboard-device mode."
+msgstr "Le portail GlobalShortcuts est absent. Associe un raccourci du compositeur à la ligne de commande de LinuxFlow, ou active le mode optionnel de lecture du clavier."
+
+msgid "The RemoteDesktop portal is missing: automatic pasting may be unavailable. The text stays on the clipboard."
+msgstr "Le portail RemoteDesktop est absent : le collage automatique peut être indisponible. Le texte reste dans le presse-papiers."
+
+msgid "The Clipboard portal is missing: copying while another window has focus may fail."
+msgstr "Le portail Clipboard est absent : la copie peut échouer quand une autre fenêtre a le focus."
+
+msgid "The Wayland compositor could not be queried; overlay and clipboard capabilities are unknown."
+msgstr "Le compositeur Wayland n’a pas pu être interrogé ; les capacités de la pastille et du presse-papiers sont inconnues."
+
+msgid "This compositor does not offer layer-shell: the recording indicator uses a fallback window."
+msgstr "Ce compositeur n’offre pas layer-shell : l’indicateur d’enregistrement utilise une fenêtre de repli."
+
+msgid "This compositor does not offer data-control: clipboard access relies on the portal or on window focus."
+msgstr "Ce compositeur n’offre pas data-control : l’accès au presse-papiers passe par le portail ou par le focus de la fenêtre."
+
+msgid "Vulkan is installed but reports no GPU: transcription runs on the CPU."
+msgstr "Vulkan est installé mais ne signale aucun GPU : la transcription s’exécute sur le CPU."
+
+msgid "Vulkan is not available: transcription runs on the CPU. Install the Vulkan loader and your GPU driver to use the GPU."
+msgstr "Vulkan n’est pas disponible : la transcription s’exécute sur le CPU. Installe le chargeur Vulkan et le pilote de ton GPU pour l’utiliser."
+
+msgid "PipeWire was not found: audio capture falls back to ALSA."
+msgstr "PipeWire est introuvable : la capture audio se replie sur ALSA."
+
+msgid "No notification-area host was found: there will be no tray icon. Use the main window instead."
+msgstr "Aucune zone de notification trouvée : il n’y aura pas d’icône. Utilise la fenêtre principale."
+
+msgid "/dev/uinput is not writable: the keystroke-injection fallback is disabled. A udev rule can grant access."
+msgstr "/dev/uinput n’est pas accessible en écriture : le repli par injection de touches est désactivé. Une règle udev peut accorder l’accès."
+
+msgid "You are not in the \"input\" group: reading keyboard devices directly is disabled."
+msgstr "Tu n’es pas dans le groupe « input » : la lecture directe des claviers est désactivée."
+
+msgid "Keyboard devices are not readable. Add your user to the \"input\" group, then log in again."
+msgstr "Les claviers ne sont pas lisibles. Ajoute ton utilisateur au groupe « input », puis reconnecte-toi."
+
+msgid "Reading keyboard devices directly; keystrokes are never recorded."
+msgstr "Lecture directe des claviers ; les frappes ne sont jamais enregistrées."
+
+msgid "The global shortcut is not started."
+msgstr "Le raccourci global n’est pas démarré."
+
+msgid "the desktop shortcut portal"
+msgstr "le portail de raccourcis du bureau"
+
+msgid "X11 key grabs"
+msgstr "les captures de touches X11"
+
+msgid "keyboard devices"
+msgstr "les périphériques clavier"
+
+msgid "no backend"
+msgstr "aucun mécanisme"
+
+#, rust-format
+msgid "Invalid shortcut: {}"
+msgstr "Raccourci invalide : {}"
+
+#, rust-format
+msgid "Shortcut active through {}."
+msgstr "Raccourci actif via {}."
+
+msgid "Shortcuts made only of modifier keys need keyboard-device access, which is disabled. Choose a shortcut with a regular key, or enable it in the settings."
+msgstr "Les raccourcis composés uniquement de touches de modification nécessitent l’accès aux périphériques clavier, qui est désactivé. Choisis un raccourci avec une touche ordinaire, ou active-le dans les paramètres."
+
+msgid "The session D-Bus is not reachable."
+msgstr "Le bus D-Bus de session est inaccessible."
+
+msgid "The shortcut portal is not available."
+msgstr "Le portail de raccourcis n’est pas disponible."
+
+msgid "The shortcut portal refused the session."
+msgstr "Le portail de raccourcis a refusé la session."
+
+msgid "Start or stop dictation"
+msgstr "Démarrer ou arrêter la dictée"
+
+msgid "The shortcut portal refused the binding."
+msgstr "Le portail de raccourcis a refusé l’association."
+
+msgid "The shortcut portal did not bind the shortcut."
+msgstr "Le portail de raccourcis n’a pas associé le raccourci."
+
+msgid "The desktop environment chooses the key; change it in its shortcut settings."
+msgstr "Le bureau choisit la touche ; modifie-la dans ses réglages de raccourcis."
+
+msgid "The shortcut portal did not answer in time."
+msgstr "Le portail de raccourcis n’a pas répondu à temps."
+
+msgid "This key combination is already used by another application."
+msgstr "Cette combinaison de touches est déjà utilisée par une autre application."
+
+msgid "Cannot connect to the X server."
+msgstr "Impossible de se connecter au serveur X."
+
+msgid "No X11 screen."
+msgstr "Aucun écran X11."
+
+msgid "XInput2 is not available: modifier-only shortcuts cannot work."
+msgstr "XInput2 n’est pas disponible : les raccourcis composés uniquement de touches de modification ne peuvent pas fonctionner."
+
+msgid "No notification-area icon"
+msgstr "Pas d’icône dans la zone de notification"
+
+msgid "LinuxFlow keeps working without the icon: launching it again opens the main window, and the launcher actions (--toggle, --cancel, --page, --quit) control dictation."
+msgstr "LinuxFlow fonctionne très bien sans l’icône : le relancer ouvre la fenêtre principale, et les actions de lancement (--toggle, --cancel, --page, --quit) pilotent la dictée."
+
+msgid "Your desktop does not show notification-area icons. Enable the system tray (StatusNotifier) of your panel or bar, then restart LinuxFlow."
+msgstr "Ton bureau n’affiche pas les icônes de la zone de notification. Active la zone de notification (StatusNotifier) de ton tableau de bord ou de ta barre, puis redémarre LinuxFlow."
+
+msgid "The AppIndicator extension is installed with Ubuntu: open the Extensions application and turn on \"Ubuntu AppIndicators\", then log out and back in if the icon does not appear."
+msgstr "L’extension AppIndicator est installée avec Ubuntu : ouvre l’application Extensions et active « Ubuntu AppIndicators », puis ferme et rouvre ta session si l’icône n’apparaît pas."
+
+msgid "Install the package gnome-shell-extension-appindicator (sudo dnf install gnome-shell-extension-appindicator), turn it on in the Extensions application, then log out and back in."
+msgstr "Installe le paquet gnome-shell-extension-appindicator (sudo dnf install gnome-shell-extension-appindicator), active-le dans l’application Extensions, puis ferme et rouvre ta session."
+
+msgid "Install the package gnome-shell-extension-appindicator (sudo pacman -S gnome-shell-extension-appindicator), turn it on in the Extensions application, then log out and back in."
+msgstr "Installe le paquet gnome-shell-extension-appindicator (sudo pacman -S gnome-shell-extension-appindicator), active-le dans l’application Extensions, puis ferme et rouvre ta session."
+
+msgid "Install the package gnome-shell-extension-appindicator (sudo zypper install gnome-shell-extension-appindicator), turn it on in the Extensions application, then log out and back in."
+msgstr "Installe le paquet gnome-shell-extension-appindicator (sudo zypper install gnome-shell-extension-appindicator), active-le dans l’application Extensions, puis ferme et rouvre ta session."
+
+msgid "Install the \"AppIndicator and KStatusNotifierItem Support\" GNOME extension (package gnome-shell-extension-appindicator on most distributions), turn it on in the Extensions application, then log out and back in."
+msgstr "Installe l’extension GNOME « AppIndicator and KStatusNotifierItem Support » (paquet gnome-shell-extension-appindicator sur la plupart des distributions), active-la dans l’application Extensions, puis ferme et rouvre ta session."
+
+msgid "Loading the model…"
+msgstr "Chargement du modèle…"
+
+#, rust-format
+msgid "Downloading the model · {} GB"
+msgstr "Téléchargement du modèle · {} Go"
+
+#, rust-format
+msgid "Downloading the model · {} ({} / {} GB)"
+msgstr "Téléchargement du modèle · {} ({} / {} Go)"
+
+msgid "System default"
+msgstr "Défaut du système"
+
+#, rust-format
+msgid "{} (not connected)"
+msgstr "{} (non connecté)"
+
+msgid "No microphone detected"
+msgstr "Aucun micro détecté"
+
+msgid "Go to"
+msgstr "Aller à"
+
+msgid "Troubleshooting"
+msgstr "Dépannage"
+
+msgid "Open models folder"
+msgstr "Ouvrir le dossier des modèles"
+
+msgid "Restart speech engine"
+msgstr "Redémarrer le moteur vocal"
+
+#, rust-format
+msgid "Shortcut: {} (unavailable)"
+msgstr "Raccourci : {} (indisponible)"
+
+#, rust-format
+msgid "Downloading model… {}"
+msgstr "Téléchargement du modèle… {}"
+
+#, rust-format
+msgid "{} — {}"
+msgstr "{} — {}"
+
+msgid "Downloading model…"
+msgstr "Téléchargement du modèle…"
+
+msgid "Open models page"
+msgstr "Ouvrir la page Modèles"
+
+msgid "Stop dictation"
+msgstr "Arrêter la dictée"
+
+msgid "Start dictation (hands-free)"
+msgstr "Démarrer la dictée (mains libres)"
+
+msgid "Cancel dictation"
+msgstr "Annuler la dictée"
+
+#, rust-format
+msgid "Open {}"
+msgstr "Ouvrir {}"
+
+msgid "Paste automatically"
+msgstr "Coller automatiquement"
+
+msgid "Launch at login"
+msgstr "Lancer à l’ouverture de session"
+
+msgid "Shortcut enabled"
+msgstr "Raccourci activé"
+
+#, rust-format
+msgid "About {}"
+msgstr "À propos de {}"
+
+msgid "Quit"
+msgstr "Quitter"
+
+msgid "The speech engine could not start."
+msgstr "Le moteur de reconnaissance vocale n’a pas pu démarrer."
+
+#, rust-format
+msgid "This processor lacks instructions required by the speech engine: {}"
+msgstr "Ce processeur ne dispose pas des instructions requises par le moteur de reconnaissance vocale : {}"
+
+msgid "No speech model is installed."
+msgstr "Aucun modèle de reconnaissance vocale n’est installé."
+
+#, rust-format
+msgid "The speech model could not be loaded: {}"
+msgstr "Le modèle de reconnaissance vocale n’a pas pu être chargé : {}"
+
+#, rust-format
+msgid "The speech engine could not be started: {}"
+msgstr "Le moteur de reconnaissance vocale n’a pas pu démarrer : {}"
+
+#, rust-format
+msgid "Engine stopped (code {})"
+msgstr "Moteur arrêté (code {})"

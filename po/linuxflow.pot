@@ -1,0 +1,2251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the LinuxFlow package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: LinuxFlow\n"
+"Report-Msgid-Bugs-To: none\n"
+"POT-Creation-Date: 2026-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: apps/linuxflow/src/app.rs
+#, rust-format
+msgid "{} {}"
+msgstr ""
+
+#: apps/linuxflow/src/app.rs crates/linuxflow-gtk/src/hub/mod.rs
+msgid "Voice dictation, 100% local"
+msgstr ""
+
+#: apps/linuxflow/src/app.rs
+#, rust-format
+msgid "LinuxFlow could not start: {}"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Usage:"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Options:"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs crates/linuxflow-platform/src/autostart/mod.rs
+msgid "Local voice dictation"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Print help"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Print version"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Start or stop dictation in the running instance"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Start dictation"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Stop dictation and transcribe"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Cancel the current dictation"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Open the main window on this page"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Quit the running instance"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Start without showing the main window"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "First name shown in the greeting"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Configuration folder"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Data folder"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Cache folder"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "State and logs folder"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Models folder"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Interface-only mode: no transcription engine"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Test tool: transcribe a WAV file without pasting"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "With --test-pipeline: exit after the result"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Development tool: render the pages to PNG files (Broadway only)"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "PAGE"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "NAME"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "DIR"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "WAV"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+#, rust-format
+msgid "Open the main window on this page [possible values: {}]"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+#, rust-format
+msgid "Invalid command line: {}"
+msgstr ""
+
+#: apps/linuxflow/src/cli.rs
+msgid "Try --help for the list of options."
+msgstr ""
+
+#: apps/linuxflow/src/engine.rs apps/linuxflow/src/engine_ctl.rs
+msgid "No speech model is installed yet."
+msgstr ""
+
+#: apps/linuxflow/src/engine.rs
+msgid "CUDA and ROCm are not supported. Use \"gpu\" (Vulkan) or \"cpu\"."
+msgstr ""
+
+#: apps/linuxflow/src/engine.rs
+msgid "Invalid device setting. Expected auto, cpu, gpu, gpu:N or a number."
+msgstr ""
+
+#: apps/linuxflow/src/engine.rs
+msgid "No usable Vulkan GPU was found (software drivers are ignored)."
+msgstr ""
+
+#: apps/linuxflow/src/engine.rs
+msgid "The requested GPU does not exist."
+msgstr ""
+
+#: apps/linuxflow/src/engine.rs
+msgid "This build has no Vulkan support."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "Interface-only mode: transcription is turned off."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "This processor is too old for the transcription engine."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid ""
+"The installed models need a GPU, which is not available. Download a lighter "
+"model."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "No installed model can run on this machine."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "The transcription engine could not start."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "The transcription engine took too long to start."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs crates/linuxflow-models/src/error.rs
+msgid "This model is not in the catalog."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "This file is not a transcription model."
+msgstr ""
+
+#: apps/linuxflow/src/engine_ctl.rs
+msgid "This model needs a usable GPU, which is not available on this machine."
+msgstr ""
+
+#: apps/linuxflow/src/hotkeys.rs
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid ""
+"No global shortcut mechanism is available here. Bind a desktop shortcut to "
+"the LinuxFlow command line instead."
+msgstr ""
+
+#: apps/linuxflow/src/library.rs
+msgid "Enter a word first."
+msgstr ""
+
+#: apps/linuxflow/src/library.rs
+msgid "Enter a trigger first."
+msgstr ""
+
+#: apps/linuxflow/src/main.rs
+#, rust-format
+msgid "LinuxFlow could not find its folders: {}"
+msgstr ""
+
+#: apps/linuxflow/src/main.rs
+#, rust-format
+msgid "LinuxFlow could not create its folders: {}"
+msgstr ""
+
+#: apps/linuxflow/src/main.rs
+msgid ""
+"This option is only available in development builds (feature dev-tools)."
+msgstr ""
+
+#: apps/linuxflow/src/models.rs
+msgid "The models folder will change when the current download ends."
+msgstr ""
+
+#: apps/linuxflow/src/models.rs
+msgid "There is no running download for this model."
+msgstr ""
+
+#: apps/linuxflow/src/models.rs
+msgid "The model file is intact."
+msgstr ""
+
+#: apps/linuxflow/src/models.rs
+msgid "The model file is corrupted. Delete it and download it again."
+msgstr ""
+
+#: apps/linuxflow/src/models.rs
+msgid "This model has no reference checksum, so it cannot be verified."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid "Press at least one key combination."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "Use only one regular key in a shortcut."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "With modifier keys only, you need at least two (e.g. Ctrl + Super)."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "Add Ctrl, Alt, Shift or Super (or use an F1 to F12 key)."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+#, rust-format
+msgid ""
+"{} is used by the system or by most applications. Choose another shortcut."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+#, rust-format
+msgid "The key “{}” is not recognised in hold-to-talk mode."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "Unsupported interface language."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "That model could not be loaded. The previous one is back."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "Could not change the launch-at-login setting."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs
+msgid "Already used by another application."
+msgstr ""
+
+#: apps/linuxflow/src/service.rs crates/linuxflow-models/src/error.rs
+msgid "This model is not installed."
+msgstr ""
+
+#: apps/linuxflow/src/system.rs
+msgid "This build has no GPU support: transcription runs on the CPU."
+msgstr ""
+
+#: apps/linuxflow/src/system.rs
+msgid "The folder could not be opened."
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+#, rust-format
+msgid "Model downloading · {}%"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+msgid "Model downloading…"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+msgid "Model is loading…"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+msgid "Transcription engine unavailable"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+msgid "Nothing heard"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+#, rust-format
+msgid "Microphone unavailable ({})"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+msgid "Microphone unavailable"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+msgid "Paste blocked — text copied to the clipboard"
+msgstr ""
+
+#: apps/linuxflow/src/ui_text.rs
+#, rust-format
+msgid "Dictation failed: {}"
+msgstr ""
+
+#: crates/linuxflow-audio/src/cpal_source.rs
+msgid "No microphone found"
+msgstr ""
+
+#: crates/linuxflow-audio/src/cpal_source.rs
+#, rust-format
+msgid "Unsupported microphone sample format: {}"
+msgstr ""
+
+#: crates/linuxflow-audio/src/microphones.rs
+msgid "System default microphone"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+msgid "Recording was cancelled"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+msgid "Audio was lost because the system was too busy; please try again"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+#, rust-format
+msgid "Microphone error during recording: {}"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+#, rust-format
+msgid "Could not start audio capture: {}"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+msgid "The microphone did not respond in time"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+msgid "No recording in progress"
+msgstr ""
+
+#: crates/linuxflow-audio/src/recorder.rs
+msgid "The audio thread stopped unexpectedly"
+msgstr ""
+
+#: crates/linuxflow-audio/src/resample.rs
+#, rust-format
+msgid "Audio resampling failed: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/dialog.rs
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#: crates/linuxflow-gtk/src/shortcut_recorder/widget.rs
+msgid "Cancel"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "Good morning, {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Good morning"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "Good evening, {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Good evening"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "{} s"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Loading model…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Downloading…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "Downloading model · {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Downloading · {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "Downloading model · {} ({} / {})"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "GPU"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "CPU"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Listening…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "{} · {} · ready"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Engine unavailable"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Ready"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-gtk/src/overlay/pill.rs
+msgid "Error"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Loading…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "GPU ({})"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Listening… click to stop"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Transcribing…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Formatting…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-gtk/src/overlay/pill.rs
+msgid "Done"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "Dictation in progress ({})"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#, rust-format
+msgid "{} word"
+msgid_plural "{} words"
+msgstr[0] ""
+msgstr[1] ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Ctrl"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Alt"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Shift"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Super"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Space"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Enter"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Backspace"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "Delete"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Insert"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/labels.rs
+msgid "Caps Lock"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+msgid "Home"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "History"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Dictionary"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid "Snippets"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "Models"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Settings"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/mod.rs
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Troubleshooting"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Without a usable GPU, the lighter model runs on the CPU."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Session type"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Wayland or X11."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Desktop"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "The desktop environment in use."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Global shortcut portal"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Lets the shortcut work while other applications are focused."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Remote desktop portal"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Used to simulate the paste key in the active application."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Clipboard portal"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Used to copy the text and restore your clipboard."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Layer shell"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Lets the recording pill float above other windows."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Clipboard data control"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Alternative clipboard access on Wayland."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Vulkan GPU"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "PipeWire"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Audio server; ALSA is used when it is missing."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Notification area"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Tray icon support."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Direct input access (uinput)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Optional: key simulation without a portal."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Input group membership"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Optional: reading keys for hold-to-talk."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "GTK version"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "libadwaita version"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid ""
+"Open the folders LinuxFlow uses, restart the speech engine, and check each "
+"system component it relies on."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Open logs folder"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Open data folder"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Open models folder"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Restart speech engine"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Compatibility report"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Refresh"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "How to fix"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Available"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Not available"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Add"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Save"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid ""
+"The correct word, and what the model hears instead: “cooper nettys” becomes "
+"“Kubernetes”. Capitals, accents, hyphens and “eight” / “8” are handled "
+"automatically."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Correct word (e.g. Kubernetes)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid ""
+"What the model hears, comma-separated (e.g. cooper nettys, kuber neties)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Test"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid ""
+"Type a sentence the way the model would hear it: I deploy with cooper nettys"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "The corrected result appears here."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Restore default words"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "No words yet. Add the names the model gets wrong."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Default words added"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "case only"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Edit"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Word added"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/dictionary.rs
+msgid "Word updated"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "Your latest dictations, most recent first."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "Clear all"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "No dictation yet. Press the shortcut and speak."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+#, rust-format
+msgid "→ {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "Copy"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "Copied"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "Clear the whole history?"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/history.rs
+msgid "All saved dictations will be deleted. This cannot be undone."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid ""
+"Speak, and LinuxFlow writes. Everything happens on your machine: nothing "
+"leaves your computer."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Words today"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Total words"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Average speed"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "words/min"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Dictations"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "How to use"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Put the cursor where you want to write (email, chat, editor…)."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Try it here"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid ""
+"Click the microphone, then speak. The text is inserted in the box below, "
+"without touching other windows."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Dictate in this box"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Dictated text will appear here…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+#, rust-format
+msgid ""
+"Press {}: the pill appears at the bottom of the screen and starts listening."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Press it again to stop: the text is transcribed, formatted and pasted."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+#, rust-format
+msgid ""
+"Press and hold {}: the pill appears at the bottom of the screen and starts "
+"listening."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Release the key to stop: the text is transcribed, formatted and pasted."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid "Automatic pasting is on. The clipboard is restored right after."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/home.rs
+msgid ""
+"Automatic pasting is off: the text is copied to the clipboard, paste it with "
+"Ctrl+V."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Automatic detection"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "English"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "French"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "German"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Spanish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Italian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Portuguese"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Dutch"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Polish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Russian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Ukrainian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Turkish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Arabic"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Hebrew"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Hindi"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Chinese"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Japanese"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Korean"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Vietnamese"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Thai"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Indonesian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Swedish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Danish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Norwegian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Finnish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Czech"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Greek"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Hungarian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Romanian"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Default microphone"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Shortcut, mode, language, pasting and microphone."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Shortcut"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Press to start / stop"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Hands-free: one press starts listening, another ends it."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Hold to talk"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid ""
+"Keep the key held while you speak; a short press switches to hands-free."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Transcription"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Language"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Microphone"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Paste the text automatically into the active application"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#, rust-format
+msgid "Launch {} when I log in"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Keep a history of my dictations"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Saved only on this computer. Turn off to stop saving new dictations."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Weak microphone"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid ""
+"Raises the volume of a voice that is too quiet before transcription. "
+"Automatic adapts the boost to each recording."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Automatic"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Off"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Low (+6 dB)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Medium (+12 dB)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "High (+20 dB)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Interface"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Interface language"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Local engine"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "State"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Hardware"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Model"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Precision"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Average latency"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Load time"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "Manage models"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid ""
+"Unavailable: key releases cannot be read on this system (see the "
+"Troubleshooting page)."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "default location"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#, rust-format
+msgid "Models folder: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#, rust-format
+msgid "{} version {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid "Say a trigger phrase, LinuxFlow writes the full text."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid "Trigger (e.g. “my signature”)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid "Text inserted instead (e.g. “Have a great day and talk soon!”)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid "Add snippet"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid ""
+"No snippets yet. Example: “my signature” → “Have a great day and talk soon!”."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/hub/pages/snippets.rs
+msgid "Snippet added"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Download"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Pause"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Resume"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Verify integrity"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Use this model"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Not installed"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Paused"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Installed"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Installed, not verified (checksum unknown)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "Error: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "{} min"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "{} h {} min"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "{} / {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "{}/s"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "{} · {} · {} left"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "{} · {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+#, rust-format
+msgid "Download {} · On disk {} · Memory ≈ {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Whisper small (multilingual)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Whisper large-v3 (quantized q5_0)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Whisper large-v3 (full precision f16)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/logic.rs
+msgid "Silero VAD v6.2.0 (voice activity detection)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid ""
+"Speech recognition models run on this computer. Nothing is sent anywhere "
+"except the download you ask for."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "Choose a local file…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "No model in the catalog."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+#, rust-format
+msgid "Disk space used by models: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "Recommended for this computer"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "In use"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+#, rust-format
+msgid "Delete “{}”?"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid ""
+"The downloaded file is removed from this computer. You can download it again "
+"later."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "Integrity check started"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+msgid "Model selected"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Choose a model file"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/models_page/mod.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Model file selected"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/overlay/pill.rs
+msgid "Listening"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/overlay/pill.rs
+msgid "Transcribing"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/overlay/pill.rs
+msgid "Formatting"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/overlay/pill.rs
+#, rust-format
+msgid "Done · {} s"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid ""
+"With modifier keys only, at least two are needed (for example Ctrl + Super)."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid "Add Ctrl, Alt, Shift or Super (or use a function key such as F9)."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+#, rust-format
+msgid "The key “{}” is not supported."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid ""
+"Press the combination you want (you can start over). Click Stop when it is "
+"right, then Confirm."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid "New shortcut ready: click Confirm to use it."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid "Shortcut active. Click Configure to choose another one."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+#, rust-format
+msgid ""
+"“{}” is already used by another application: your desktop assigned “{}” "
+"instead. Click Configure to choose another shortcut."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid ""
+"This shortcut does not work (already used by another application?). Choose "
+"another one."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/logic.rs
+msgid "Press your keys…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/widget.rs
+msgid "Configure"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/widget.rs
+msgid "Confirm"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/widget.rs
+#, rust-format
+msgid "“{}” is not available."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/widget.rs
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Shortcut: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/shortcut_recorder/widget.rs
+msgid "Stop"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+msgid "Recommended"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+msgid "Lighter"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+msgid "More accurate"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+#, rust-format
+msgid "Graphics card detected: {}. A more accurate model can run on it."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+msgid ""
+"No usable graphics card detected. A lighter model that runs on the processor "
+"is recommended."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+#, rust-format
+msgid "Space required: {} · available: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/logic.rs
+#, rust-format
+msgid "Space required: {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+#, rust-format
+msgid "Welcome to {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid ""
+"Voice dictation that runs entirely on this computer. Let's set it up in a "
+"minute."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Your computer"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Detecting your hardware…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Choose a speech model"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "The model is downloaded once and stays on your computer."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Use a file I already have…"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Skip for now (dictation stays unavailable until a model is installed)"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Choose your shortcut"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid ""
+"The key combination that starts and stops dictation, in any application."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "All set"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Here is what will happen when you finish."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Back"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Next"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Finish"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+#, rust-format
+msgid "Step {} of {}"
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "The model file you selected will be used."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+#, rust-format
+msgid "The model “{}” will be downloaded."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid ""
+"No model will be downloaded now. You can install one later from the Models "
+"page."
+msgstr ""
+
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+#, rust-format
+msgid "Your shortcut: {}"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{} B"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{} KB"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{} MB"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{} GB"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{} TB"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Jan"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Feb"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Mar"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Apr"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "May"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Jun"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Jul"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Aug"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Sep"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Oct"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Nov"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "Dec"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+msgid "just now"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{} min ago"
+msgstr ""
+
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "today at {}"
+msgstr ""
+
+#. TRANSLATORS: short date with year. {0} = abbreviated month, {1} = day, {2} = year.
+#. Reorder freely (e.g. fr: "{1} {0} {2}").
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{0} {1} {2}"
+msgstr ""
+
+#. TRANSLATORS: short date. {0} = abbreviated month, {1} = day of the month (e.g. "Oct 24").
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{0} {1}"
+msgstr ""
+
+#. TRANSLATORS: date puis heure. {0} = date courte, {1} = heure HH:MM.
+#: crates/linuxflow-i18n/src/lib.rs
+#, rust-format
+msgid "{0}, {1}"
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid ""
+"Offline mode is on: nothing can be downloaded. Choose a local model file or "
+"turn offline mode off."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid "This model is already being downloaded."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+#, rust-format
+msgid ""
+"Not enough disk space: {} needed, {} available. Free some space or pick a "
+"lighter model."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid "Download cancelled."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid ""
+"The downloaded file is corrupted (checksum mismatch). Try again or change "
+"the download source."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+#, rust-format
+msgid ""
+"The server refused or does not have this file (HTTP {}). Check the download "
+"source."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+#, rust-format
+msgid "The server answered with an error (HTTP {}). Try again later."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid ""
+"Network problem. Check your connection (and proxy settings) and try again."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid "Permission denied in the models folder. Choose another folder."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid "The disk is full. Free some space and try again."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid "A file error occurred in the models folder."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid ""
+"This file cannot be used as a model: it does not match the expected one."
+msgstr ""
+
+#: crates/linuxflow-models/src/error.rs
+msgid "This model is busy. Stop the download or switch model first."
+msgstr ""
+
+#: crates/linuxflow-models/src/manager.rs
+msgid "The file has an unexpected size. Verify it or delete it."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"No graphical session was detected. Control LinuxFlow from the command line "
+"instead."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"The session D-Bus is not reachable: portals and the tray icon are "
+"unavailable."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"The GlobalShortcuts portal is missing. Bind a compositor shortcut to the "
+"LinuxFlow command line, or enable the optional keyboard-device mode."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"The RemoteDesktop portal is missing: automatic pasting may be unavailable. "
+"The text stays on the clipboard."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"The Clipboard portal is missing: copying while another window has focus may "
+"fail."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"The Wayland compositor could not be queried; overlay and clipboard "
+"capabilities are unknown."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"This compositor does not offer layer-shell: the recording indicator uses a "
+"fallback window."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"This compositor does not offer data-control: clipboard access relies on the "
+"portal or on window focus."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid "Vulkan is installed but reports no GPU: transcription runs on the CPU."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"Vulkan is not available: transcription runs on the CPU. Install the Vulkan "
+"loader and your GPU driver to use the GPU."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid "PipeWire was not found: audio capture falls back to ALSA."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"No notification-area host was found: there will be no tray icon. Use the "
+"main window instead."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"/dev/uinput is not writable: the keystroke-injection fallback is disabled. A "
+"udev rule can grant access."
+msgstr ""
+
+#: crates/linuxflow-platform/src/capabilities/mod.rs
+msgid ""
+"You are not in the \"input\" group: reading keyboard devices directly is "
+"disabled."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+#, rust-format
+msgid ""
+"{} is already used by your Sway configuration (“{}”). Choose another "
+"shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+#, rust-format
+msgid ""
+"{} is already used by your Hyprland configuration (“{}”). Choose another "
+"shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid "Sway's command socket was not found."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid "This shortcut cannot be used with Sway's key bindings."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid "Sway's command socket is not reachable."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid ""
+"Sway starts \"linuxflow --toggle\" when you press the shortcut: press once "
+"to start, again to stop."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid "Hyprland's command socket was not found."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid "This shortcut cannot be used with Hyprland's key bindings."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid "Hyprland's command socket is not reachable."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/compositor.rs
+msgid ""
+"Hyprland starts \"linuxflow --toggle\" when you press the shortcut: press "
+"once to start, again to stop."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/evdev_backend.rs
+msgid ""
+"Keyboard devices are not readable. Add your user to the \"input\" group, "
+"then log in again."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/evdev_backend.rs
+msgid "Reading keyboard devices directly; keystrokes are never recorded."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/gnome.rs
+#, rust-format
+msgid "{} is already used by GNOME (“{}”). Choose another shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/gnome.rs
+msgid "GNOME's custom shortcut settings are not available."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/gnome.rs
+msgid "This shortcut cannot be used with GNOME's keyboard settings."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/gnome.rs
+msgid ""
+"GNOME starts \"linuxflow --toggle\" when you press the shortcut: press once "
+"to start, again to stop."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "Start or stop dictation"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+msgid "The KDE global shortcut service is not available."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+#, rust-format
+msgid "{} is already used by {} ({}). Choose another shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+msgid "This shortcut cannot be used with KDE's shortcut service."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+msgid "KDE's shortcut service refused the request."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+#, rust-format
+msgid "KDE did not accept {}. Choose another shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/kglobalaccel.rs
+msgid "The KDE shortcut service did not answer in time."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "The global shortcut is not started."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "KDE's shortcut service"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "GNOME's keyboard shortcuts"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "Sway's key bindings"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "Hyprland's key bindings"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "the desktop shortcut portal"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "X11 key grabs"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "keyboard devices"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid "no backend"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+#, rust-format
+msgid "Invalid shortcut: {}"
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+#, rust-format
+msgid "Shortcut active through {}."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid ""
+"Shortcuts made only of modifier keys need keyboard-device access, which is "
+"disabled. Choose a shortcut with a regular key, or enable it in the settings."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/manager.rs
+msgid ""
+"The shortcut stopped working (the desktop's shortcut service restarted). "
+"Choose the shortcut again to re-enable it."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "The session D-Bus is not reachable."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "The shortcut portal is not available."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "The shortcut portal refused the session."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "The shortcut portal refused the binding."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "The shortcut portal did not bind the shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid ""
+"The desktop did not assign the key you chose (it is probably already used by "
+"another application). Choose another shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid ""
+"If the key you chose is taken, the desktop assigns another one: record a "
+"different shortcut."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/portal.rs
+msgid "The shortcut portal did not answer in time."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/x11.rs
+msgid "This key combination is already used by another application."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/x11.rs
+msgid "Cannot connect to the X server."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/x11.rs
+msgid "No X11 screen."
+msgstr ""
+
+#: crates/linuxflow-platform/src/hotkeys/x11.rs
+msgid "XInput2 is not available: modifier-only shortcuts cannot work."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid "No notification-area icon"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"LinuxFlow keeps working without the icon: launching it again opens the main "
+"window, and the launcher actions (--toggle, --cancel, --page, --quit) "
+"control dictation."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"Your desktop does not show notification-area icons. Enable the system tray "
+"(StatusNotifier) of your panel or bar, then restart LinuxFlow."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"The AppIndicator extension is installed with Ubuntu: open the Extensions "
+"application and turn on \"Ubuntu AppIndicators\", then log out and back in "
+"if the icon does not appear."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"Install the package gnome-shell-extension-appindicator (sudo dnf install "
+"gnome-shell-extension-appindicator), turn it on in the Extensions "
+"application, then log out and back in."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"Install the package gnome-shell-extension-appindicator (sudo pacman -S gnome-"
+"shell-extension-appindicator), turn it on in the Extensions application, "
+"then log out and back in."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"Install the package gnome-shell-extension-appindicator (sudo zypper install "
+"gnome-shell-extension-appindicator), turn it on in the Extensions "
+"application, then log out and back in."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/advice.rs
+msgid ""
+"Install the \"AppIndicator and KStatusNotifierItem Support\" GNOME extension "
+"(package gnome-shell-extension-appindicator on most distributions), turn it "
+"on in the Extensions application, then log out and back in."
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Loading the model…"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Downloading the model · {} GB"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Downloading the model · {} ({} / {} GB)"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "System default"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "{} (not connected)"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "No microphone detected"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Shortcut: {} (unavailable)"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Downloading model… {}"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "{} — {}"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Downloading model…"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Open models page"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Stop dictation"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Start dictation (hands-free)"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Cancel dictation"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "Open {}"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Paste automatically"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Launch at login"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+#, rust-format
+msgid "About {}"
+msgstr ""
+
+#: crates/linuxflow-platform/src/tray/model.rs
+msgid "Quit"
+msgstr ""
+
+#: crates/linuxflow-stt/src/engine.rs
+msgid "The speech engine could not start."
+msgstr ""
+
+#: crates/linuxflow-stt/src/engine.rs
+#, rust-format
+msgid "This processor lacks instructions required by the speech engine: {}"
+msgstr ""
+
+#: crates/linuxflow-stt/src/engine.rs
+msgid "No speech model is installed."
+msgstr ""
+
+#: crates/linuxflow-stt/src/engine.rs
+#, rust-format
+msgid "The speech model could not be loaded: {}"
+msgstr ""
+
+#: crates/linuxflow-stt/src/worker.rs
+#, rust-format
+msgid "The speech engine could not be started: {}"
+msgstr ""
+
+#: crates/linuxflow-stt/src/worker.rs
+#, rust-format
+msgid "Engine stopped (code {})"
+msgstr ""

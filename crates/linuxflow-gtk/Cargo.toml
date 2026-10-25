@@ -1,0 +1,47 @@
+[package]
+name = "linuxflow-gtk"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "GTK 4 / libadwaita interface of LinuxFlow: hub, recording pill, wizard"
+
+[lints]
+workspace = true
+
+[features]
+# "Layer-shell" pill inside the process. Disabled by default: the libgtk4-layer-shell
+# library is then absent from the load dependencies of the application, which starts
+# even where it is not installed (Ubuntu 24.04, RHEL 10…). Only the small program
+# `linuxflow-overlay` enables it; the application then hands the pill over to it.
+layer-shell = ["dep:gtk4-layer-shell"]
+
+[dependencies]
+linuxflow-core = { workspace = true }
+# --- gtk-hub ---
+linuxflow-i18n = { workspace = true }
+gtk4 = { workspace = true, features = ["v4_12"] }
+libadwaita = { workspace = true, features = ["v1_4"] }
+async-channel = { workspace = true }
+serde_json = { workspace = true }
+# --- end gtk-hub ---
+# --- gtk-overlay ---
+gdk4 = { workspace = true, features = ["v4_12"] }
+gdk4-x11 = { version = "=0.11.5", default-features = false, features = ["v4_4"] }
+gtk4-layer-shell = { workspace = true, optional = true }
+serde = { workspace = true }
+tracing = { workspace = true }
+x11rb = { workspace = true, features = ["shape"] }
+# --- end gtk-overlay ---
+
+[dev-dependencies]
+tempfile = { workspace = true }
+
+# --- gtk-hub ---
+# Widget tests run on the main thread (GTK requires it): custom harness.
+[[test]]
+name = "hub_widgets"
+harness = false
+# --- end gtk-hub ---

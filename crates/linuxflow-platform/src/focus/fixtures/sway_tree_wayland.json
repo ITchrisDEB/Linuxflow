@@ -1,0 +1,33 @@
+{
+  "id": 1, "type": "root", "name": "root", "focused": false, "pid": null,
+  "nodes": [
+    {
+      "id": 2, "type": "output", "name": "__i3", "focused": false,
+      "nodes": [
+        {"id": 3, "type": "con", "name": "__i3_scratch", "focused": false, "nodes": [], "floating_nodes": []}
+      ],
+      "floating_nodes": []
+    },
+    {
+      "id": 4, "type": "output", "name": "DP-1", "focused": false,
+      "nodes": [
+        {
+          "id": 5, "type": "workspace", "name": "1", "focused": false,
+          "nodes": [
+            {
+              "id": 6, "type": "con", "name": "firefox", "app_id": "firefox", "pid": 2210,
+              "focused": false, "window_properties": null, "nodes": [], "floating_nodes": []
+            },
+            {
+              "id": 7, "type": "con", "name": "wezterm — ~/code", "app_id": "org.wezfurlong.wezterm",
+              "pid": 3107, "focused": true, "window_properties": null, "nodes": [], "floating_nodes": []
+            }
+          ],
+          "floating_nodes": []
+        }
+      ],
+      "floating_nodes": []
+    }
+  ],
+  "floating_nodes": []
+}

@@ -1,0 +1,36 @@
+[Desktop Entry]
+Type=Application
+Name=LinuxFlow
+GenericName=Voice dictation
+GenericName[fr]=Dictée vocale
+Comment=Local voice dictation: speak, and the text is typed for you
+Comment[fr]=Dictée vocale locale : vous parlez, le texte s'écrit pour vous
+Exec=@BINDIR@/linuxflow
+Icon=@APP_ID@
+Terminal=false
+Categories=AudioVideo;Audio;
+Keywords=dictation;speech;voice;transcription;whisper;
+Keywords[fr]=dictée;parole;voix;transcription;whisper;
+StartupWMClass=@APP_ID@
+StartupNotify=false
+Actions=Toggle;Cancel;Settings;Quit;
+
+[Desktop Action Toggle]
+Name=Start or stop dictation
+Name[fr]=Démarrer ou arrêter la dictée
+Exec=@BINDIR@/linuxflow --toggle
+
+[Desktop Action Cancel]
+Name=Cancel dictation
+Name[fr]=Annuler la dictée
+Exec=@BINDIR@/linuxflow --cancel
+
+[Desktop Action Settings]
+Name=Settings
+Name[fr]=Paramètres
+Exec=@BINDIR@/linuxflow --page settings
+
+[Desktop Action Quit]
+Name=Quit
+Name[fr]=Quitter
+Exec=@BINDIR@/linuxflow --quit

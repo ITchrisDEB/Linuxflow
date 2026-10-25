@@ -1,0 +1,56 @@
+# Embedded table: paste mode and delay per foreground application.
+# Key = app_id (Wayland) or class (X11), in lower case.
+# mode: "ctrl_v" | "ctrl_shift_v" | "shift_insert"; delay_ms: delay before typing (optional).
+# A user file of the same format overrides field by field.
+
+# --- Terminals: Ctrl+Shift+V ---
+[apps.kitty]
+mode = "ctrl_shift_v"
+[apps.alacritty]
+mode = "ctrl_shift_v"
+[apps.foot]
+mode = "ctrl_shift_v"
+[apps."org.wezfurlong.wezterm"]
+mode = "ctrl_shift_v"
+[apps.wezterm-gui]
+mode = "ctrl_shift_v"
+[apps."org.gnome.terminal"]
+mode = "ctrl_shift_v"
+[apps.gnome-terminal-server]
+mode = "ctrl_shift_v"
+[apps."org.gnome.console"]
+mode = "ctrl_shift_v"
+[apps."org.gnome.ptyxis"]
+mode = "ctrl_shift_v"
+[apps.konsole]
+mode = "ctrl_shift_v"
+[apps."org.kde.konsole"]
+mode = "ctrl_shift_v"
+[apps.xterm]
+mode = "ctrl_shift_v"
+[apps.urxvt]
+mode = "ctrl_shift_v"
+[apps.tilix]
+mode = "ctrl_shift_v"
+[apps.terminator]
+mode = "ctrl_shift_v"
+[apps."com.mitchellh.ghostty"]
+mode = "ctrl_shift_v"
+[apps.xfce4-terminal]
+mode = "ctrl_shift_v"
+[apps.st]
+mode = "ctrl_shift_v"
+
+# --- Chat applications: longer delay ---
+[apps.slack]
+delay_ms = 120
+[apps.teams-for-linux]
+delay_ms = 120
+[apps."org.telegram.desktop"]
+delay_ms = 100
+[apps.telegramdesktop]
+delay_ms = 100
+[apps.discord]
+delay_ms = 100
+[apps.signal-desktop]
+delay_ms = 100

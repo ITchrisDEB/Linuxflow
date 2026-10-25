@@ -1,0 +1,13 @@
+{
+  "id": 1, "type": "root", "name": "root", "focused": false,
+  "nodes": [
+    {
+      "id": 4, "type": "output", "name": "DP-1", "focused": false,
+      "nodes": [
+        {"id": 5, "type": "workspace", "name": "3", "focused": true, "pid": null, "nodes": [], "floating_nodes": []}
+      ],
+      "floating_nodes": []
+    }
+  ],
+  "floating_nodes": []
+}

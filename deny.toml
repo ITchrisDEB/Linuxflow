@@ -1,0 +1,53 @@
+# cargo-deny configuration (https://embarkstudios.github.io/cargo-deny/).
+# Run: cargo deny check   (run with cargo-deny 0.20: licences, bans, sources and
+# security advisories pass).
+# Licence rule: allow-list; anything not on it is refused,
+# so GPL, AGPL and LGPL are refused for the Rust crates. GTK4 and libadwaita (LGPL-2.1+)
+# are SYSTEM libraries linked dynamically, outside the Cargo graph: they are
+# documented in THIRD_PARTY_NOTICES.md, not allowed here.
+
+[graph]
+targets = ["x86_64-unknown-linux-gnu", "aarch64-unknown-linux-gnu"]
+
+[licenses]
+version = 2
+confidence-threshold = 0.9
+allow = [
+    "MIT",
+    "MIT-0",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+    "Zlib",
+    "MPL-2.0",   # fichier par fichier ; aucune modification de ces fichiers par LinuxFlow
+    "Unlicense",
+    "0BSD",
+    "CC0-1.0",
+]
+
+[advisories]
+version = 2
+yanked = "deny"
+# "Unmaintained" advisories (no vulnerability): zvariant, zvariant_derive and zbus_names are merged into
+# zbus 6. Our dependencies ashpd 0.13 (portals) and ksni 0.3 (notification area), at their latest
+# published version, still use zbus 5: no update is possible for now. To re-examine
+# at every update of ashpd or ksni.
+ignore = [
+    { id = "RUSTSEC-2026-0370", reason = "zvariant: merged into zbus 6; ashpd and ksni use zbus 5" },
+    { id = "RUSTSEC-2026-0371", reason = "zbus_names: merged into zbus 6; ashpd and ksni use zbus 5" },
+    { id = "RUSTSEC-2026-0372", reason = "zvariant_derive: merged into zbus 6; ashpd and ksni use zbus 5" },
+]
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+# Internal crates (publish = false) reference each other by path, without a version number.
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

@@ -1,0 +1,21 @@
+[package]
+name = "linuxflow-audio"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Microphone capture, mono conversion, 16 kHz resampling and sound level for LinuxFlow"
+
+[lints]
+workspace = true
+
+[dependencies]
+linuxflow-core = { workspace = true }
+linuxflow-i18n = { workspace = true }
+audioadapter-buffers = { workspace = true }
+cpal = { workspace = true }
+rtrb = { workspace = true }
+rubato = { workspace = true }
+tracing = { workspace = true }

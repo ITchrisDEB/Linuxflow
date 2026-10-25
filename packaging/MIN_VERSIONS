@@ -1,0 +1,10 @@
+# Base minimale vérifiée par install.sh (format CLE=valeur, une par ligne).
+# Valeurs modifiables sans toucher au script. Voir plan/10 (compatibilité).
+#
+# Bibliothèques d'interface : features Cargo v4_12 / v1_4, jamais au-dessus.
+GTK_MIN=4.12
+ADW_MIN=1.4
+# glibc : plus récente glibc requise par le binaire distribué. VALEUR PROVISOIRE
+# (proposition du plan : 2.39 = Ubuntu 24.04), à figer (Q14) après vérification
+# avec `objdump -T bin/linuxflow` sur le binaire réellement construit.
+GLIBC_MIN=2.39

@@ -1,0 +1,21 @@
+{
+    "address": "0x5581d0c7a2f0",
+    "mapped": true,
+    "hidden": false,
+    "at": [12, 38],
+    "size": [1896, 1030],
+    "workspace": {"id": 2, "name": "2"},
+    "floating": false,
+    "monitor": 0,
+    "class": "kitty",
+    "title": "~/projets — zsh",
+    "initialClass": "kitty",
+    "initialTitle": "kitty",
+    "pid": 48213,
+    "xwayland": false,
+    "pinned": false,
+    "fullscreen": 0,
+    "grouped": [],
+    "tags": [],
+    "focusHistoryID": 0
+}

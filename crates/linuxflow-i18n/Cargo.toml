@@ -1,0 +1,18 @@
+[package]
+name = "linuxflow-i18n"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Translation (pure-Rust gettext .mo reader) and localised formats for LinuxFlow"
+
+[lints]
+workspace = true
+
+[dependencies]
+time = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

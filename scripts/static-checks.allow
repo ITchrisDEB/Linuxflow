@@ -1,0 +1,20 @@
+# Documented exceptions of `cargo xtask static-checks`: CHECK|path glob|line regex|reason
+T-ID|crates/linuxflow-core/src/constants.rs|.*|single source of APP_ID
+T-ID|crates/linuxflow-core/tests/golden/*|.*|test fixtures
+T-ID|crates/*/tests/fixtures/*|.*|test fixtures
+T-HARD|crates/linuxflow-core/tests/golden/*|.*|test fixtures
+T-HARD|crates/*/tests/fixtures/*|.*|test fixtures
+T-HARD|crates/linuxflow-core/src/settings.rs|48123|migration test of an old settings.json (inline #[cfg(test)] fixture)
+T-HARD|crates/linuxflow-core/src/settings.rs|AppData|migration test: old Windows path in an inline fixture
+T-HARD|crates/linuxflow-models/tests/*|127\.0\.0\.1:|test HTTP server on the loopback interface (tests only)
+T-HARD|crates/linuxflow-platform/src/autostart/mod.rs|/home/x y/|fake path with a space in a unit test
+T-HARD|apps/linuxflow/src/models.rs|127\.0\.0\.1:|test catalogue on the loopback interface (code under #[cfg(test)])
+T-HARD|apps/linuxflow/src/engine_ctl.rs|127\.0\.0\.1:|test catalogue on the loopback interface (code under #[cfg(test)])
+T-HARD|apps/linuxflow/src/testkit.rs|127\.0\.0\.1:|testkit only exists in tests (main.rs: #[cfg(test)] mod testkit)
+T-HARD|apps/linuxflow/src/logging.rs|/home/alice|test of the home-folder masking with a fake path (#[cfg(test)])
+T-HARD|crates/linuxflow-models/src/catalog.rs|127\.0\.0\.1:|unit test of the catalogue validation (http on the loopback interface allowed without a checksum; code under #[cfg(test)])
+T-NET|crates/linuxflow-core/*|http://x\.[a-z]+|fake URL used as formatting test data (never opened)
+T-NET|crates/linuxflow-models/*|https?://[a-z]+\.test|fake hosts of the download unit tests (.test is reserved by RFC 2606)
+T-NET|crates/linuxflow-models/*|https://h/|fake host "h" of the download manager unit tests
+T-NET|crates/linuxflow-models/*|http://h/|fake host "h" of the download manager unit tests
+T-NET|packaging/share/fonts/*|http://scripts\.sil\.org|official text of the OFL 1.1 licence of the Figtree font (never opened by the application)

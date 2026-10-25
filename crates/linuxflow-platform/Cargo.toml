@@ -1,0 +1,48 @@
+[package]
+name = "linuxflow-platform"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Desktop integration of LinuxFlow: shortcuts, paste, clipboard, tray, autostart"
+
+[lints]
+workspace = true
+
+[dependencies]
+linuxflow-core = { workspace = true }
+
+# --- desktop (focus, autostart, tray, open) ---
+linuxflow-i18n = { workspace = true }
+async-channel = { workspace = true }
+directories = { workspace = true }
+ksni = { workspace = true }
+x11rb = { workspace = true, features = ["xkb", "xinput", "xtest"] }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+ashpd = { workspace = true, features = ["tokio", "open_uri", "global_shortcuts", "remote_desktop", "clipboard", "screencast"] }
+
+# --- output (clipboard, inject, per_app) ---
+# (the xtest / remote_desktop / clipboard features are merged into the x11rb / ashpd lines of the desktop block)
+wl-clipboard-rs = { workspace = true }
+arboard = { workspace = true }
+evdev = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+futures-util = { workspace = true }
+tempfile = { workspace = true }
+toml = { version = "1.1.8", default-features = false, features = ["parse", "serde", "std"] }
+wayland-client = "0.31.15"
+wayland-protocols-misc = { version = "0.3.12", features = ["client"] }
+
+# --- GNOME: custom shortcut set by the application (GSettings/dconf) ---
+gio = { version = "0.22.10", default-features = false }
+
+# --- input (hotkeys, capabilities) ---
+libc = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

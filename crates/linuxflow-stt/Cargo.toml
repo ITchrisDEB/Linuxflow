@@ -1,0 +1,39 @@
+[package]
+name = "linuxflow-stt"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+publish.workspace = true
+description = "Speech recognition engine of LinuxFlow (whisper.cpp), hardware detection and worker process"
+build = "build.rs"
+
+[lints]
+workspace = true
+
+[features]
+default = []
+# Vulkan GPU (needs the Vulkan headers at build time). Without this feature: CPU only.
+vulkan = ["whisper-rs/vulkan"]
+
+[dependencies]
+linuxflow-core = { workspace = true }
+linuxflow-i18n = { workspace = true }
+whisper-rs = { workspace = true, features = ["tracing_backend"] }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+libc = { workspace = true }
+# Dynamic loading of libvulkan.so.1 (no hard link). MIT/Apache-2.0 licence.
+ash = { version = "0.38.0", default-features = false, features = ["loaded", "std"] }
+
+[dev-dependencies]
+hound = { workspace = true }
+tempfile = { workspace = true }
+
+[[test]]
+name = "worker_process"
+path = "tests/worker_process.rs"
+harness = false

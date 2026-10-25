@@ -1,0 +1,6278 @@
+{
+ "dictionaries": {
+  "none": [],
+  "tech": [
+   {
+    "word": "n8n",
+    "sounds": [
+     "n huit n",
+     "aine huit aine",
+     "en huit en",
+     "n eight n",
+     "n 8 n",
+     "n y n"
+    ]
+   },
+   {
+    "word": "Quarkfield",
+    "sounds": [
+     "x field",
+     "xfield",
+     "ix field",
+     "quark field",
+     "qix field"
+    ]
+   },
+   {
+    "word": "Claude Code",
+    "sounds": [
+     "clode code",
+     "clod code",
+     "cloud code",
+     "clôde code"
+    ]
+   },
+   {
+    "word": "Claude",
+    "sounds": [
+     "clode",
+     "clôde"
+    ]
+   },
+   {
+    "word": "GitHub",
+    "sounds": [
+     "git hub",
+     "guit hub",
+     "gîte hub",
+     "guithub"
+    ]
+   },
+   {
+    "word": "ChatGPT",
+    "sounds": [
+     "chat gpt",
+     "chat g p t",
+     "tchat gpt"
+    ]
+   },
+   {
+    "word": "GPT",
+    "sounds": [
+     "g p t",
+     "gé pé té"
+    ]
+   },
+   {
+    "word": "MCP",
+    "sounds": [
+     "m c p",
+     "aime c p"
+    ]
+   },
+   {
+    "word": "API",
+    "sounds": [
+     "a p i",
+     "a pé i"
+    ]
+   },
+   {
+    "word": "LinuxFlow",
+    "sounds": [
+     "linux flow",
+     "fri flow"
+    ]
+   },
+   {
+    "word": "YouTube",
+    "sounds": [
+     "you tube"
+    ]
+   },
+   {
+    "word": "TikTok",
+    "sounds": [
+     "tic toc",
+     "tik tok"
+    ]
+   },
+   {
+    "word": "Opus",
+    "sounds": []
+   }
+  ],
+  "accents": [
+   {
+    "word": "Éléonore",
+    "sounds": [
+     "eleonor",
+     "éléonor"
+    ]
+   },
+   {
+    "word": "Çava",
+    "sounds": [
+     "sava"
+    ]
+   },
+   {
+    "word": "Zoë",
+    "sounds": [
+     "zoe"
+    ]
+   },
+   {
+    "word": "e-mail",
+    "sounds": [
+     "i mail",
+     "email"
+    ]
+   },
+   {
+    "word": "Paris",
+    "sounds": []
+   }
+  ],
+  "legacy": [
+   {
+    "word": "Kubernetes",
+    "sounds": []
+   },
+   {
+    "word": "PostgreSQL",
+    "sounds": []
+   },
+   {
+    "word": "docker",
+    "sounds": []
+   }
+  ]
+ },
+ "apply": [
+  {
+   "input": "",
+   "dict": "tech",
+   "expected": ""
+  },
+  {
+   "input": "",
+   "dict": "accents",
+   "expected": ""
+  },
+  {
+   "input": "",
+   "dict": "legacy",
+   "expected": ""
+  },
+  {
+   "input": " ",
+   "dict": "tech",
+   "expected": " "
+  },
+  {
+   "input": " ",
+   "dict": "accents",
+   "expected": " "
+  },
+  {
+   "input": " ",
+   "dict": "legacy",
+   "expected": " "
+  },
+  {
+   "input": "   ",
+   "dict": "tech",
+   "expected": "   "
+  },
+  {
+   "input": "   ",
+   "dict": "accents",
+   "expected": "   "
+  },
+  {
+   "input": "   ",
+   "dict": "legacy",
+   "expected": "   "
+  },
+  {
+   "input": "\n",
+   "dict": "tech",
+   "expected": "\n"
+  },
+  {
+   "input": "\n",
+   "dict": "accents",
+   "expected": "\n"
+  },
+  {
+   "input": "\n",
+   "dict": "legacy",
+   "expected": "\n"
+  },
+  {
+   "input": "\t",
+   "dict": "tech",
+   "expected": "\t"
+  },
+  {
+   "input": "\t",
+   "dict": "accents",
+   "expected": "\t"
+  },
+  {
+   "input": "\t",
+   "dict": "legacy",
+   "expected": "\t"
+  },
+  {
+   "input": ",",
+   "dict": "tech",
+   "expected": ","
+  },
+  {
+   "input": ",",
+   "dict": "accents",
+   "expected": ","
+  },
+  {
+   "input": ",",
+   "dict": "legacy",
+   "expected": ","
+  },
+  {
+   "input": ".",
+   "dict": "tech",
+   "expected": "."
+  },
+  {
+   "input": ".",
+   "dict": "accents",
+   "expected": "."
+  },
+  {
+   "input": ".",
+   "dict": "legacy",
+   "expected": "."
+  },
+  {
+   "input": "...",
+   "dict": "tech",
+   "expected": "..."
+  },
+  {
+   "input": "...",
+   "dict": "accents",
+   "expected": "..."
+  },
+  {
+   "input": "...",
+   "dict": "legacy",
+   "expected": "..."
+  },
+  {
+   "input": "?",
+   "dict": "tech",
+   "expected": "?"
+  },
+  {
+   "input": "?",
+   "dict": "accents",
+   "expected": "?"
+  },
+  {
+   "input": "?",
+   "dict": "legacy",
+   "expected": "?"
+  },
+  {
+   "input": "? début",
+   "dict": "tech",
+   "expected": "? début"
+  },
+  {
+   "input": "? début",
+   "dict": "accents",
+   "expected": "? début"
+  },
+  {
+   "input": "? début",
+   "dict": "legacy",
+   "expected": "? début"
+  },
+  {
+   "input": "! début",
+   "dict": "tech",
+   "expected": "! début"
+  },
+  {
+   "input": "! début",
+   "dict": "accents",
+   "expected": "! début"
+  },
+  {
+   "input": "! début",
+   "dict": "legacy",
+   "expected": "! début"
+  },
+  {
+   "input": ", début",
+   "dict": "tech",
+   "expected": ", début"
+  },
+  {
+   "input": ", début",
+   "dict": "accents",
+   "expected": ", début"
+  },
+  {
+   "input": ", début",
+   "dict": "legacy",
+   "expected": ", début"
+  },
+  {
+   "input": "; début",
+   "dict": "tech",
+   "expected": "; début"
+  },
+  {
+   "input": "; début",
+   "dict": "accents",
+   "expected": "; début"
+  },
+  {
+   "input": "; début",
+   "dict": "legacy",
+   "expected": "; début"
+  },
+  {
+   "input": ": début",
+   "dict": "tech",
+   "expected": ": début"
+  },
+  {
+   "input": ": début",
+   "dict": "accents",
+   "expected": ": début"
+  },
+  {
+   "input": ": début",
+   "dict": "legacy",
+   "expected": ": début"
+  },
+  {
+   "input": " , . ; début",
+   "dict": "tech",
+   "expected": " , . ; début"
+  },
+  {
+   "input": " , . ; début",
+   "dict": "accents",
+   "expected": " , . ; début"
+  },
+  {
+   "input": " , . ; début",
+   "dict": "legacy",
+   "expected": " , . ; début"
+  },
+  {
+   "input": "bonjour",
+   "dict": "tech",
+   "expected": "bonjour"
+  },
+  {
+   "input": "bonjour",
+   "dict": "accents",
+   "expected": "bonjour"
+  },
+  {
+   "input": "bonjour",
+   "dict": "legacy",
+   "expected": "bonjour"
+  },
+  {
+   "input": "Bonjour",
+   "dict": "tech",
+   "expected": "Bonjour"
+  },
+  {
+   "input": "Bonjour",
+   "dict": "accents",
+   "expected": "Bonjour"
+  },
+  {
+   "input": "Bonjour",
+   "dict": "legacy",
+   "expected": "Bonjour"
+  },
+  {
+   "input": "BONJOUR",
+   "dict": "tech",
+   "expected": "BONJOUR"
+  },
+  {
+   "input": "BONJOUR",
+   "dict": "accents",
+   "expected": "BONJOUR"
+  },
+  {
+   "input": "BONJOUR",
+   "dict": "legacy",
+   "expected": "BONJOUR"
+  },
+  {
+   "input": "bonjour tout le monde",
+   "dict": "tech",
+   "expected": "bonjour tout le monde"
+  },
+  {
+   "input": "bonjour tout le monde",
+   "dict": "accents",
+   "expected": "bonjour tout le monde"
+  },
+  {
+   "input": "bonjour tout le monde",
+   "dict": "legacy",
+   "expected": "bonjour tout le monde"
+  },
+  {
+   "input": "  bonjour   tout\tle \n monde  ",
+   "dict": "tech",
+   "expected": "  bonjour   tout\tle \n monde  "
+  },
+  {
+   "input": "  bonjour   tout\tle \n monde  ",
+   "dict": "accents",
+   "expected": "  bonjour   tout\tle \n monde  "
+  },
+  {
+   "input": "  bonjour   tout\tle \n monde  ",
+   "dict": "legacy",
+   "expected": "  bonjour   tout\tle \n monde  "
+  },
+  {
+   "input": "bonjour tout le monde",
+   "dict": "tech",
+   "expected": "bonjour tout le monde"
+  },
+  {
+   "input": "bonjour tout le monde",
+   "dict": "accents",
+   "expected": "bonjour tout le monde"
+  },
+  {
+   "input": "bonjour tout le monde",
+   "dict": "legacy",
+   "expected": "bonjour tout le monde"
+  },
+  {
+   "input": "﻿bonjour",
+   "dict": "tech",
+   "expected": "﻿bonjour"
+  },
+  {
+   "input": "﻿bonjour",
+   "dict": "accents",
+   "expected": "﻿bonjour"
+  },
+  {
+   "input": "﻿bonjour",
+   "dict": "legacy",
+   "expected": "﻿bonjour"
+  },
+  {
+   "input": "bonjour monde",
+   "dict": "tech",
+   "expected": "bonjour monde"
+  },
+  {
+   "input": "bonjour monde",
+   "dict": "accents",
+   "expected": "bonjour monde"
+  },
+  {
+   "input": "bonjour monde",
+   "dict": "legacy",
+   "expected": "bonjour monde"
+  },
+  {
+   "input": "ab",
+   "dict": "tech",
+   "expected": "ab"
+  },
+  {
+   "input": "ab",
+   "dict": "accents",
+   "expected": "ab"
+  },
+  {
+   "input": "ab",
+   "dict": "legacy",
+   "expected": "ab"
+  },
+  {
+   "input": "Bonjour ! Comment vas-tu ?",
+   "dict": "tech",
+   "expected": "Bonjour ! Comment vas-tu ?"
+  },
+  {
+   "input": "Bonjour ! Comment vas-tu ?",
+   "dict": "accents",
+   "expected": "Bonjour ! Comment vas-tu ?"
+  },
+  {
+   "input": "Bonjour ! Comment vas-tu ?",
+   "dict": "legacy",
+   "expected": "Bonjour ! Comment vas-tu ?"
+  },
+  {
+   "input": "Bonjour! Comment vas-tu?",
+   "dict": "tech",
+   "expected": "Bonjour! Comment vas-tu?"
+  },
+  {
+   "input": "Bonjour! Comment vas-tu?",
+   "dict": "accents",
+   "expected": "Bonjour! Comment vas-tu?"
+  },
+  {
+   "input": "Bonjour! Comment vas-tu?",
+   "dict": "legacy",
+   "expected": "Bonjour! Comment vas-tu?"
+  },
+  {
+   "input": "bonjour   !",
+   "dict": "tech",
+   "expected": "bonjour   !"
+  },
+  {
+   "input": "bonjour   !",
+   "dict": "accents",
+   "expected": "bonjour   !"
+  },
+  {
+   "input": "bonjour   !",
+   "dict": "legacy",
+   "expected": "bonjour   !"
+  },
+  {
+   "input": "bonjour!!",
+   "dict": "tech",
+   "expected": "bonjour!!"
+  },
+  {
+   "input": "bonjour!!",
+   "dict": "accents",
+   "expected": "bonjour!!"
+  },
+  {
+   "input": "bonjour!!",
+   "dict": "legacy",
+   "expected": "bonjour!!"
+  },
+  {
+   "input": "quoi ?!",
+   "dict": "tech",
+   "expected": "quoi ?!"
+  },
+  {
+   "input": "quoi ?!",
+   "dict": "accents",
+   "expected": "quoi ?!"
+  },
+  {
+   "input": "quoi ?!",
+   "dict": "legacy",
+   "expected": "quoi ?!"
+  },
+  {
+   "input": "quoi?!",
+   "dict": "tech",
+   "expected": "quoi?!"
+  },
+  {
+   "input": "quoi?!",
+   "dict": "accents",
+   "expected": "quoi?!"
+  },
+  {
+   "input": "quoi?!",
+   "dict": "legacy",
+   "expected": "quoi?!"
+  },
+  {
+   "input": "oui ; non : peut-être",
+   "dict": "tech",
+   "expected": "oui ; non : peut-être"
+  },
+  {
+   "input": "oui ; non : peut-être",
+   "dict": "accents",
+   "expected": "oui ; non : peut-être"
+  },
+  {
+   "input": "oui ; non : peut-être",
+   "dict": "legacy",
+   "expected": "oui ; non : peut-être"
+  },
+  {
+   "input": "oui;non:peut-être",
+   "dict": "tech",
+   "expected": "oui;non:peut-être"
+  },
+  {
+   "input": "oui;non:peut-être",
+   "dict": "accents",
+   "expected": "oui;non:peut-être"
+  },
+  {
+   "input": "oui;non:peut-être",
+   "dict": "legacy",
+   "expected": "oui;non:peut-être"
+  },
+  {
+   "input": "liste : un, deux, trois",
+   "dict": "tech",
+   "expected": "liste : un, deux, trois"
+  },
+  {
+   "input": "liste : un, deux, trois",
+   "dict": "accents",
+   "expected": "liste : un, deux, trois"
+  },
+  {
+   "input": "liste : un, deux, trois",
+   "dict": "legacy",
+   "expected": "liste : un, deux, trois"
+  },
+  {
+   "input": "liste: un,deux,trois",
+   "dict": "tech",
+   "expected": "liste: un,deux,trois"
+  },
+  {
+   "input": "liste: un,deux,trois",
+   "dict": "accents",
+   "expected": "liste: un,deux,trois"
+  },
+  {
+   "input": "liste: un,deux,trois",
+   "dict": "legacy",
+   "expected": "liste: un,deux,trois"
+  },
+  {
+   "input": "il est 10:30",
+   "dict": "tech",
+   "expected": "il est 10:30"
+  },
+  {
+   "input": "il est 10:30",
+   "dict": "accents",
+   "expected": "il est 10:30"
+  },
+  {
+   "input": "il est 10:30",
+   "dict": "legacy",
+   "expected": "il est 10:30"
+  },
+  {
+   "input": "il est 10 : 30",
+   "dict": "tech",
+   "expected": "il est 10 : 30"
+  },
+  {
+   "input": "il est 10 : 30",
+   "dict": "accents",
+   "expected": "il est 10 : 30"
+  },
+  {
+   "input": "il est 10 : 30",
+   "dict": "legacy",
+   "expected": "il est 10 : 30"
+  },
+  {
+   "input": "rendez-vous à 10:30 ou 11:45",
+   "dict": "tech",
+   "expected": "rendez-vous à 10:30 ou 11:45"
+  },
+  {
+   "input": "rendez-vous à 10:30 ou 11:45",
+   "dict": "accents",
+   "expected": "rendez-vous à 10:30 ou 11:45"
+  },
+  {
+   "input": "rendez-vous à 10:30 ou 11:45",
+   "dict": "legacy",
+   "expected": "rendez-vous à 10:30 ou 11:45"
+  },
+  {
+   "input": "http://x.fr",
+   "dict": "tech",
+   "expected": "http://x.fr"
+  },
+  {
+   "input": "http://x.fr",
+   "dict": "accents",
+   "expected": "http://x.fr"
+  },
+  {
+   "input": "http://x.fr",
+   "dict": "legacy",
+   "expected": "http://x.fr"
+  },
+  {
+   "input": "voir https://example.org/a?b=c&d=e",
+   "dict": "tech",
+   "expected": "voir https://example.org/a?b=c&d=e"
+  },
+  {
+   "input": "voir https://example.org/a?b=c&d=e",
+   "dict": "accents",
+   "expected": "voir https://example.org/a?b=c&d=e"
+  },
+  {
+   "input": "voir https://example.org/a?b=c&d=e",
+   "dict": "legacy",
+   "expected": "voir https://example.org/a?b=c&d=e"
+  },
+  {
+   "input": "ftp://serveur/dossier",
+   "dict": "tech",
+   "expected": "ftp://serveur/dossier"
+  },
+  {
+   "input": "ftp://serveur/dossier",
+   "dict": "accents",
+   "expected": "ftp://serveur/dossier"
+  },
+  {
+   "input": "ftp://serveur/dossier",
+   "dict": "legacy",
+   "expected": "ftp://serveur/dossier"
+  },
+  {
+   "input": "ratio 3:2 ou 16:9",
+   "dict": "tech",
+   "expected": "ratio 3:2 ou 16:9"
+  },
+  {
+   "input": "ratio 3:2 ou 16:9",
+   "dict": "accents",
+   "expected": "ratio 3:2 ou 16:9"
+  },
+  {
+   "input": "ratio 3:2 ou 16:9",
+   "dict": "legacy",
+   "expected": "ratio 3:2 ou 16:9"
+  },
+  {
+   "input": "note : 12/20",
+   "dict": "tech",
+   "expected": "note : 12/20"
+  },
+  {
+   "input": "note : 12/20",
+   "dict": "accents",
+   "expected": "note : 12/20"
+  },
+  {
+   "input": "note : 12/20",
+   "dict": "legacy",
+   "expected": "note : 12/20"
+  },
+  {
+   "input": "elle a dit «bonjour»",
+   "dict": "tech",
+   "expected": "elle a dit «bonjour»"
+  },
+  {
+   "input": "elle a dit «bonjour»",
+   "dict": "accents",
+   "expected": "elle a dit «bonjour»"
+  },
+  {
+   "input": "elle a dit «bonjour»",
+   "dict": "legacy",
+   "expected": "elle a dit «bonjour»"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "tech",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "accents",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "legacy",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit «  bonjour  »",
+   "dict": "tech",
+   "expected": "elle a dit «  bonjour  »"
+  },
+  {
+   "input": "elle a dit «  bonjour  »",
+   "dict": "accents",
+   "expected": "elle a dit «  bonjour  »"
+  },
+  {
+   "input": "elle a dit «  bonjour  »",
+   "dict": "legacy",
+   "expected": "elle a dit «  bonjour  »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "tech",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "accents",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "legacy",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "tech",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "accents",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "elle a dit « bonjour »",
+   "dict": "legacy",
+   "expected": "elle a dit « bonjour »"
+  },
+  {
+   "input": "il crie «stop !» et part",
+   "dict": "tech",
+   "expected": "il crie «stop !» et part"
+  },
+  {
+   "input": "il crie «stop !» et part",
+   "dict": "accents",
+   "expected": "il crie «stop !» et part"
+  },
+  {
+   "input": "il crie «stop !» et part",
+   "dict": "legacy",
+   "expected": "il crie «stop !» et part"
+  },
+  {
+   "input": "«a» «b»",
+   "dict": "tech",
+   "expected": "«a» «b»"
+  },
+  {
+   "input": "«a» «b»",
+   "dict": "accents",
+   "expected": "«a» «b»"
+  },
+  {
+   "input": "«a» «b»",
+   "dict": "legacy",
+   "expected": "«a» «b»"
+  },
+  {
+   "input": "le «mot»",
+   "dict": "tech",
+   "expected": "le «mot»"
+  },
+  {
+   "input": "le «mot»",
+   "dict": "accents",
+   "expected": "le «mot»"
+  },
+  {
+   "input": "le «mot»",
+   "dict": "legacy",
+   "expected": "le «mot»"
+  },
+  {
+   "input": "fin de citation»",
+   "dict": "tech",
+   "expected": "fin de citation»"
+  },
+  {
+   "input": "fin de citation»",
+   "dict": "accents",
+   "expected": "fin de citation»"
+  },
+  {
+   "input": "fin de citation»",
+   "dict": "legacy",
+   "expected": "fin de citation»"
+  },
+  {
+   "input": "début de citation«",
+   "dict": "tech",
+   "expected": "début de citation«"
+  },
+  {
+   "input": "début de citation«",
+   "dict": "accents",
+   "expected": "début de citation«"
+  },
+  {
+   "input": "début de citation«",
+   "dict": "legacy",
+   "expected": "début de citation«"
+  },
+  {
+   "input": "phrase.Suivante",
+   "dict": "tech",
+   "expected": "phrase.Suivante"
+  },
+  {
+   "input": "phrase.Suivante",
+   "dict": "accents",
+   "expected": "phrase.Suivante"
+  },
+  {
+   "input": "phrase.Suivante",
+   "dict": "legacy",
+   "expected": "phrase.Suivante"
+  },
+  {
+   "input": "phrase.suivante",
+   "dict": "tech",
+   "expected": "phrase.suivante"
+  },
+  {
+   "input": "phrase.suivante",
+   "dict": "accents",
+   "expected": "phrase.suivante"
+  },
+  {
+   "input": "phrase.suivante",
+   "dict": "legacy",
+   "expected": "phrase.suivante"
+  },
+  {
+   "input": "phrase. suivante",
+   "dict": "tech",
+   "expected": "phrase. suivante"
+  },
+  {
+   "input": "phrase. suivante",
+   "dict": "accents",
+   "expected": "phrase. suivante"
+  },
+  {
+   "input": "phrase. suivante",
+   "dict": "legacy",
+   "expected": "phrase. suivante"
+  },
+  {
+   "input": "phrase.Suivante.Encore",
+   "dict": "tech",
+   "expected": "phrase.Suivante.Encore"
+  },
+  {
+   "input": "phrase.Suivante.Encore",
+   "dict": "accents",
+   "expected": "phrase.Suivante.Encore"
+  },
+  {
+   "input": "phrase.Suivante.Encore",
+   "dict": "legacy",
+   "expected": "phrase.Suivante.Encore"
+  },
+  {
+   "input": "fini!Oui",
+   "dict": "tech",
+   "expected": "fini!Oui"
+  },
+  {
+   "input": "fini!Oui",
+   "dict": "accents",
+   "expected": "fini!Oui"
+  },
+  {
+   "input": "fini!Oui",
+   "dict": "legacy",
+   "expected": "fini!Oui"
+  },
+  {
+   "input": "fini?Oui",
+   "dict": "tech",
+   "expected": "fini?Oui"
+  },
+  {
+   "input": "fini?Oui",
+   "dict": "accents",
+   "expected": "fini?Oui"
+  },
+  {
+   "input": "fini?Oui",
+   "dict": "legacy",
+   "expected": "fini?Oui"
+  },
+  {
+   "input": "fini…Oui",
+   "dict": "tech",
+   "expected": "fini…Oui"
+  },
+  {
+   "input": "fini…Oui",
+   "dict": "accents",
+   "expected": "fini…Oui"
+  },
+  {
+   "input": "fini…Oui",
+   "dict": "legacy",
+   "expected": "fini…Oui"
+  },
+  {
+   "input": "fini...Oui",
+   "dict": "tech",
+   "expected": "fini...Oui"
+  },
+  {
+   "input": "fini...Oui",
+   "dict": "accents",
+   "expected": "fini...Oui"
+  },
+  {
+   "input": "fini...Oui",
+   "dict": "legacy",
+   "expected": "fini...Oui"
+  },
+  {
+   "input": "a,b",
+   "dict": "tech",
+   "expected": "a,b"
+  },
+  {
+   "input": "a,b",
+   "dict": "accents",
+   "expected": "a,b"
+  },
+  {
+   "input": "a,b",
+   "dict": "legacy",
+   "expected": "a,b"
+  },
+  {
+   "input": "a, b",
+   "dict": "tech",
+   "expected": "a, b"
+  },
+  {
+   "input": "a, b",
+   "dict": "accents",
+   "expected": "a, b"
+  },
+  {
+   "input": "a, b",
+   "dict": "legacy",
+   "expected": "a, b"
+  },
+  {
+   "input": "a ,b",
+   "dict": "tech",
+   "expected": "a ,b"
+  },
+  {
+   "input": "a ,b",
+   "dict": "accents",
+   "expected": "a ,b"
+  },
+  {
+   "input": "a ,b",
+   "dict": "legacy",
+   "expected": "a ,b"
+  },
+  {
+   "input": "a , b",
+   "dict": "tech",
+   "expected": "a , b"
+  },
+  {
+   "input": "a , b",
+   "dict": "accents",
+   "expected": "a , b"
+  },
+  {
+   "input": "a , b",
+   "dict": "legacy",
+   "expected": "a , b"
+  },
+  {
+   "input": "a,,b",
+   "dict": "tech",
+   "expected": "a,,b"
+  },
+  {
+   "input": "a,,b",
+   "dict": "accents",
+   "expected": "a,,b"
+  },
+  {
+   "input": "a,,b",
+   "dict": "legacy",
+   "expected": "a,,b"
+  },
+  {
+   "input": "a,, b",
+   "dict": "tech",
+   "expected": "a,, b"
+  },
+  {
+   "input": "a,, b",
+   "dict": "accents",
+   "expected": "a,, b"
+  },
+  {
+   "input": "a,, b",
+   "dict": "legacy",
+   "expected": "a,, b"
+  },
+  {
+   "input": "a, ,b",
+   "dict": "tech",
+   "expected": "a, ,b"
+  },
+  {
+   "input": "a, ,b",
+   "dict": "accents",
+   "expected": "a, ,b"
+  },
+  {
+   "input": "a, ,b",
+   "dict": "legacy",
+   "expected": "a, ,b"
+  },
+  {
+   "input": "a,.b",
+   "dict": "tech",
+   "expected": "a,.b"
+  },
+  {
+   "input": "a,.b",
+   "dict": "accents",
+   "expected": "a,.b"
+  },
+  {
+   "input": "a,.b",
+   "dict": "legacy",
+   "expected": "a,.b"
+  },
+  {
+   "input": "a.,b",
+   "dict": "tech",
+   "expected": "a.,b"
+  },
+  {
+   "input": "a.,b",
+   "dict": "accents",
+   "expected": "a.,b"
+  },
+  {
+   "input": "a.,b",
+   "dict": "legacy",
+   "expected": "a.,b"
+  },
+  {
+   "input": "a., b",
+   "dict": "tech",
+   "expected": "a., b"
+  },
+  {
+   "input": "a., b",
+   "dict": "accents",
+   "expected": "a., b"
+  },
+  {
+   "input": "a., b",
+   "dict": "legacy",
+   "expected": "a., b"
+  },
+  {
+   "input": "a ,. b",
+   "dict": "tech",
+   "expected": "a ,. b"
+  },
+  {
+   "input": "a ,. b",
+   "dict": "accents",
+   "expected": "a ,. b"
+  },
+  {
+   "input": "a ,. b",
+   "dict": "legacy",
+   "expected": "a ,. b"
+  },
+  {
+   "input": "un,deux,trois,quatre",
+   "dict": "tech",
+   "expected": "un,deux,trois,quatre"
+  },
+  {
+   "input": "un,deux,trois,quatre",
+   "dict": "accents",
+   "expected": "un,deux,trois,quatre"
+  },
+  {
+   "input": "un,deux,trois,quatre",
+   "dict": "legacy",
+   "expected": "un,deux,trois,quatre"
+  },
+  {
+   "input": "1,5 kg",
+   "dict": "tech",
+   "expected": "1,5 kg"
+  },
+  {
+   "input": "1,5 kg",
+   "dict": "accents",
+   "expected": "1,5 kg"
+  },
+  {
+   "input": "1,5 kg",
+   "dict": "legacy",
+   "expected": "1,5 kg"
+  },
+  {
+   "input": "3,14",
+   "dict": "tech",
+   "expected": "3,14"
+  },
+  {
+   "input": "3,14",
+   "dict": "accents",
+   "expected": "3,14"
+  },
+  {
+   "input": "3,14",
+   "dict": "legacy",
+   "expected": "3,14"
+  },
+  {
+   "input": "x,1",
+   "dict": "tech",
+   "expected": "x,1"
+  },
+  {
+   "input": "x,1",
+   "dict": "accents",
+   "expected": "x,1"
+  },
+  {
+   "input": "x,1",
+   "dict": "legacy",
+   "expected": "x,1"
+  },
+  {
+   "input": "a,É",
+   "dict": "tech",
+   "expected": "a,É"
+  },
+  {
+   "input": "a,É",
+   "dict": "accents",
+   "expected": "a,É"
+  },
+  {
+   "input": "a,É",
+   "dict": "legacy",
+   "expected": "a,É"
+  },
+  {
+   "input": "a,é",
+   "dict": "tech",
+   "expected": "a,é"
+  },
+  {
+   "input": "a,é",
+   "dict": "accents",
+   "expected": "a,é"
+  },
+  {
+   "input": "a,é",
+   "dict": "legacy",
+   "expected": "a,é"
+  },
+  {
+   "input": "a,1",
+   "dict": "tech",
+   "expected": "a,1"
+  },
+  {
+   "input": "a,1",
+   "dict": "accents",
+   "expected": "a,1"
+  },
+  {
+   "input": "a,1",
+   "dict": "legacy",
+   "expected": "a,1"
+  },
+  {
+   "input": "( parenthèse )",
+   "dict": "tech",
+   "expected": "( parenthèse )"
+  },
+  {
+   "input": "( parenthèse )",
+   "dict": "accents",
+   "expected": "( parenthèse )"
+  },
+  {
+   "input": "( parenthèse )",
+   "dict": "legacy",
+   "expected": "( parenthèse )"
+  },
+  {
+   "input": "(parenthèse)",
+   "dict": "tech",
+   "expected": "(parenthèse)"
+  },
+  {
+   "input": "(parenthèse)",
+   "dict": "accents",
+   "expected": "(parenthèse)"
+  },
+  {
+   "input": "(parenthèse)",
+   "dict": "legacy",
+   "expected": "(parenthèse)"
+  },
+  {
+   "input": "avant ( dedans ) après",
+   "dict": "tech",
+   "expected": "avant ( dedans ) après"
+  },
+  {
+   "input": "avant ( dedans ) après",
+   "dict": "accents",
+   "expected": "avant ( dedans ) après"
+  },
+  {
+   "input": "avant ( dedans ) après",
+   "dict": "legacy",
+   "expected": "avant ( dedans ) après"
+  },
+  {
+   "input": "[ crochet ]",
+   "dict": "tech",
+   "expected": "[ crochet ]"
+  },
+  {
+   "input": "[ crochet ]",
+   "dict": "accents",
+   "expected": "[ crochet ]"
+  },
+  {
+   "input": "[ crochet ]",
+   "dict": "legacy",
+   "expected": "[ crochet ]"
+  },
+  {
+   "input": "{ accolade }",
+   "dict": "tech",
+   "expected": "{ accolade }"
+  },
+  {
+   "input": "{ accolade }",
+   "dict": "accents",
+   "expected": "{ accolade }"
+  },
+  {
+   "input": "{ accolade }",
+   "dict": "legacy",
+   "expected": "{ accolade }"
+  },
+  {
+   "input": "texte (note) suite",
+   "dict": "tech",
+   "expected": "texte (note) suite"
+  },
+  {
+   "input": "texte (note) suite",
+   "dict": "accents",
+   "expected": "texte (note) suite"
+  },
+  {
+   "input": "texte (note) suite",
+   "dict": "legacy",
+   "expected": "texte (note) suite"
+  },
+  {
+   "input": "texte ( note ) suite",
+   "dict": "tech",
+   "expected": "texte ( note ) suite"
+  },
+  {
+   "input": "texte ( note ) suite",
+   "dict": "accents",
+   "expected": "texte ( note ) suite"
+  },
+  {
+   "input": "texte ( note ) suite",
+   "dict": "legacy",
+   "expected": "texte ( note ) suite"
+  },
+  {
+   "input": "point . virgule , fin",
+   "dict": "tech",
+   "expected": "point . virgule , fin"
+  },
+  {
+   "input": "point . virgule , fin",
+   "dict": "accents",
+   "expected": "point . virgule , fin"
+  },
+  {
+   "input": "point . virgule , fin",
+   "dict": "legacy",
+   "expected": "point . virgule , fin"
+  },
+  {
+   "input": "mot …suite",
+   "dict": "tech",
+   "expected": "mot …suite"
+  },
+  {
+   "input": "mot …suite",
+   "dict": "accents",
+   "expected": "mot …suite"
+  },
+  {
+   "input": "mot …suite",
+   "dict": "legacy",
+   "expected": "mot …suite"
+  },
+  {
+   "input": "mot … suite",
+   "dict": "tech",
+   "expected": "mot … suite"
+  },
+  {
+   "input": "mot … suite",
+   "dict": "accents",
+   "expected": "mot … suite"
+  },
+  {
+   "input": "mot … suite",
+   "dict": "legacy",
+   "expected": "mot … suite"
+  },
+  {
+   "input": "mot…",
+   "dict": "tech",
+   "expected": "mot…"
+  },
+  {
+   "input": "mot…",
+   "dict": "accents",
+   "expected": "mot…"
+  },
+  {
+   "input": "mot…",
+   "dict": "legacy",
+   "expected": "mot…"
+  },
+  {
+   "input": "suspension ...",
+   "dict": "tech",
+   "expected": "suspension ..."
+  },
+  {
+   "input": "suspension ...",
+   "dict": "accents",
+   "expected": "suspension ..."
+  },
+  {
+   "input": "suspension ...",
+   "dict": "legacy",
+   "expected": "suspension ..."
+  },
+  {
+   "input": "attends ... quoi ?",
+   "dict": "tech",
+   "expected": "attends ... quoi ?"
+  },
+  {
+   "input": "attends ... quoi ?",
+   "dict": "accents",
+   "expected": "attends ... quoi ?"
+  },
+  {
+   "input": "attends ... quoi ?",
+   "dict": "legacy",
+   "expected": "attends ... quoi ?"
+  },
+  {
+   "input": "bonjour .",
+   "dict": "tech",
+   "expected": "bonjour ."
+  },
+  {
+   "input": "bonjour .",
+   "dict": "accents",
+   "expected": "bonjour ."
+  },
+  {
+   "input": "bonjour .",
+   "dict": "legacy",
+   "expected": "bonjour ."
+  },
+  {
+   "input": "bonjour . merci",
+   "dict": "tech",
+   "expected": "bonjour . merci"
+  },
+  {
+   "input": "bonjour . merci",
+   "dict": "accents",
+   "expected": "bonjour . merci"
+  },
+  {
+   "input": "bonjour . merci",
+   "dict": "legacy",
+   "expected": "bonjour . merci"
+  },
+  {
+   "input": "oui . non . peut-être",
+   "dict": "tech",
+   "expected": "oui . non . peut-être"
+  },
+  {
+   "input": "oui . non . peut-être",
+   "dict": "accents",
+   "expected": "oui . non . peut-être"
+  },
+  {
+   "input": "oui . non . peut-être",
+   "dict": "legacy",
+   "expected": "oui . non . peut-être"
+  },
+  {
+   "input": "euh bonjour",
+   "dict": "tech",
+   "expected": "euh bonjour"
+  },
+  {
+   "input": "euh bonjour",
+   "dict": "accents",
+   "expected": "euh bonjour"
+  },
+  {
+   "input": "euh bonjour",
+   "dict": "legacy",
+   "expected": "euh bonjour"
+  },
+  {
+   "input": "euh, bonjour",
+   "dict": "tech",
+   "expected": "euh, bonjour"
+  },
+  {
+   "input": "euh, bonjour",
+   "dict": "accents",
+   "expected": "euh, bonjour"
+  },
+  {
+   "input": "euh, bonjour",
+   "dict": "legacy",
+   "expected": "euh, bonjour"
+  },
+  {
+   "input": "euuuh bonjour",
+   "dict": "tech",
+   "expected": "euuuh bonjour"
+  },
+  {
+   "input": "euuuh bonjour",
+   "dict": "accents",
+   "expected": "euuuh bonjour"
+  },
+  {
+   "input": "euuuh bonjour",
+   "dict": "legacy",
+   "expected": "euuuh bonjour"
+  },
+  {
+   "input": "heu bonjour",
+   "dict": "tech",
+   "expected": "heu bonjour"
+  },
+  {
+   "input": "heu bonjour",
+   "dict": "accents",
+   "expected": "heu bonjour"
+  },
+  {
+   "input": "heu bonjour",
+   "dict": "legacy",
+   "expected": "heu bonjour"
+  },
+  {
+   "input": "heuuu, bonjour",
+   "dict": "tech",
+   "expected": "heuuu, bonjour"
+  },
+  {
+   "input": "heuuu, bonjour",
+   "dict": "accents",
+   "expected": "heuuu, bonjour"
+  },
+  {
+   "input": "heuuu, bonjour",
+   "dict": "legacy",
+   "expected": "heuuu, bonjour"
+  },
+  {
+   "input": "hum bonjour",
+   "dict": "tech",
+   "expected": "hum bonjour"
+  },
+  {
+   "input": "hum bonjour",
+   "dict": "accents",
+   "expected": "hum bonjour"
+  },
+  {
+   "input": "hum bonjour",
+   "dict": "legacy",
+   "expected": "hum bonjour"
+  },
+  {
+   "input": "hmm bonjour",
+   "dict": "tech",
+   "expected": "hmm bonjour"
+  },
+  {
+   "input": "hmm bonjour",
+   "dict": "accents",
+   "expected": "hmm bonjour"
+  },
+  {
+   "input": "hmm bonjour",
+   "dict": "legacy",
+   "expected": "hmm bonjour"
+  },
+  {
+   "input": "hmmmm, bonjour",
+   "dict": "tech",
+   "expected": "hmmmm, bonjour"
+  },
+  {
+   "input": "hmmmm, bonjour",
+   "dict": "accents",
+   "expected": "hmmmm, bonjour"
+  },
+  {
+   "input": "hmmmm, bonjour",
+   "dict": "legacy",
+   "expected": "hmmmm, bonjour"
+  },
+  {
+   "input": "mmh oui",
+   "dict": "tech",
+   "expected": "mmh oui"
+  },
+  {
+   "input": "mmh oui",
+   "dict": "accents",
+   "expected": "mmh oui"
+  },
+  {
+   "input": "mmh oui",
+   "dict": "legacy",
+   "expected": "mmh oui"
+  },
+  {
+   "input": "mh oui",
+   "dict": "tech",
+   "expected": "mh oui"
+  },
+  {
+   "input": "mh oui",
+   "dict": "accents",
+   "expected": "mh oui"
+  },
+  {
+   "input": "mh oui",
+   "dict": "legacy",
+   "expected": "mh oui"
+  },
+  {
+   "input": "mhhh oui",
+   "dict": "tech",
+   "expected": "mhhh oui"
+  },
+  {
+   "input": "mhhh oui",
+   "dict": "accents",
+   "expected": "mhhh oui"
+  },
+  {
+   "input": "mhhh oui",
+   "dict": "legacy",
+   "expected": "mhhh oui"
+  },
+  {
+   "input": "um hello",
+   "dict": "tech",
+   "expected": "um hello"
+  },
+  {
+   "input": "um hello",
+   "dict": "accents",
+   "expected": "um hello"
+  },
+  {
+   "input": "um hello",
+   "dict": "legacy",
+   "expected": "um hello"
+  },
+  {
+   "input": "uh hello",
+   "dict": "tech",
+   "expected": "uh hello"
+  },
+  {
+   "input": "uh hello",
+   "dict": "accents",
+   "expected": "uh hello"
+  },
+  {
+   "input": "uh hello",
+   "dict": "legacy",
+   "expected": "uh hello"
+  },
+  {
+   "input": "uhm hello",
+   "dict": "tech",
+   "expected": "uhm hello"
+  },
+  {
+   "input": "uhm hello",
+   "dict": "accents",
+   "expected": "uhm hello"
+  },
+  {
+   "input": "uhm hello",
+   "dict": "legacy",
+   "expected": "uhm hello"
+  },
+  {
+   "input": "umm, hello",
+   "dict": "tech",
+   "expected": "umm, hello"
+  },
+  {
+   "input": "umm, hello",
+   "dict": "accents",
+   "expected": "umm, hello"
+  },
+  {
+   "input": "umm, hello",
+   "dict": "legacy",
+   "expected": "umm, hello"
+  },
+  {
+   "input": "erm hello",
+   "dict": "tech",
+   "expected": "erm hello"
+  },
+  {
+   "input": "erm hello",
+   "dict": "accents",
+   "expected": "erm hello"
+  },
+  {
+   "input": "erm hello",
+   "dict": "legacy",
+   "expected": "erm hello"
+  },
+  {
+   "input": "Euh bonjour",
+   "dict": "tech",
+   "expected": "Euh bonjour"
+  },
+  {
+   "input": "Euh bonjour",
+   "dict": "accents",
+   "expected": "Euh bonjour"
+  },
+  {
+   "input": "Euh bonjour",
+   "dict": "legacy",
+   "expected": "Euh bonjour"
+  },
+  {
+   "input": "EUH BONJOUR",
+   "dict": "tech",
+   "expected": "EUH BONJOUR"
+  },
+  {
+   "input": "EUH BONJOUR",
+   "dict": "accents",
+   "expected": "EUH BONJOUR"
+  },
+  {
+   "input": "EUH BONJOUR",
+   "dict": "legacy",
+   "expected": "EUH BONJOUR"
+  },
+  {
+   "input": "euh",
+   "dict": "tech",
+   "expected": "euh"
+  },
+  {
+   "input": "euh",
+   "dict": "accents",
+   "expected": "euh"
+  },
+  {
+   "input": "euh",
+   "dict": "legacy",
+   "expected": "euh"
+  },
+  {
+   "input": "euh euh euh",
+   "dict": "tech",
+   "expected": "euh euh euh"
+  },
+  {
+   "input": "euh euh euh",
+   "dict": "accents",
+   "expected": "euh euh euh"
+  },
+  {
+   "input": "euh euh euh",
+   "dict": "legacy",
+   "expected": "euh euh euh"
+  },
+  {
+   "input": "euh, euh, bonjour",
+   "dict": "tech",
+   "expected": "euh, euh, bonjour"
+  },
+  {
+   "input": "euh, euh, bonjour",
+   "dict": "accents",
+   "expected": "euh, euh, bonjour"
+  },
+  {
+   "input": "euh, euh, bonjour",
+   "dict": "legacy",
+   "expected": "euh, euh, bonjour"
+  },
+  {
+   "input": "bonjour euh monde",
+   "dict": "tech",
+   "expected": "bonjour euh monde"
+  },
+  {
+   "input": "bonjour euh monde",
+   "dict": "accents",
+   "expected": "bonjour euh monde"
+  },
+  {
+   "input": "bonjour euh monde",
+   "dict": "legacy",
+   "expected": "bonjour euh monde"
+  },
+  {
+   "input": "bonjour, euh, monde",
+   "dict": "tech",
+   "expected": "bonjour, euh, monde"
+  },
+  {
+   "input": "bonjour, euh, monde",
+   "dict": "accents",
+   "expected": "bonjour, euh, monde"
+  },
+  {
+   "input": "bonjour, euh, monde",
+   "dict": "legacy",
+   "expected": "bonjour, euh, monde"
+  },
+  {
+   "input": "bonjour euh, monde",
+   "dict": "tech",
+   "expected": "bonjour euh, monde"
+  },
+  {
+   "input": "bonjour euh, monde",
+   "dict": "accents",
+   "expected": "bonjour euh, monde"
+  },
+  {
+   "input": "bonjour euh, monde",
+   "dict": "legacy",
+   "expected": "bonjour euh, monde"
+  },
+  {
+   "input": "bonjour , euh , monde",
+   "dict": "tech",
+   "expected": "bonjour , euh , monde"
+  },
+  {
+   "input": "bonjour , euh , monde",
+   "dict": "accents",
+   "expected": "bonjour , euh , monde"
+  },
+  {
+   "input": "bonjour , euh , monde",
+   "dict": "legacy",
+   "expected": "bonjour , euh , monde"
+  },
+  {
+   "input": "euh je pense que, hum, ça marche",
+   "dict": "tech",
+   "expected": "euh je pense que, hum, ça marche"
+  },
+  {
+   "input": "euh je pense que, hum, ça marche",
+   "dict": "accents",
+   "expected": "euh je pense que, hum, ça marche"
+  },
+  {
+   "input": "euh je pense que, hum, ça marche",
+   "dict": "legacy",
+   "expected": "euh je pense que, hum, ça marche"
+  },
+  {
+   "input": "je veux euh dire que hum voilà",
+   "dict": "tech",
+   "expected": "je veux euh dire que hum voilà"
+  },
+  {
+   "input": "je veux euh dire que hum voilà",
+   "dict": "accents",
+   "expected": "je veux euh dire que hum voilà"
+  },
+  {
+   "input": "je veux euh dire que hum voilà",
+   "dict": "legacy",
+   "expected": "je veux euh dire que hum voilà"
+  },
+  {
+   "input": "um I think, uh, it works",
+   "dict": "tech",
+   "expected": "um I think, uh, it works"
+  },
+  {
+   "input": "um I think, uh, it works",
+   "dict": "accents",
+   "expected": "um I think, uh, it works"
+  },
+  {
+   "input": "um I think, uh, it works",
+   "dict": "legacy",
+   "expected": "um I think, uh, it works"
+  },
+  {
+   "input": "well um, you know, it works",
+   "dict": "tech",
+   "expected": "well um, you know, it works"
+  },
+  {
+   "input": "well um, you know, it works",
+   "dict": "accents",
+   "expected": "well um, you know, it works"
+  },
+  {
+   "input": "well um, you know, it works",
+   "dict": "legacy",
+   "expected": "well um, you know, it works"
+  },
+  {
+   "input": "humble",
+   "dict": "tech",
+   "expected": "humble"
+  },
+  {
+   "input": "humble",
+   "dict": "accents",
+   "expected": "humble"
+  },
+  {
+   "input": "humble",
+   "dict": "legacy",
+   "expected": "humble"
+  },
+  {
+   "input": "humain",
+   "dict": "tech",
+   "expected": "humain"
+  },
+  {
+   "input": "humain",
+   "dict": "accents",
+   "expected": "humain"
+  },
+  {
+   "input": "humain",
+   "dict": "legacy",
+   "expected": "humain"
+  },
+  {
+   "input": "uhuru",
+   "dict": "tech",
+   "expected": "uhuru"
+  },
+  {
+   "input": "uhuru",
+   "dict": "accents",
+   "expected": "uhuru"
+  },
+  {
+   "input": "uhuru",
+   "dict": "legacy",
+   "expected": "uhuru"
+  },
+  {
+   "input": "summum",
+   "dict": "tech",
+   "expected": "summum"
+  },
+  {
+   "input": "summum",
+   "dict": "accents",
+   "expected": "summum"
+  },
+  {
+   "input": "summum",
+   "dict": "legacy",
+   "expected": "summum"
+  },
+  {
+   "input": "erma",
+   "dict": "tech",
+   "expected": "erma"
+  },
+  {
+   "input": "erma",
+   "dict": "accents",
+   "expected": "erma"
+  },
+  {
+   "input": "erma",
+   "dict": "legacy",
+   "expected": "erma"
+  },
+  {
+   "input": "heure",
+   "dict": "tech",
+   "expected": "heure"
+  },
+  {
+   "input": "heure",
+   "dict": "accents",
+   "expected": "heure"
+  },
+  {
+   "input": "heure",
+   "dict": "legacy",
+   "expected": "heure"
+  },
+  {
+   "input": "mhz",
+   "dict": "tech",
+   "expected": "mhz"
+  },
+  {
+   "input": "mhz",
+   "dict": "accents",
+   "expected": "mhz"
+  },
+  {
+   "input": "mhz",
+   "dict": "legacy",
+   "expected": "mhz"
+  },
+  {
+   "input": "umbrella",
+   "dict": "tech",
+   "expected": "umbrella"
+  },
+  {
+   "input": "umbrella",
+   "dict": "accents",
+   "expected": "umbrella"
+  },
+  {
+   "input": "umbrella",
+   "dict": "legacy",
+   "expected": "umbrella"
+  },
+  {
+   "input": "hummus",
+   "dict": "tech",
+   "expected": "hummus"
+  },
+  {
+   "input": "hummus",
+   "dict": "accents",
+   "expected": "hummus"
+  },
+  {
+   "input": "hummus",
+   "dict": "legacy",
+   "expected": "hummus"
+  },
+  {
+   "input": "euhéméra",
+   "dict": "tech",
+   "expected": "euhéméra"
+  },
+  {
+   "input": "euhéméra",
+   "dict": "accents",
+   "expected": "euhéméra"
+  },
+  {
+   "input": "euhéméra",
+   "dict": "legacy",
+   "expected": "euhéméra"
+  },
+  {
+   "input": "éuh",
+   "dict": "tech",
+   "expected": "éuh"
+  },
+  {
+   "input": "éuh",
+   "dict": "accents",
+   "expected": "éuh"
+  },
+  {
+   "input": "éuh",
+   "dict": "legacy",
+   "expected": "éuh"
+  },
+  {
+   "input": "euhé",
+   "dict": "tech",
+   "expected": "euhé"
+  },
+  {
+   "input": "euhé",
+   "dict": "accents",
+   "expected": "euhé"
+  },
+  {
+   "input": "euhé",
+   "dict": "legacy",
+   "expected": "euhé"
+  },
+  {
+   "input": "hum1",
+   "dict": "tech",
+   "expected": "hum1"
+  },
+  {
+   "input": "hum1",
+   "dict": "accents",
+   "expected": "hum1"
+  },
+  {
+   "input": "hum1",
+   "dict": "legacy",
+   "expected": "hum1"
+  },
+  {
+   "input": "1hum",
+   "dict": "tech",
+   "expected": "1hum"
+  },
+  {
+   "input": "1hum",
+   "dict": "accents",
+   "expected": "1hum"
+  },
+  {
+   "input": "1hum",
+   "dict": "legacy",
+   "expected": "1hum"
+  },
+  {
+   "input": "hum-hum",
+   "dict": "tech",
+   "expected": "hum-hum"
+  },
+  {
+   "input": "hum-hum",
+   "dict": "accents",
+   "expected": "hum-hum"
+  },
+  {
+   "input": "hum-hum",
+   "dict": "legacy",
+   "expected": "hum-hum"
+  },
+  {
+   "input": "hum.",
+   "dict": "tech",
+   "expected": "hum."
+  },
+  {
+   "input": "hum.",
+   "dict": "accents",
+   "expected": "hum."
+  },
+  {
+   "input": "hum.",
+   "dict": "legacy",
+   "expected": "hum."
+  },
+  {
+   "input": "hum!",
+   "dict": "tech",
+   "expected": "hum!"
+  },
+  {
+   "input": "hum!",
+   "dict": "accents",
+   "expected": "hum!"
+  },
+  {
+   "input": "hum!",
+   "dict": "legacy",
+   "expected": "hum!"
+  },
+  {
+   "input": "hum?",
+   "dict": "tech",
+   "expected": "hum?"
+  },
+  {
+   "input": "hum?",
+   "dict": "accents",
+   "expected": "hum?"
+  },
+  {
+   "input": "hum?",
+   "dict": "legacy",
+   "expected": "hum?"
+  },
+  {
+   "input": "oui hum.",
+   "dict": "tech",
+   "expected": "oui hum."
+  },
+  {
+   "input": "oui hum.",
+   "dict": "accents",
+   "expected": "oui hum."
+  },
+  {
+   "input": "oui hum.",
+   "dict": "legacy",
+   "expected": "oui hum."
+  },
+  {
+   "input": "oui, hum. non",
+   "dict": "tech",
+   "expected": "oui, hum. non"
+  },
+  {
+   "input": "oui, hum. non",
+   "dict": "accents",
+   "expected": "oui, hum. non"
+  },
+  {
+   "input": "oui, hum. non",
+   "dict": "legacy",
+   "expected": "oui, hum. non"
+  },
+  {
+   "input": "fin. E, le modèle",
+   "dict": "tech",
+   "expected": "fin. E, le modèle"
+  },
+  {
+   "input": "fin. E, le modèle",
+   "dict": "accents",
+   "expected": "fin. E, le modèle"
+  },
+  {
+   "input": "fin. E, le modèle",
+   "dict": "legacy",
+   "expected": "fin. E, le modèle"
+  },
+  {
+   "input": "fin. e, le modèle",
+   "dict": "tech",
+   "expected": "fin. e, le modèle"
+  },
+  {
+   "input": "fin. e, le modèle",
+   "dict": "accents",
+   "expected": "fin. e, le modèle"
+  },
+  {
+   "input": "fin. e, le modèle",
+   "dict": "legacy",
+   "expected": "fin. e, le modèle"
+  },
+  {
+   "input": "fin! E, suite",
+   "dict": "tech",
+   "expected": "fin! E, suite"
+  },
+  {
+   "input": "fin! E, suite",
+   "dict": "accents",
+   "expected": "fin! E, suite"
+  },
+  {
+   "input": "fin! E, suite",
+   "dict": "legacy",
+   "expected": "fin! E, suite"
+  },
+  {
+   "input": "fin? E, suite",
+   "dict": "tech",
+   "expected": "fin? E, suite"
+  },
+  {
+   "input": "fin? E, suite",
+   "dict": "accents",
+   "expected": "fin? E, suite"
+  },
+  {
+   "input": "fin? E, suite",
+   "dict": "legacy",
+   "expected": "fin? E, suite"
+  },
+  {
+   "input": "a, E, suite",
+   "dict": "tech",
+   "expected": "a, E, suite"
+  },
+  {
+   "input": "a, E, suite",
+   "dict": "accents",
+   "expected": "a, E, suite"
+  },
+  {
+   "input": "a, E, suite",
+   "dict": "legacy",
+   "expected": "a, E, suite"
+  },
+  {
+   "input": "a; E, suite",
+   "dict": "tech",
+   "expected": "a; E, suite"
+  },
+  {
+   "input": "a; E, suite",
+   "dict": "accents",
+   "expected": "a; E, suite"
+  },
+  {
+   "input": "a; E, suite",
+   "dict": "legacy",
+   "expected": "a; E, suite"
+  },
+  {
+   "input": "mot E, suite",
+   "dict": "tech",
+   "expected": "mot E, suite"
+  },
+  {
+   "input": "mot E, suite",
+   "dict": "accents",
+   "expected": "mot E, suite"
+  },
+  {
+   "input": "mot E, suite",
+   "dict": "legacy",
+   "expected": "mot E, suite"
+  },
+  {
+   "input": "E, début",
+   "dict": "tech",
+   "expected": "E, début"
+  },
+  {
+   "input": "E, début",
+   "dict": "accents",
+   "expected": "E, début"
+  },
+  {
+   "input": "E, début",
+   "dict": "legacy",
+   "expected": "E, début"
+  },
+  {
+   "input": "e, début",
+   "dict": "tech",
+   "expected": "e, début"
+  },
+  {
+   "input": "e, début",
+   "dict": "accents",
+   "expected": "e, début"
+  },
+  {
+   "input": "e, début",
+   "dict": "legacy",
+   "expected": "e, début"
+  },
+  {
+   "input": "fin. E,suite",
+   "dict": "tech",
+   "expected": "fin. E,suite"
+  },
+  {
+   "input": "fin. E,suite",
+   "dict": "accents",
+   "expected": "fin. E,suite"
+  },
+  {
+   "input": "fin. E,suite",
+   "dict": "legacy",
+   "expected": "fin. E,suite"
+  },
+  {
+   "input": "fin. E, ",
+   "dict": "tech",
+   "expected": "fin. E, "
+  },
+  {
+   "input": "fin. E, ",
+   "dict": "accents",
+   "expected": "fin. E, "
+  },
+  {
+   "input": "fin. E, ",
+   "dict": "legacy",
+   "expected": "fin. E, "
+  },
+  {
+   "input": "fin.  E, le modèle",
+   "dict": "tech",
+   "expected": "fin.  E, le modèle"
+  },
+  {
+   "input": "fin.  E, le modèle",
+   "dict": "accents",
+   "expected": "fin.  E, le modèle"
+  },
+  {
+   "input": "fin.  E, le modèle",
+   "dict": "legacy",
+   "expected": "fin.  E, le modèle"
+  },
+  {
+   "input": "fin.\tE, le modèle",
+   "dict": "tech",
+   "expected": "fin.\tE, le modèle"
+  },
+  {
+   "input": "fin.\tE, le modèle",
+   "dict": "accents",
+   "expected": "fin.\tE, le modèle"
+  },
+  {
+   "input": "fin.\tE, le modèle",
+   "dict": "legacy",
+   "expected": "fin.\tE, le modèle"
+  },
+  {
+   "input": "fin. E, E, suite",
+   "dict": "tech",
+   "expected": "fin. E, E, suite"
+  },
+  {
+   "input": "fin. E, E, suite",
+   "dict": "accents",
+   "expected": "fin. E, E, suite"
+  },
+  {
+   "input": "fin. E, E, suite",
+   "dict": "legacy",
+   "expected": "fin. E, E, suite"
+  },
+  {
+   "input": "fin. E. suite",
+   "dict": "tech",
+   "expected": "fin. E. suite"
+  },
+  {
+   "input": "fin. E. suite",
+   "dict": "accents",
+   "expected": "fin. E. suite"
+  },
+  {
+   "input": "fin. E. suite",
+   "dict": "legacy",
+   "expected": "fin. E. suite"
+  },
+  {
+   "input": "fin. Euh, E, suite",
+   "dict": "tech",
+   "expected": "fin. Euh, E, suite"
+  },
+  {
+   "input": "fin. Euh, E, suite",
+   "dict": "accents",
+   "expected": "fin. Euh, E, suite"
+  },
+  {
+   "input": "fin. Euh, E, suite",
+   "dict": "legacy",
+   "expected": "fin. Euh, E, suite"
+  },
+  {
+   "input": "fin. É, suite",
+   "dict": "tech",
+   "expected": "fin. É, suite"
+  },
+  {
+   "input": "fin. É, suite",
+   "dict": "accents",
+   "expected": "fin. É, suite"
+  },
+  {
+   "input": "fin. É, suite",
+   "dict": "legacy",
+   "expected": "fin. É, suite"
+  },
+  {
+   "input": "euh. E, bonjour",
+   "dict": "tech",
+   "expected": "euh. E, bonjour"
+  },
+  {
+   "input": "euh. E, bonjour",
+   "dict": "accents",
+   "expected": "euh. E, bonjour"
+  },
+  {
+   "input": "euh. E, bonjour",
+   "dict": "legacy",
+   "expected": "euh. E, bonjour"
+  },
+  {
+   "input": "vitamine E, et C",
+   "dict": "tech",
+   "expected": "vitamine E, et C"
+  },
+  {
+   "input": "vitamine E, et C",
+   "dict": "accents",
+   "expected": "vitamine E, et C"
+  },
+  {
+   "input": "vitamine E, et C",
+   "dict": "legacy",
+   "expected": "vitamine E, et C"
+  },
+  {
+   "input": "vitamine E, et C. E, final",
+   "dict": "tech",
+   "expected": "vitamine E, et C. E, final"
+  },
+  {
+   "input": "vitamine E, et C. E, final",
+   "dict": "accents",
+   "expected": "vitamine E, et C. E, final"
+  },
+  {
+   "input": "vitamine E, et C. E, final",
+   "dict": "legacy",
+   "expected": "vitamine E, et C. E, final"
+  },
+  {
+   "input": "genre genre bon",
+   "dict": "tech",
+   "expected": "genre genre bon"
+  },
+  {
+   "input": "genre genre bon",
+   "dict": "accents",
+   "expected": "genre genre bon"
+  },
+  {
+   "input": "genre genre bon",
+   "dict": "legacy",
+   "expected": "genre genre bon"
+  },
+  {
+   "input": "genre, genre bon",
+   "dict": "tech",
+   "expected": "genre, genre bon"
+  },
+  {
+   "input": "genre, genre bon",
+   "dict": "accents",
+   "expected": "genre, genre bon"
+  },
+  {
+   "input": "genre, genre bon",
+   "dict": "legacy",
+   "expected": "genre, genre bon"
+  },
+  {
+   "input": "genre genre genre bon",
+   "dict": "tech",
+   "expected": "genre genre genre bon"
+  },
+  {
+   "input": "genre genre genre bon",
+   "dict": "accents",
+   "expected": "genre genre genre bon"
+  },
+  {
+   "input": "genre genre genre bon",
+   "dict": "legacy",
+   "expected": "genre genre genre bon"
+  },
+  {
+   "input": "Genre genre bon",
+   "dict": "tech",
+   "expected": "Genre genre bon"
+  },
+  {
+   "input": "Genre genre bon",
+   "dict": "accents",
+   "expected": "Genre genre bon"
+  },
+  {
+   "input": "Genre genre bon",
+   "dict": "legacy",
+   "expected": "Genre genre bon"
+  },
+  {
+   "input": "genre Genre GENRE bon",
+   "dict": "tech",
+   "expected": "genre Genre GENRE bon"
+  },
+  {
+   "input": "genre Genre GENRE bon",
+   "dict": "accents",
+   "expected": "genre Genre GENRE bon"
+  },
+  {
+   "input": "genre Genre GENRE bon",
+   "dict": "legacy",
+   "expected": "genre Genre GENRE bon"
+  },
+  {
+   "input": "like like this",
+   "dict": "tech",
+   "expected": "like like this"
+  },
+  {
+   "input": "like like this",
+   "dict": "accents",
+   "expected": "like like this"
+  },
+  {
+   "input": "like like this",
+   "dict": "legacy",
+   "expected": "like like this"
+  },
+  {
+   "input": "like, like, like it",
+   "dict": "tech",
+   "expected": "like, like, like it"
+  },
+  {
+   "input": "like, like, like it",
+   "dict": "accents",
+   "expected": "like, like, like it"
+  },
+  {
+   "input": "like, like, like it",
+   "dict": "legacy",
+   "expected": "like, like, like it"
+  },
+  {
+   "input": "du coup du coup oui",
+   "dict": "tech",
+   "expected": "du coup du coup oui"
+  },
+  {
+   "input": "du coup du coup oui",
+   "dict": "accents",
+   "expected": "du coup du coup oui"
+  },
+  {
+   "input": "du coup du coup oui",
+   "dict": "legacy",
+   "expected": "du coup du coup oui"
+  },
+  {
+   "input": "du coup, du coup, oui",
+   "dict": "tech",
+   "expected": "du coup, du coup, oui"
+  },
+  {
+   "input": "du coup, du coup, oui",
+   "dict": "accents",
+   "expected": "du coup, du coup, oui"
+  },
+  {
+   "input": "du coup, du coup, oui",
+   "dict": "legacy",
+   "expected": "du coup, du coup, oui"
+  },
+  {
+   "input": "du  coup  du  coup",
+   "dict": "tech",
+   "expected": "du  coup  du  coup"
+  },
+  {
+   "input": "du  coup  du  coup",
+   "dict": "accents",
+   "expected": "du  coup  du  coup"
+  },
+  {
+   "input": "du  coup  du  coup",
+   "dict": "legacy",
+   "expected": "du  coup  du  coup"
+  },
+  {
+   "input": "du coup du coupé",
+   "dict": "tech",
+   "expected": "du coup du coupé"
+  },
+  {
+   "input": "du coup du coupé",
+   "dict": "accents",
+   "expected": "du coup du coupé"
+  },
+  {
+   "input": "du coup du coupé",
+   "dict": "legacy",
+   "expected": "du coup du coupé"
+  },
+  {
+   "input": "voilà voilà",
+   "dict": "tech",
+   "expected": "voilà voilà"
+  },
+  {
+   "input": "voilà voilà",
+   "dict": "accents",
+   "expected": "voilà voilà"
+  },
+  {
+   "input": "voilà voilà",
+   "dict": "legacy",
+   "expected": "voilà voilà"
+  },
+  {
+   "input": "voilà, voilà. Bon",
+   "dict": "tech",
+   "expected": "voilà, voilà. Bon"
+  },
+  {
+   "input": "voilà, voilà. Bon",
+   "dict": "accents",
+   "expected": "voilà, voilà. Bon"
+  },
+  {
+   "input": "voilà, voilà. Bon",
+   "dict": "legacy",
+   "expected": "voilà, voilà. Bon"
+  },
+  {
+   "input": "you know you know what",
+   "dict": "tech",
+   "expected": "you know you know what"
+  },
+  {
+   "input": "you know you know what",
+   "dict": "accents",
+   "expected": "you know you know what"
+  },
+  {
+   "input": "you know you know what",
+   "dict": "legacy",
+   "expected": "you know you know what"
+  },
+  {
+   "input": "you know, you know",
+   "dict": "tech",
+   "expected": "you know, you know"
+  },
+  {
+   "input": "you know, you know",
+   "dict": "accents",
+   "expected": "you know, you know"
+  },
+  {
+   "input": "you know, you know",
+   "dict": "legacy",
+   "expected": "you know, you know"
+  },
+  {
+   "input": "tu vois tu vois",
+   "dict": "tech",
+   "expected": "tu vois tu vois"
+  },
+  {
+   "input": "tu vois tu vois",
+   "dict": "accents",
+   "expected": "tu vois tu vois"
+  },
+  {
+   "input": "tu vois tu vois",
+   "dict": "legacy",
+   "expected": "tu vois tu vois"
+  },
+  {
+   "input": "tu vois, tu vois ?",
+   "dict": "tech",
+   "expected": "tu vois, tu vois ?"
+  },
+  {
+   "input": "tu vois, tu vois ?",
+   "dict": "accents",
+   "expected": "tu vois, tu vois ?"
+  },
+  {
+   "input": "tu vois, tu vois ?",
+   "dict": "legacy",
+   "expected": "tu vois, tu vois ?"
+  },
+  {
+   "input": "liked like",
+   "dict": "tech",
+   "expected": "liked like"
+  },
+  {
+   "input": "liked like",
+   "dict": "accents",
+   "expected": "liked like"
+  },
+  {
+   "input": "liked like",
+   "dict": "legacy",
+   "expected": "liked like"
+  },
+  {
+   "input": "dislike like",
+   "dict": "tech",
+   "expected": "dislike like"
+  },
+  {
+   "input": "dislike like",
+   "dict": "accents",
+   "expected": "dislike like"
+  },
+  {
+   "input": "dislike like",
+   "dict": "legacy",
+   "expected": "dislike like"
+  },
+  {
+   "input": "genres genre",
+   "dict": "tech",
+   "expected": "genres genre"
+  },
+  {
+   "input": "genres genre",
+   "dict": "accents",
+   "expected": "genres genre"
+  },
+  {
+   "input": "genres genre",
+   "dict": "legacy",
+   "expected": "genres genre"
+  },
+  {
+   "input": "genre genres",
+   "dict": "tech",
+   "expected": "genre genres"
+  },
+  {
+   "input": "genre genres",
+   "dict": "accents",
+   "expected": "genre genres"
+  },
+  {
+   "input": "genre genres",
+   "dict": "legacy",
+   "expected": "genre genres"
+  },
+  {
+   "input": "like likes",
+   "dict": "tech",
+   "expected": "like likes"
+  },
+  {
+   "input": "like likes",
+   "dict": "accents",
+   "expected": "like likes"
+  },
+  {
+   "input": "like likes",
+   "dict": "legacy",
+   "expected": "like likes"
+  },
+  {
+   "input": "like, likes",
+   "dict": "tech",
+   "expected": "like, likes"
+  },
+  {
+   "input": "like, likes",
+   "dict": "accents",
+   "expected": "like, likes"
+  },
+  {
+   "input": "like, likes",
+   "dict": "legacy",
+   "expected": "like, likes"
+  },
+  {
+   "input": "bon genre genre",
+   "dict": "tech",
+   "expected": "bon genre genre"
+  },
+  {
+   "input": "bon genre genre",
+   "dict": "accents",
+   "expected": "bon genre genre"
+  },
+  {
+   "input": "bon genre genre",
+   "dict": "legacy",
+   "expected": "bon genre genre"
+  },
+  {
+   "input": "genre genre",
+   "dict": "tech",
+   "expected": "genre genre"
+  },
+  {
+   "input": "genre genre",
+   "dict": "accents",
+   "expected": "genre genre"
+  },
+  {
+   "input": "genre genre",
+   "dict": "legacy",
+   "expected": "genre genre"
+  },
+  {
+   "input": "like like",
+   "dict": "tech",
+   "expected": "like like"
+  },
+  {
+   "input": "like like",
+   "dict": "accents",
+   "expected": "like like"
+  },
+  {
+   "input": "like like",
+   "dict": "legacy",
+   "expected": "like like"
+  },
+  {
+   "input": "un genre de truc, genre genre",
+   "dict": "tech",
+   "expected": "un genre de truc, genre genre"
+  },
+  {
+   "input": "un genre de truc, genre genre",
+   "dict": "accents",
+   "expected": "un genre de truc, genre genre"
+  },
+  {
+   "input": "un genre de truc, genre genre",
+   "dict": "legacy",
+   "expected": "un genre de truc, genre genre"
+  },
+  {
+   "input": "bonjour. comment ça va? très bien! et toi… moi aussi",
+   "dict": "tech",
+   "expected": "bonjour. comment ça va? très bien! et toi… moi aussi"
+  },
+  {
+   "input": "bonjour. comment ça va? très bien! et toi… moi aussi",
+   "dict": "accents",
+   "expected": "bonjour. comment ça va? très bien! et toi… moi aussi"
+  },
+  {
+   "input": "bonjour. comment ça va? très bien! et toi… moi aussi",
+   "dict": "legacy",
+   "expected": "bonjour. comment ça va? très bien! et toi… moi aussi"
+  },
+  {
+   "input": "il dit. \"ok\". puis part",
+   "dict": "tech",
+   "expected": "il dit. \"ok\". puis part"
+  },
+  {
+   "input": "il dit. \"ok\". puis part",
+   "dict": "accents",
+   "expected": "il dit. \"ok\". puis part"
+  },
+  {
+   "input": "il dit. \"ok\". puis part",
+   "dict": "legacy",
+   "expected": "il dit. \"ok\". puis part"
+  },
+  {
+   "input": "il dit. »ok. puis part",
+   "dict": "tech",
+   "expected": "il dit. »ok. puis part"
+  },
+  {
+   "input": "il dit. »ok. puis part",
+   "dict": "accents",
+   "expected": "il dit. »ok. puis part"
+  },
+  {
+   "input": "il dit. »ok. puis part",
+   "dict": "legacy",
+   "expected": "il dit. »ok. puis part"
+  },
+  {
+   "input": "fin. »suite",
+   "dict": "tech",
+   "expected": "fin. »suite"
+  },
+  {
+   "input": "fin. »suite",
+   "dict": "accents",
+   "expected": "fin. »suite"
+  },
+  {
+   "input": "fin. »suite",
+   "dict": "legacy",
+   "expected": "fin. »suite"
+  },
+  {
+   "input": "fin.\"suite",
+   "dict": "tech",
+   "expected": "fin.\"suite"
+  },
+  {
+   "input": "fin.\"suite",
+   "dict": "accents",
+   "expected": "fin.\"suite"
+  },
+  {
+   "input": "fin.\"suite",
+   "dict": "legacy",
+   "expected": "fin.\"suite"
+  },
+  {
+   "input": "fin. \"suite\"",
+   "dict": "tech",
+   "expected": "fin. \"suite\""
+  },
+  {
+   "input": "fin. \"suite\"",
+   "dict": "accents",
+   "expected": "fin. \"suite\""
+  },
+  {
+   "input": "fin. \"suite\"",
+   "dict": "legacy",
+   "expected": "fin. \"suite\""
+  },
+  {
+   "input": "a. b. c. d",
+   "dict": "tech",
+   "expected": "a. b. c. d"
+  },
+  {
+   "input": "a. b. c. d",
+   "dict": "accents",
+   "expected": "a. b. c. d"
+  },
+  {
+   "input": "a. b. c. d",
+   "dict": "legacy",
+   "expected": "a. b. c. d"
+  },
+  {
+   "input": "a.b.c",
+   "dict": "tech",
+   "expected": "a.b.c"
+  },
+  {
+   "input": "a.b.c",
+   "dict": "accents",
+   "expected": "a.b.c"
+  },
+  {
+   "input": "a.b.c",
+   "dict": "legacy",
+   "expected": "a.b.c"
+  },
+  {
+   "input": "m. dupont est là",
+   "dict": "tech",
+   "expected": "m. dupont est là"
+  },
+  {
+   "input": "m. dupont est là",
+   "dict": "accents",
+   "expected": "m. dupont est là"
+  },
+  {
+   "input": "m. dupont est là",
+   "dict": "legacy",
+   "expected": "m. dupont est là"
+  },
+  {
+   "input": "état. éclair. œuf. ça",
+   "dict": "tech",
+   "expected": "état. éclair. œuf. ça"
+  },
+  {
+   "input": "état. éclair. œuf. ça",
+   "dict": "accents",
+   "expected": "état. éclair. œuf. ça"
+  },
+  {
+   "input": "état. éclair. œuf. ça",
+   "dict": "legacy",
+   "expected": "état. éclair. œuf. ça"
+  },
+  {
+   "input": "ñandú. ßtraße",
+   "dict": "tech",
+   "expected": "ñandú. ßtraße"
+  },
+  {
+   "input": "ñandú. ßtraße",
+   "dict": "accents",
+   "expected": "ñandú. ßtraße"
+  },
+  {
+   "input": "ñandú. ßtraße",
+   "dict": "legacy",
+   "expected": "ñandú. ßtraße"
+  },
+  {
+   "input": "ǆ. ǆa",
+   "dict": "tech",
+   "expected": "ǆ. ǆa"
+  },
+  {
+   "input": "ǆ. ǆa",
+   "dict": "accents",
+   "expected": "ǆ. ǆa"
+  },
+  {
+   "input": "ǆ. ǆa",
+   "dict": "legacy",
+   "expected": "ǆ. ǆa"
+  },
+  {
+   "input": "élève. Élève. ÉLÈVE",
+   "dict": "tech",
+   "expected": "élève. Élève. ÉLÈVE"
+  },
+  {
+   "input": "élève. Élève. ÉLÈVE",
+   "dict": "accents",
+   "expected": "élève. Élève. ÉLÈVE"
+  },
+  {
+   "input": "élève. Élève. ÉLÈVE",
+   "dict": "legacy",
+   "expected": "élève. Élève. ÉLÈVE"
+  },
+  {
+   "input": "ligne un.\nligne deux",
+   "dict": "tech",
+   "expected": "ligne un.\nligne deux"
+  },
+  {
+   "input": "ligne un.\nligne deux",
+   "dict": "accents",
+   "expected": "ligne un.\nligne deux"
+  },
+  {
+   "input": "ligne un.\nligne deux",
+   "dict": "legacy",
+   "expected": "ligne un.\nligne deux"
+  },
+  {
+   "input": "ligne un. \n ligne deux",
+   "dict": "tech",
+   "expected": "ligne un. \n ligne deux"
+  },
+  {
+   "input": "ligne un. \n ligne deux",
+   "dict": "accents",
+   "expected": "ligne un. \n ligne deux"
+  },
+  {
+   "input": "ligne un. \n ligne deux",
+   "dict": "legacy",
+   "expected": "ligne un. \n ligne deux"
+  },
+  {
+   "input": "1. un 2. deux",
+   "dict": "tech",
+   "expected": "1. un 2. deux"
+  },
+  {
+   "input": "1. un 2. deux",
+   "dict": "accents",
+   "expected": "1. un 2. deux"
+  },
+  {
+   "input": "1. un 2. deux",
+   "dict": "legacy",
+   "expected": "1. un 2. deux"
+  },
+  {
+   "input": "3. trois",
+   "dict": "tech",
+   "expected": "3. trois"
+  },
+  {
+   "input": "3. trois",
+   "dict": "accents",
+   "expected": "3. trois"
+  },
+  {
+   "input": "3. trois",
+   "dict": "legacy",
+   "expected": "3. trois"
+  },
+  {
+   "input": "fin. 3 chats",
+   "dict": "tech",
+   "expected": "fin. 3 chats"
+  },
+  {
+   "input": "fin. 3 chats",
+   "dict": "accents",
+   "expected": "fin. 3 chats"
+  },
+  {
+   "input": "fin. 3 chats",
+   "dict": "legacy",
+   "expected": "fin. 3 chats"
+  },
+  {
+   "input": "zéro un deux trois",
+   "dict": "tech",
+   "expected": "zéro un deux trois"
+  },
+  {
+   "input": "zéro un deux trois",
+   "dict": "accents",
+   "expected": "zéro un deux trois"
+  },
+  {
+   "input": "zéro un deux trois",
+   "dict": "legacy",
+   "expected": "zéro un deux trois"
+  },
+  {
+   "input": "j'ai vingt et un ans",
+   "dict": "tech",
+   "expected": "j'ai vingt et un ans"
+  },
+  {
+   "input": "j'ai vingt et un ans",
+   "dict": "accents",
+   "expected": "j'ai vingt et un ans"
+  },
+  {
+   "input": "j'ai vingt et un ans",
+   "dict": "legacy",
+   "expected": "j'ai vingt et un ans"
+  },
+  {
+   "input": "dix-sept",
+   "dict": "tech",
+   "expected": "dix-sept"
+  },
+  {
+   "input": "dix-sept",
+   "dict": "accents",
+   "expected": "dix-sept"
+  },
+  {
+   "input": "dix-sept",
+   "dict": "legacy",
+   "expected": "dix-sept"
+  },
+  {
+   "input": "one two three",
+   "dict": "tech",
+   "expected": "one two three"
+  },
+  {
+   "input": "one two three",
+   "dict": "accents",
+   "expected": "one two three"
+  },
+  {
+   "input": "one two three",
+   "dict": "legacy",
+   "expected": "one two three"
+  },
+  {
+   "input": "cinq plus six égale onze",
+   "dict": "tech",
+   "expected": "cinq plus six égale onze"
+  },
+  {
+   "input": "cinq plus six égale onze",
+   "dict": "accents",
+   "expected": "cinq plus six égale onze"
+  },
+  {
+   "input": "cinq plus six égale onze",
+   "dict": "legacy",
+   "expected": "cinq plus six égale onze"
+  },
+  {
+   "input": "le 8 mars",
+   "dict": "tech",
+   "expected": "le 8 mars"
+  },
+  {
+   "input": "le 8 mars",
+   "dict": "accents",
+   "expected": "le 8 mars"
+  },
+  {
+   "input": "le 8 mars",
+   "dict": "legacy",
+   "expected": "le 8 mars"
+  },
+  {
+   "input": "huit",
+   "dict": "tech",
+   "expected": "huit"
+  },
+  {
+   "input": "huit",
+   "dict": "accents",
+   "expected": "huit"
+  },
+  {
+   "input": "huit",
+   "dict": "legacy",
+   "expected": "huit"
+  },
+  {
+   "input": "hello world",
+   "dict": "tech",
+   "expected": "hello world"
+  },
+  {
+   "input": "hello world",
+   "dict": "accents",
+   "expected": "hello world"
+  },
+  {
+   "input": "hello world",
+   "dict": "legacy",
+   "expected": "hello world"
+  },
+  {
+   "input": "Hello, world!",
+   "dict": "tech",
+   "expected": "Hello, world!"
+  },
+  {
+   "input": "Hello, world!",
+   "dict": "accents",
+   "expected": "Hello, world!"
+  },
+  {
+   "input": "Hello, world!",
+   "dict": "legacy",
+   "expected": "Hello, world!"
+  },
+  {
+   "input": "really ?",
+   "dict": "tech",
+   "expected": "really ?"
+  },
+  {
+   "input": "really ?",
+   "dict": "accents",
+   "expected": "really ?"
+  },
+  {
+   "input": "really ?",
+   "dict": "legacy",
+   "expected": "really ?"
+  },
+  {
+   "input": "really?",
+   "dict": "tech",
+   "expected": "really?"
+  },
+  {
+   "input": "really?",
+   "dict": "accents",
+   "expected": "really?"
+  },
+  {
+   "input": "really?",
+   "dict": "legacy",
+   "expected": "really?"
+  },
+  {
+   "input": "what ? why ! ok ; fine : done",
+   "dict": "tech",
+   "expected": "what ? why ! ok ; fine : done"
+  },
+  {
+   "input": "what ? why ! ok ; fine : done",
+   "dict": "accents",
+   "expected": "what ? why ! ok ; fine : done"
+  },
+  {
+   "input": "what ? why ! ok ; fine : done",
+   "dict": "legacy",
+   "expected": "what ? why ! ok ; fine : done"
+  },
+  {
+   "input": "it is 10:30 now",
+   "dict": "tech",
+   "expected": "it is 10:30 now"
+  },
+  {
+   "input": "it is 10:30 now",
+   "dict": "accents",
+   "expected": "it is 10:30 now"
+  },
+  {
+   "input": "it is 10:30 now",
+   "dict": "legacy",
+   "expected": "it is 10:30 now"
+  },
+  {
+   "input": "see http://x.com",
+   "dict": "tech",
+   "expected": "see http://x.com"
+  },
+  {
+   "input": "see http://x.com",
+   "dict": "accents",
+   "expected": "see http://x.com"
+  },
+  {
+   "input": "see http://x.com",
+   "dict": "legacy",
+   "expected": "see http://x.com"
+  },
+  {
+   "input": "he said \"hello\"",
+   "dict": "tech",
+   "expected": "he said \"hello\""
+  },
+  {
+   "input": "he said \"hello\"",
+   "dict": "accents",
+   "expected": "he said \"hello\""
+  },
+  {
+   "input": "he said \"hello\"",
+   "dict": "legacy",
+   "expected": "he said \"hello\""
+  },
+  {
+   "input": "I'm here. you're there",
+   "dict": "tech",
+   "expected": "I'm here. you're there"
+  },
+  {
+   "input": "I'm here. you're there",
+   "dict": "accents",
+   "expected": "I'm here. you're there"
+  },
+  {
+   "input": "I'm here. you're there",
+   "dict": "legacy",
+   "expected": "I'm here. you're there"
+  },
+  {
+   "input": "don't stop",
+   "dict": "tech",
+   "expected": "don't stop"
+  },
+  {
+   "input": "don't stop",
+   "dict": "accents",
+   "expected": "don't stop"
+  },
+  {
+   "input": "don't stop",
+   "dict": "legacy",
+   "expected": "don't stop"
+  },
+  {
+   "input": "rock'n'roll",
+   "dict": "tech",
+   "expected": "rock'n'roll"
+  },
+  {
+   "input": "rock'n'roll",
+   "dict": "accents",
+   "expected": "rock'n'roll"
+  },
+  {
+   "input": "rock'n'roll",
+   "dict": "legacy",
+   "expected": "rock'n'roll"
+  },
+  {
+   "input": "well-known fact",
+   "dict": "tech",
+   "expected": "well-known fact"
+  },
+  {
+   "input": "well-known fact",
+   "dict": "accents",
+   "expected": "well-known fact"
+  },
+  {
+   "input": "well-known fact",
+   "dict": "legacy",
+   "expected": "well-known fact"
+  },
+  {
+   "input": "a.b",
+   "dict": "tech",
+   "expected": "a.b"
+  },
+  {
+   "input": "a.b",
+   "dict": "accents",
+   "expected": "a.b"
+  },
+  {
+   "input": "a.b",
+   "dict": "legacy",
+   "expected": "a.b"
+  },
+  {
+   "input": "e.g. this",
+   "dict": "tech",
+   "expected": "e.g. this"
+  },
+  {
+   "input": "e.g. this",
+   "dict": "accents",
+   "expected": "e.g. this"
+  },
+  {
+   "input": "e.g. this",
+   "dict": "legacy",
+   "expected": "e.g. this"
+  },
+  {
+   "input": "U.S.A. is big",
+   "dict": "tech",
+   "expected": "U.S.A. is big"
+  },
+  {
+   "input": "U.S.A. is big",
+   "dict": "accents",
+   "expected": "U.S.A. is big"
+  },
+  {
+   "input": "U.S.A. is big",
+   "dict": "legacy",
+   "expected": "U.S.A. is big"
+  },
+  {
+   "input": "mr. smith is here",
+   "dict": "tech",
+   "expected": "mr. smith is here"
+  },
+  {
+   "input": "mr. smith is here",
+   "dict": "accents",
+   "expected": "mr. smith is here"
+  },
+  {
+   "input": "mr. smith is here",
+   "dict": "legacy",
+   "expected": "mr. smith is here"
+  },
+  {
+   "input": "hello.World",
+   "dict": "tech",
+   "expected": "hello.World"
+  },
+  {
+   "input": "hello.World",
+   "dict": "accents",
+   "expected": "hello.World"
+  },
+  {
+   "input": "hello.World",
+   "dict": "legacy",
+   "expected": "hello.World"
+  },
+  {
+   "input": "hello,world",
+   "dict": "tech",
+   "expected": "hello,world"
+  },
+  {
+   "input": "hello,world",
+   "dict": "accents",
+   "expected": "hello,world"
+  },
+  {
+   "input": "hello,world",
+   "dict": "legacy",
+   "expected": "hello,world"
+  },
+  {
+   "input": "hello , world",
+   "dict": "tech",
+   "expected": "hello , world"
+  },
+  {
+   "input": "hello , world",
+   "dict": "accents",
+   "expected": "hello , world"
+  },
+  {
+   "input": "hello , world",
+   "dict": "legacy",
+   "expected": "hello , world"
+  },
+  {
+   "input": "um, so, uh, yes",
+   "dict": "tech",
+   "expected": "um, so, uh, yes"
+  },
+  {
+   "input": "um, so, uh, yes",
+   "dict": "accents",
+   "expected": "um, so, uh, yes"
+  },
+  {
+   "input": "um, so, uh, yes",
+   "dict": "legacy",
+   "expected": "um, so, uh, yes"
+  },
+  {
+   "input": "like like like",
+   "dict": "tech",
+   "expected": "like like like"
+  },
+  {
+   "input": "like like like",
+   "dict": "accents",
+   "expected": "like like like"
+  },
+  {
+   "input": "like like like",
+   "dict": "legacy",
+   "expected": "like like like"
+  },
+  {
+   "input": "you know you know you know",
+   "dict": "tech",
+   "expected": "you know you know you know"
+  },
+  {
+   "input": "you know you know you know",
+   "dict": "accents",
+   "expected": "you know you know you know"
+  },
+  {
+   "input": "you know you know you know",
+   "dict": "legacy",
+   "expected": "you know you know you know"
+  },
+  {
+   "input": "n huit n",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "n huit n",
+   "dict": "accents",
+   "expected": "n huit n"
+  },
+  {
+   "input": "n huit n",
+   "dict": "legacy",
+   "expected": "n huit n"
+  },
+  {
+   "input": "N-8-N",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "N-8-N",
+   "dict": "accents",
+   "expected": "N-8-N"
+  },
+  {
+   "input": "N-8-N",
+   "dict": "legacy",
+   "expected": "N-8-N"
+  },
+  {
+   "input": "N, huit, N",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "N, huit, N",
+   "dict": "accents",
+   "expected": "N, huit, N"
+  },
+  {
+   "input": "N, huit, N",
+   "dict": "legacy",
+   "expected": "N, huit, N"
+  },
+  {
+   "input": "n 8 n",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "n 8 n",
+   "dict": "accents",
+   "expected": "n 8 n"
+  },
+  {
+   "input": "n 8 n",
+   "dict": "legacy",
+   "expected": "n 8 n"
+  },
+  {
+   "input": "n8n",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "n8n",
+   "dict": "accents",
+   "expected": "n8n"
+  },
+  {
+   "input": "n8n",
+   "dict": "legacy",
+   "expected": "n8n"
+  },
+  {
+   "input": "N8N",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "N8N",
+   "dict": "accents",
+   "expected": "N8N"
+  },
+  {
+   "input": "N8N",
+   "dict": "legacy",
+   "expected": "N8N"
+  },
+  {
+   "input": "n-8-n est bien",
+   "dict": "tech",
+   "expected": "n8n est bien"
+  },
+  {
+   "input": "n-8-n est bien",
+   "dict": "accents",
+   "expected": "n-8-n est bien"
+  },
+  {
+   "input": "n-8-n est bien",
+   "dict": "legacy",
+   "expected": "n-8-n est bien"
+  },
+  {
+   "input": "n eight n",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "n eight n",
+   "dict": "accents",
+   "expected": "n eight n"
+  },
+  {
+   "input": "n eight n",
+   "dict": "legacy",
+   "expected": "n eight n"
+  },
+  {
+   "input": "aine huit aine",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "aine huit aine",
+   "dict": "accents",
+   "expected": "aine huit aine"
+  },
+  {
+   "input": "aine huit aine",
+   "dict": "legacy",
+   "expected": "aine huit aine"
+  },
+  {
+   "input": "en huit en",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "en huit en",
+   "dict": "accents",
+   "expected": "en huit en"
+  },
+  {
+   "input": "en huit en",
+   "dict": "legacy",
+   "expected": "en huit en"
+  },
+  {
+   "input": "n y n",
+   "dict": "tech",
+   "expected": "n8n"
+  },
+  {
+   "input": "n y n",
+   "dict": "accents",
+   "expected": "n y n"
+  },
+  {
+   "input": "n y n",
+   "dict": "legacy",
+   "expected": "n y n"
+  },
+  {
+   "input": "euh j'utilise n huit n avec clode code",
+   "dict": "tech",
+   "expected": "euh j'utilise n8n avec Claude Code"
+  },
+  {
+   "input": "euh j'utilise n huit n avec clode code",
+   "dict": "accents",
+   "expected": "euh j'utilise n huit n avec clode code"
+  },
+  {
+   "input": "euh j'utilise n huit n avec clode code",
+   "dict": "legacy",
+   "expected": "euh j'utilise n huit n avec clode code"
+  },
+  {
+   "input": "j'utilise clode code et clode",
+   "dict": "tech",
+   "expected": "j'utilise Claude Code et Claude"
+  },
+  {
+   "input": "j'utilise clode code et clode",
+   "dict": "accents",
+   "expected": "j'utilise clode code et clode"
+  },
+  {
+   "input": "j'utilise clode code et clode",
+   "dict": "legacy",
+   "expected": "j'utilise clode code et clode"
+  },
+  {
+   "input": "clode",
+   "dict": "tech",
+   "expected": "Claude"
+  },
+  {
+   "input": "clode",
+   "dict": "accents",
+   "expected": "clode"
+  },
+  {
+   "input": "clode",
+   "dict": "legacy",
+   "expected": "clode"
+  },
+  {
+   "input": "Clode Code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "Clode Code",
+   "dict": "accents",
+   "expected": "Clode Code"
+  },
+  {
+   "input": "Clode Code",
+   "dict": "legacy",
+   "expected": "Clode Code"
+  },
+  {
+   "input": "clôde code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clôde code",
+   "dict": "accents",
+   "expected": "clôde code"
+  },
+  {
+   "input": "clôde code",
+   "dict": "legacy",
+   "expected": "clôde code"
+  },
+  {
+   "input": "clod code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clod code",
+   "dict": "accents",
+   "expected": "clod code"
+  },
+  {
+   "input": "clod code",
+   "dict": "legacy",
+   "expected": "clod code"
+  },
+  {
+   "input": "cloud code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "cloud code",
+   "dict": "accents",
+   "expected": "cloud code"
+  },
+  {
+   "input": "cloud code",
+   "dict": "legacy",
+   "expected": "cloud code"
+  },
+  {
+   "input": "claude",
+   "dict": "tech",
+   "expected": "Claude"
+  },
+  {
+   "input": "claude",
+   "dict": "accents",
+   "expected": "claude"
+  },
+  {
+   "input": "claude",
+   "dict": "legacy",
+   "expected": "claude"
+  },
+  {
+   "input": "CLAUDE CODE",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "CLAUDE CODE",
+   "dict": "accents",
+   "expected": "CLAUDE CODE"
+  },
+  {
+   "input": "CLAUDE CODE",
+   "dict": "legacy",
+   "expected": "CLAUDE CODE"
+  },
+  {
+   "input": "git hub",
+   "dict": "tech",
+   "expected": "GitHub"
+  },
+  {
+   "input": "git hub",
+   "dict": "accents",
+   "expected": "git hub"
+  },
+  {
+   "input": "git hub",
+   "dict": "legacy",
+   "expected": "git hub"
+  },
+  {
+   "input": "Git Hub",
+   "dict": "tech",
+   "expected": "GitHub"
+  },
+  {
+   "input": "Git Hub",
+   "dict": "accents",
+   "expected": "Git Hub"
+  },
+  {
+   "input": "Git Hub",
+   "dict": "legacy",
+   "expected": "Git Hub"
+  },
+  {
+   "input": "guit hub",
+   "dict": "tech",
+   "expected": "GitHub"
+  },
+  {
+   "input": "guit hub",
+   "dict": "accents",
+   "expected": "guit hub"
+  },
+  {
+   "input": "guit hub",
+   "dict": "legacy",
+   "expected": "guit hub"
+  },
+  {
+   "input": "guithub",
+   "dict": "tech",
+   "expected": "GitHub"
+  },
+  {
+   "input": "guithub",
+   "dict": "accents",
+   "expected": "guithub"
+  },
+  {
+   "input": "guithub",
+   "dict": "legacy",
+   "expected": "guithub"
+  },
+  {
+   "input": "gîte hub",
+   "dict": "tech",
+   "expected": "GitHub"
+  },
+  {
+   "input": "gîte hub",
+   "dict": "accents",
+   "expected": "gîte hub"
+  },
+  {
+   "input": "gîte hub",
+   "dict": "legacy",
+   "expected": "gîte hub"
+  },
+  {
+   "input": "github.com",
+   "dict": "tech",
+   "expected": "GitHub.com"
+  },
+  {
+   "input": "github.com",
+   "dict": "accents",
+   "expected": "github.com"
+  },
+  {
+   "input": "github.com",
+   "dict": "legacy",
+   "expected": "github.com"
+  },
+  {
+   "input": "sur git hub, voilà",
+   "dict": "tech",
+   "expected": "sur GitHub, voilà"
+  },
+  {
+   "input": "sur git hub, voilà",
+   "dict": "accents",
+   "expected": "sur git hub, voilà"
+  },
+  {
+   "input": "sur git hub, voilà",
+   "dict": "legacy",
+   "expected": "sur git hub, voilà"
+  },
+  {
+   "input": "g p t",
+   "dict": "tech",
+   "expected": "GPT"
+  },
+  {
+   "input": "g p t",
+   "dict": "accents",
+   "expected": "g p t"
+  },
+  {
+   "input": "g p t",
+   "dict": "legacy",
+   "expected": "g p t"
+  },
+  {
+   "input": "G P T",
+   "dict": "tech",
+   "expected": "GPT"
+  },
+  {
+   "input": "G P T",
+   "dict": "accents",
+   "expected": "G P T"
+  },
+  {
+   "input": "G P T",
+   "dict": "legacy",
+   "expected": "G P T"
+  },
+  {
+   "input": "gé pé té",
+   "dict": "tech",
+   "expected": "GPT"
+  },
+  {
+   "input": "gé pé té",
+   "dict": "accents",
+   "expected": "gé pé té"
+  },
+  {
+   "input": "gé pé té",
+   "dict": "legacy",
+   "expected": "gé pé té"
+  },
+  {
+   "input": "chat g p t",
+   "dict": "tech",
+   "expected": "ChatGPT"
+  },
+  {
+   "input": "chat g p t",
+   "dict": "accents",
+   "expected": "chat g p t"
+  },
+  {
+   "input": "chat g p t",
+   "dict": "legacy",
+   "expected": "chat g p t"
+  },
+  {
+   "input": "chat gpt",
+   "dict": "tech",
+   "expected": "ChatGPT"
+  },
+  {
+   "input": "chat gpt",
+   "dict": "accents",
+   "expected": "chat gpt"
+  },
+  {
+   "input": "chat gpt",
+   "dict": "legacy",
+   "expected": "chat gpt"
+  },
+  {
+   "input": "tchat gpt",
+   "dict": "tech",
+   "expected": "ChatGPT"
+  },
+  {
+   "input": "tchat gpt",
+   "dict": "accents",
+   "expected": "tchat gpt"
+  },
+  {
+   "input": "tchat gpt",
+   "dict": "legacy",
+   "expected": "tchat gpt"
+  },
+  {
+   "input": "chat gpt g p t",
+   "dict": "tech",
+   "expected": "ChatGPT GPT"
+  },
+  {
+   "input": "chat gpt g p t",
+   "dict": "accents",
+   "expected": "chat gpt g p t"
+  },
+  {
+   "input": "chat gpt g p t",
+   "dict": "legacy",
+   "expected": "chat gpt g p t"
+  },
+  {
+   "input": "x field",
+   "dict": "tech",
+   "expected": "Quarkfield"
+  },
+  {
+   "input": "x field",
+   "dict": "accents",
+   "expected": "x field"
+  },
+  {
+   "input": "x field",
+   "dict": "legacy",
+   "expected": "x field"
+  },
+  {
+   "input": "x fields",
+   "dict": "tech",
+   "expected": "x fields"
+  },
+  {
+   "input": "x fields",
+   "dict": "accents",
+   "expected": "x fields"
+  },
+  {
+   "input": "x fields",
+   "dict": "legacy",
+   "expected": "x fields"
+  },
+  {
+   "input": "xfield",
+   "dict": "tech",
+   "expected": "Quarkfield"
+  },
+  {
+   "input": "xfield",
+   "dict": "accents",
+   "expected": "xfield"
+  },
+  {
+   "input": "xfield",
+   "dict": "legacy",
+   "expected": "xfield"
+  },
+  {
+   "input": "ix field",
+   "dict": "tech",
+   "expected": "Quarkfield"
+  },
+  {
+   "input": "ix field",
+   "dict": "accents",
+   "expected": "ix field"
+  },
+  {
+   "input": "ix field",
+   "dict": "legacy",
+   "expected": "ix field"
+  },
+  {
+   "input": "quark field",
+   "dict": "tech",
+   "expected": "Quarkfield"
+  },
+  {
+   "input": "quark field",
+   "dict": "accents",
+   "expected": "quark field"
+  },
+  {
+   "input": "quark field",
+   "dict": "legacy",
+   "expected": "quark field"
+  },
+  {
+   "input": "m c p",
+   "dict": "tech",
+   "expected": "MCP"
+  },
+  {
+   "input": "m c p",
+   "dict": "accents",
+   "expected": "m c p"
+  },
+  {
+   "input": "m c p",
+   "dict": "legacy",
+   "expected": "m c p"
+  },
+  {
+   "input": "a p i",
+   "dict": "tech",
+   "expected": "API"
+  },
+  {
+   "input": "a p i",
+   "dict": "accents",
+   "expected": "a p i"
+  },
+  {
+   "input": "a p i",
+   "dict": "legacy",
+   "expected": "a p i"
+  },
+  {
+   "input": "a pé i",
+   "dict": "tech",
+   "expected": "API"
+  },
+  {
+   "input": "a pé i",
+   "dict": "accents",
+   "expected": "a pé i"
+  },
+  {
+   "input": "a pé i",
+   "dict": "legacy",
+   "expected": "a pé i"
+  },
+  {
+   "input": "linux flow",
+   "dict": "tech",
+   "expected": "LinuxFlow"
+  },
+  {
+   "input": "linux flow",
+   "dict": "accents",
+   "expected": "linux flow"
+  },
+  {
+   "input": "linux flow",
+   "dict": "legacy",
+   "expected": "linux flow"
+  },
+  {
+   "input": "fri flow",
+   "dict": "tech",
+   "expected": "LinuxFlow"
+  },
+  {
+   "input": "fri flow",
+   "dict": "accents",
+   "expected": "fri flow"
+  },
+  {
+   "input": "fri flow",
+   "dict": "legacy",
+   "expected": "fri flow"
+  },
+  {
+   "input": "you tube",
+   "dict": "tech",
+   "expected": "YouTube"
+  },
+  {
+   "input": "you tube",
+   "dict": "accents",
+   "expected": "you tube"
+  },
+  {
+   "input": "you tube",
+   "dict": "legacy",
+   "expected": "you tube"
+  },
+  {
+   "input": "tic toc",
+   "dict": "tech",
+   "expected": "TikTok"
+  },
+  {
+   "input": "tic toc",
+   "dict": "accents",
+   "expected": "tic toc"
+  },
+  {
+   "input": "tic toc",
+   "dict": "legacy",
+   "expected": "tic toc"
+  },
+  {
+   "input": "tik tok",
+   "dict": "tech",
+   "expected": "TikTok"
+  },
+  {
+   "input": "tik tok",
+   "dict": "accents",
+   "expected": "tik tok"
+  },
+  {
+   "input": "tik tok",
+   "dict": "legacy",
+   "expected": "tik tok"
+  },
+  {
+   "input": "opus",
+   "dict": "tech",
+   "expected": "Opus"
+  },
+  {
+   "input": "opus",
+   "dict": "accents",
+   "expected": "opus"
+  },
+  {
+   "input": "opus",
+   "dict": "legacy",
+   "expected": "opus"
+  },
+  {
+   "input": "OPUS",
+   "dict": "tech",
+   "expected": "Opus"
+  },
+  {
+   "input": "OPUS",
+   "dict": "accents",
+   "expected": "OPUS"
+  },
+  {
+   "input": "OPUS",
+   "dict": "legacy",
+   "expected": "OPUS"
+  },
+  {
+   "input": "n huit n. clode code ? oui",
+   "dict": "tech",
+   "expected": "n8n. Claude Code ? oui"
+  },
+  {
+   "input": "n huit n. clode code ? oui",
+   "dict": "accents",
+   "expected": "n huit n. clode code ? oui"
+  },
+  {
+   "input": "n huit n. clode code ? oui",
+   "dict": "legacy",
+   "expected": "n huit n. clode code ? oui"
+  },
+  {
+   "input": "n huit n, git hub et g p t",
+   "dict": "tech",
+   "expected": "n8n, GitHub et GPT"
+  },
+  {
+   "input": "n huit n, git hub et g p t",
+   "dict": "accents",
+   "expected": "n huit n, git hub et g p t"
+  },
+  {
+   "input": "n huit n, git hub et g p t",
+   "dict": "legacy",
+   "expected": "n huit n, git hub et g p t"
+  },
+  {
+   "input": "clode code, clode code",
+   "dict": "tech",
+   "expected": "Claude Code, Claude Code"
+  },
+  {
+   "input": "clode code, clode code",
+   "dict": "accents",
+   "expected": "clode code, clode code"
+  },
+  {
+   "input": "clode code, clode code",
+   "dict": "legacy",
+   "expected": "clode code, clode code"
+  },
+  {
+   "input": "clode  code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clode  code",
+   "dict": "accents",
+   "expected": "clode  code"
+  },
+  {
+   "input": "clode  code",
+   "dict": "legacy",
+   "expected": "clode  code"
+  },
+  {
+   "input": "clode-code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clode-code",
+   "dict": "accents",
+   "expected": "clode-code"
+  },
+  {
+   "input": "clode-code",
+   "dict": "legacy",
+   "expected": "clode-code"
+  },
+  {
+   "input": "clode.code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clode.code",
+   "dict": "accents",
+   "expected": "clode.code"
+  },
+  {
+   "input": "clode.code",
+   "dict": "legacy",
+   "expected": "clode.code"
+  },
+  {
+   "input": "clode_code",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clode_code",
+   "dict": "accents",
+   "expected": "clode_code"
+  },
+  {
+   "input": "clode_code",
+   "dict": "legacy",
+   "expected": "clode_code"
+  },
+  {
+   "input": "clodecode",
+   "dict": "tech",
+   "expected": "Claude Code"
+  },
+  {
+   "input": "clodecode",
+   "dict": "accents",
+   "expected": "clodecode"
+  },
+  {
+   "input": "clodecode",
+   "dict": "legacy",
+   "expected": "clodecode"
+  },
+  {
+   "input": "unclode code",
+   "dict": "tech",
+   "expected": "unclode code"
+  },
+  {
+   "input": "unclode code",
+   "dict": "accents",
+   "expected": "unclode code"
+  },
+  {
+   "input": "unclode code",
+   "dict": "legacy",
+   "expected": "unclode code"
+  },
+  {
+   "input": "clode codes",
+   "dict": "tech",
+   "expected": "Claude codes"
+  },
+  {
+   "input": "clode codes",
+   "dict": "accents",
+   "expected": "clode codes"
+  },
+  {
+   "input": "clode codes",
+   "dict": "legacy",
+   "expected": "clode codes"
+  },
+  {
+   "input": "n8n est le premier mot",
+   "dict": "tech",
+   "expected": "n8n est le premier mot"
+  },
+  {
+   "input": "n8n est le premier mot",
+   "dict": "accents",
+   "expected": "n8n est le premier mot"
+  },
+  {
+   "input": "n8n est le premier mot",
+   "dict": "legacy",
+   "expected": "n8n est le premier mot"
+  },
+  {
+   "input": "le premier mot est n huit n",
+   "dict": "tech",
+   "expected": "le premier mot est n8n"
+  },
+  {
+   "input": "le premier mot est n huit n",
+   "dict": "accents",
+   "expected": "le premier mot est n huit n"
+  },
+  {
+   "input": "le premier mot est n huit n",
+   "dict": "legacy",
+   "expected": "le premier mot est n huit n"
+  },
+  {
+   "input": "x field. n huit n",
+   "dict": "tech",
+   "expected": "Quarkfield. n8n"
+  },
+  {
+   "input": "x field. n huit n",
+   "dict": "accents",
+   "expected": "x field. n huit n"
+  },
+  {
+   "input": "x field. n huit n",
+   "dict": "legacy",
+   "expected": "x field. n huit n"
+  },
+  {
+   "input": "x field! n huit n",
+   "dict": "tech",
+   "expected": "Quarkfield! n8n"
+  },
+  {
+   "input": "x field! n huit n",
+   "dict": "accents",
+   "expected": "x field! n huit n"
+  },
+  {
+   "input": "x field! n huit n",
+   "dict": "legacy",
+   "expected": "x field! n huit n"
+  },
+  {
+   "input": "fin. n huit n",
+   "dict": "tech",
+   "expected": "fin. n8n"
+  },
+  {
+   "input": "fin. n huit n",
+   "dict": "accents",
+   "expected": "fin. n huit n"
+  },
+  {
+   "input": "fin. n huit n",
+   "dict": "legacy",
+   "expected": "fin. n huit n"
+  },
+  {
+   "input": "fin.n huit n",
+   "dict": "tech",
+   "expected": "fin.n8n"
+  },
+  {
+   "input": "fin.n huit n",
+   "dict": "accents",
+   "expected": "fin.n huit n"
+  },
+  {
+   "input": "fin.n huit n",
+   "dict": "legacy",
+   "expected": "fin.n huit n"
+  },
+  {
+   "input": "n huit n,clode code",
+   "dict": "tech",
+   "expected": "n8n,Claude Code"
+  },
+  {
+   "input": "n huit n,clode code",
+   "dict": "accents",
+   "expected": "n huit n,clode code"
+  },
+  {
+   "input": "n huit n,clode code",
+   "dict": "legacy",
+   "expected": "n huit n,clode code"
+  },
+  {
+   "input": "api",
+   "dict": "tech",
+   "expected": "API"
+  },
+  {
+   "input": "api",
+   "dict": "accents",
+   "expected": "api"
+  },
+  {
+   "input": "api",
+   "dict": "legacy",
+   "expected": "api"
+  },
+  {
+   "input": "API",
+   "dict": "tech",
+   "expected": "API"
+  },
+  {
+   "input": "API",
+   "dict": "accents",
+   "expected": "API"
+  },
+  {
+   "input": "API",
+   "dict": "legacy",
+   "expected": "API"
+  },
+  {
+   "input": "Api",
+   "dict": "tech",
+   "expected": "API"
+  },
+  {
+   "input": "Api",
+   "dict": "accents",
+   "expected": "Api"
+  },
+  {
+   "input": "Api",
+   "dict": "legacy",
+   "expected": "Api"
+  },
+  {
+   "input": "une a p i",
+   "dict": "tech",
+   "expected": "une API"
+  },
+  {
+   "input": "une a p i",
+   "dict": "accents",
+   "expected": "une a p i"
+  },
+  {
+   "input": "une a p i",
+   "dict": "legacy",
+   "expected": "une a p i"
+  },
+  {
+   "input": "des a p i, ok",
+   "dict": "tech",
+   "expected": "des API, ok"
+  },
+  {
+   "input": "des a p i, ok",
+   "dict": "accents",
+   "expected": "des a p i, ok"
+  },
+  {
+   "input": "des a p i, ok",
+   "dict": "legacy",
+   "expected": "des a p i, ok"
+  },
+  {
+   "input": "a p i ?",
+   "dict": "tech",
+   "expected": "API ?"
+  },
+  {
+   "input": "a p i ?",
+   "dict": "accents",
+   "expected": "a p i ?"
+  },
+  {
+   "input": "a p i ?",
+   "dict": "legacy",
+   "expected": "a p i ?"
+  },
+  {
+   "input": "a p i?",
+   "dict": "tech",
+   "expected": "API?"
+  },
+  {
+   "input": "a p i?",
+   "dict": "accents",
+   "expected": "a p i?"
+  },
+  {
+   "input": "a p i?",
+   "dict": "legacy",
+   "expected": "a p i?"
+  },
+  {
+   "input": "a p i !",
+   "dict": "tech",
+   "expected": "API !"
+  },
+  {
+   "input": "a p i !",
+   "dict": "accents",
+   "expected": "a p i !"
+  },
+  {
+   "input": "a p i !",
+   "dict": "legacy",
+   "expected": "a p i !"
+  },
+  {
+   "input": "«n huit n»",
+   "dict": "tech",
+   "expected": "«n8n»"
+  },
+  {
+   "input": "«n huit n»",
+   "dict": "accents",
+   "expected": "«n huit n»"
+  },
+  {
+   "input": "«n huit n»",
+   "dict": "legacy",
+   "expected": "«n huit n»"
+  },
+  {
+   "input": "(n huit n)",
+   "dict": "tech",
+   "expected": "(n8n)"
+  },
+  {
+   "input": "(n huit n)",
+   "dict": "accents",
+   "expected": "(n huit n)"
+  },
+  {
+   "input": "(n huit n)",
+   "dict": "legacy",
+   "expected": "(n huit n)"
+  },
+  {
+   "input": "n huit n :",
+   "dict": "tech",
+   "expected": "n8n :"
+  },
+  {
+   "input": "n huit n :",
+   "dict": "accents",
+   "expected": "n huit n :"
+  },
+  {
+   "input": "n huit n :",
+   "dict": "legacy",
+   "expected": "n huit n :"
+  },
+  {
+   "input": "n huit n ;",
+   "dict": "tech",
+   "expected": "n8n ;"
+  },
+  {
+   "input": "n huit n ;",
+   "dict": "accents",
+   "expected": "n huit n ;"
+  },
+  {
+   "input": "n huit n ;",
+   "dict": "legacy",
+   "expected": "n huit n ;"
+  },
+  {
+   "input": "n huit n ?",
+   "dict": "tech",
+   "expected": "n8n ?"
+  },
+  {
+   "input": "n huit n ?",
+   "dict": "accents",
+   "expected": "n huit n ?"
+  },
+  {
+   "input": "n huit n ?",
+   "dict": "legacy",
+   "expected": "n huit n ?"
+  },
+  {
+   "input": "1 n huit n",
+   "dict": "tech",
+   "expected": "1 n8n"
+  },
+  {
+   "input": "1 n huit n",
+   "dict": "accents",
+   "expected": "1 n huit n"
+  },
+  {
+   "input": "1 n huit n",
+   "dict": "legacy",
+   "expected": "1 n huit n"
+  },
+  {
+   "input": "n huit n 2",
+   "dict": "tech",
+   "expected": "n8n 2"
+  },
+  {
+   "input": "n huit n 2",
+   "dict": "accents",
+   "expected": "n huit n 2"
+  },
+  {
+   "input": "n huit n 2",
+   "dict": "legacy",
+   "expected": "n huit n 2"
+  },
+  {
+   "input": "n huit nn",
+   "dict": "tech",
+   "expected": "n huit nn"
+  },
+  {
+   "input": "n huit nn",
+   "dict": "accents",
+   "expected": "n huit nn"
+  },
+  {
+   "input": "n huit nn",
+   "dict": "legacy",
+   "expected": "n huit nn"
+  },
+  {
+   "input": "nn huit n",
+   "dict": "tech",
+   "expected": "nn huit n"
+  },
+  {
+   "input": "nn huit n",
+   "dict": "accents",
+   "expected": "nn huit n"
+  },
+  {
+   "input": "nn huit n",
+   "dict": "legacy",
+   "expected": "nn huit n"
+  },
+  {
+   "input": "n huit n n huit n",
+   "dict": "tech",
+   "expected": "n8n n8n"
+  },
+  {
+   "input": "n huit n n huit n",
+   "dict": "accents",
+   "expected": "n huit n n huit n"
+  },
+  {
+   "input": "n huit n n huit n",
+   "dict": "legacy",
+   "expected": "n huit n n huit n"
+  },
+  {
+   "input": "n huit n n huit n n huit n",
+   "dict": "tech",
+   "expected": "n8n n8n n8n"
+  },
+  {
+   "input": "n huit n n huit n n huit n",
+   "dict": "accents",
+   "expected": "n huit n n huit n n huit n"
+  },
+  {
+   "input": "n huit n n huit n n huit n",
+   "dict": "legacy",
+   "expected": "n huit n n huit n n huit n"
+  },
+  {
+   "input": "sava",
+   "dict": "tech",
+   "expected": "sava"
+  },
+  {
+   "input": "sava",
+   "dict": "accents",
+   "expected": "Çava"
+  },
+  {
+   "input": "sava",
+   "dict": "legacy",
+   "expected": "sava"
+  },
+  {
+   "input": "ça va",
+   "dict": "tech",
+   "expected": "ça va"
+  },
+  {
+   "input": "ça va",
+   "dict": "accents",
+   "expected": "ça va"
+  },
+  {
+   "input": "ça va",
+   "dict": "legacy",
+   "expected": "ça va"
+  },
+  {
+   "input": "Éleonor",
+   "dict": "tech",
+   "expected": "Éleonor"
+  },
+  {
+   "input": "Éleonor",
+   "dict": "accents",
+   "expected": "Éléonore"
+  },
+  {
+   "input": "Éleonor",
+   "dict": "legacy",
+   "expected": "Éleonor"
+  },
+  {
+   "input": "eleonor",
+   "dict": "tech",
+   "expected": "eleonor"
+  },
+  {
+   "input": "eleonor",
+   "dict": "accents",
+   "expected": "Éléonore"
+  },
+  {
+   "input": "eleonor",
+   "dict": "legacy",
+   "expected": "eleonor"
+  },
+  {
+   "input": "éléonor",
+   "dict": "tech",
+   "expected": "éléonor"
+  },
+  {
+   "input": "éléonor",
+   "dict": "accents",
+   "expected": "Éléonore"
+  },
+  {
+   "input": "éléonor",
+   "dict": "legacy",
+   "expected": "éléonor"
+  },
+  {
+   "input": "ELEONOR",
+   "dict": "tech",
+   "expected": "ELEONOR"
+  },
+  {
+   "input": "ELEONOR",
+   "dict": "accents",
+   "expected": "Éléonore"
+  },
+  {
+   "input": "ELEONOR",
+   "dict": "legacy",
+   "expected": "ELEONOR"
+  },
+  {
+   "input": "zoe",
+   "dict": "tech",
+   "expected": "zoe"
+  },
+  {
+   "input": "zoe",
+   "dict": "accents",
+   "expected": "Zoë"
+  },
+  {
+   "input": "zoe",
+   "dict": "legacy",
+   "expected": "zoe"
+  },
+  {
+   "input": "Zoë",
+   "dict": "tech",
+   "expected": "Zoë"
+  },
+  {
+   "input": "Zoë",
+   "dict": "accents",
+   "expected": "Zoë"
+  },
+  {
+   "input": "Zoë",
+   "dict": "legacy",
+   "expected": "Zoë"
+  },
+  {
+   "input": "i mail",
+   "dict": "tech",
+   "expected": "i mail"
+  },
+  {
+   "input": "i mail",
+   "dict": "accents",
+   "expected": "e-mail"
+  },
+  {
+   "input": "i mail",
+   "dict": "legacy",
+   "expected": "i mail"
+  },
+  {
+   "input": "email",
+   "dict": "tech",
+   "expected": "email"
+  },
+  {
+   "input": "email",
+   "dict": "accents",
+   "expected": "e-mail"
+  },
+  {
+   "input": "email",
+   "dict": "legacy",
+   "expected": "email"
+  },
+  {
+   "input": "e-mail",
+   "dict": "tech",
+   "expected": "e-mail"
+  },
+  {
+   "input": "e-mail",
+   "dict": "accents",
+   "expected": "e-mail"
+  },
+  {
+   "input": "e-mail",
+   "dict": "legacy",
+   "expected": "e-mail"
+  },
+  {
+   "input": "paris",
+   "dict": "tech",
+   "expected": "paris"
+  },
+  {
+   "input": "paris",
+   "dict": "accents",
+   "expected": "Paris"
+  },
+  {
+   "input": "paris",
+   "dict": "legacy",
+   "expected": "paris"
+  },
+  {
+   "input": "PARIS",
+   "dict": "tech",
+   "expected": "PARIS"
+  },
+  {
+   "input": "PARIS",
+   "dict": "accents",
+   "expected": "Paris"
+  },
+  {
+   "input": "PARIS",
+   "dict": "legacy",
+   "expected": "PARIS"
+  },
+  {
+   "input": "kubernetes",
+   "dict": "tech",
+   "expected": "kubernetes"
+  },
+  {
+   "input": "kubernetes",
+   "dict": "accents",
+   "expected": "kubernetes"
+  },
+  {
+   "input": "kubernetes",
+   "dict": "legacy",
+   "expected": "Kubernetes"
+  },
+  {
+   "input": "POSTGRESQL",
+   "dict": "tech",
+   "expected": "POSTGRESQL"
+  },
+  {
+   "input": "POSTGRESQL",
+   "dict": "accents",
+   "expected": "POSTGRESQL"
+  },
+  {
+   "input": "POSTGRESQL",
+   "dict": "legacy",
+   "expected": "PostgreSQL"
+  },
+  {
+   "input": "Docker",
+   "dict": "tech",
+   "expected": "Docker"
+  },
+  {
+   "input": "Docker",
+   "dict": "accents",
+   "expected": "Docker"
+  },
+  {
+   "input": "Docker",
+   "dict": "legacy",
+   "expected": "docker"
+  },
+  {
+   "input": "docker",
+   "dict": "tech",
+   "expected": "docker"
+  },
+  {
+   "input": "docker",
+   "dict": "accents",
+   "expected": "docker"
+  },
+  {
+   "input": "docker",
+   "dict": "legacy",
+   "expected": "docker"
+  },
+  {
+   "input": "dockers",
+   "dict": "tech",
+   "expected": "dockers"
+  },
+  {
+   "input": "dockers",
+   "dict": "accents",
+   "expected": "dockers"
+  },
+  {
+   "input": "dockers",
+   "dict": "legacy",
+   "expected": "dockers"
+  },
+  {
+   "input": "mon adresse",
+   "dict": "tech",
+   "expected": "mon adresse"
+  },
+  {
+   "input": "mon adresse",
+   "dict": "accents",
+   "expected": "mon adresse"
+  },
+  {
+   "input": "mon adresse",
+   "dict": "legacy",
+   "expected": "mon adresse"
+  },
+  {
+   "input": "Mon Adresse est ici",
+   "dict": "tech",
+   "expected": "Mon Adresse est ici"
+  },
+  {
+   "input": "Mon Adresse est ici",
+   "dict": "accents",
+   "expected": "Mon Adresse est ici"
+  },
+  {
+   "input": "Mon Adresse est ici",
+   "dict": "legacy",
+   "expected": "Mon Adresse est ici"
+  },
+  {
+   "input": "mon  adresse",
+   "dict": "tech",
+   "expected": "mon  adresse"
+  },
+  {
+   "input": "mon  adresse",
+   "dict": "accents",
+   "expected": "mon  adresse"
+  },
+  {
+   "input": "mon  adresse",
+   "dict": "legacy",
+   "expected": "mon  adresse"
+  },
+  {
+   "input": "mon\nadresse",
+   "dict": "tech",
+   "expected": "mon\nadresse"
+  },
+  {
+   "input": "mon\nadresse",
+   "dict": "accents",
+   "expected": "mon\nadresse"
+  },
+  {
+   "input": "mon\nadresse",
+   "dict": "legacy",
+   "expected": "mon\nadresse"
+  },
+  {
+   "input": "envoie à mon mail",
+   "dict": "tech",
+   "expected": "envoie à mon mail"
+  },
+  {
+   "input": "envoie à mon mail",
+   "dict": "accents",
+   "expected": "envoie à mon mail"
+  },
+  {
+   "input": "envoie à mon mail",
+   "dict": "legacy",
+   "expected": "envoie à mon mail"
+  },
+  {
+   "input": "mon mail, mon adresse, signature",
+   "dict": "tech",
+   "expected": "mon mail, mon adresse, signature"
+  },
+  {
+   "input": "mon mail, mon adresse, signature",
+   "dict": "accents",
+   "expected": "mon mail, mon adresse, signature"
+  },
+  {
+   "input": "mon mail, mon adresse, signature",
+   "dict": "legacy",
+   "expected": "mon mail, mon adresse, signature"
+  },
+  {
+   "input": "signature.",
+   "dict": "tech",
+   "expected": "signature."
+  },
+  {
+   "input": "signature.",
+   "dict": "accents",
+   "expected": "signature."
+  },
+  {
+   "input": "signature.",
+   "dict": "legacy",
+   "expected": "signature."
+  },
+  {
+   "input": "ma signature",
+   "dict": "tech",
+   "expected": "ma signature"
+  },
+  {
+   "input": "ma signature",
+   "dict": "accents",
+   "expected": "ma signature"
+  },
+  {
+   "input": "ma signature",
+   "dict": "legacy",
+   "expected": "ma signature"
+  },
+  {
+   "input": "best regards",
+   "dict": "tech",
+   "expected": "best regards"
+  },
+  {
+   "input": "best regards",
+   "dict": "accents",
+   "expected": "best regards"
+  },
+  {
+   "input": "best regards",
+   "dict": "legacy",
+   "expected": "best regards"
+  },
+  {
+   "input": "BEST   REGARDS",
+   "dict": "tech",
+   "expected": "BEST   REGARDS"
+  },
+  {
+   "input": "BEST   REGARDS",
+   "dict": "accents",
+   "expected": "BEST   REGARDS"
+  },
+  {
+   "input": "BEST   REGARDS",
+   "dict": "legacy",
+   "expected": "BEST   REGARDS"
+  },
+  {
+   "input": "aa bb",
+   "dict": "tech",
+   "expected": "aa bb"
+  },
+  {
+   "input": "aa bb",
+   "dict": "accents",
+   "expected": "aa bb"
+  },
+  {
+   "input": "aa bb",
+   "dict": "legacy",
+   "expected": "aa bb"
+  },
+  {
+   "input": "aa",
+   "dict": "tech",
+   "expected": "aa"
+  },
+  {
+   "input": "aa",
+   "dict": "accents",
+   "expected": "aa"
+  },
+  {
+   "input": "aa",
+   "dict": "legacy",
+   "expected": "aa"
+  },
+  {
+   "input": "bb cc",
+   "dict": "tech",
+   "expected": "bb cc"
+  },
+  {
+   "input": "bb cc",
+   "dict": "accents",
+   "expected": "bb cc"
+  },
+  {
+   "input": "bb cc",
+   "dict": "legacy",
+   "expected": "bb cc"
+  },
+  {
+   "input": "aa aa bb cc",
+   "dict": "tech",
+   "expected": "aa aa bb cc"
+  },
+  {
+   "input": "aa aa bb cc",
+   "dict": "accents",
+   "expected": "aa aa bb cc"
+  },
+  {
+   "input": "aa aa bb cc",
+   "dict": "legacy",
+   "expected": "aa aa bb cc"
+  },
+  {
+   "input": "aabb",
+   "dict": "tech",
+   "expected": "aabb"
+  },
+  {
+   "input": "aabb",
+   "dict": "accents",
+   "expected": "aabb"
+  },
+  {
+   "input": "aabb",
+   "dict": "legacy",
+   "expected": "aabb"
+  },
+  {
+   "input": "a.b",
+   "dict": "tech",
+   "expected": "a.b"
+  },
+  {
+   "input": "a.b",
+   "dict": "accents",
+   "expected": "a.b"
+  },
+  {
+   "input": "a.b",
+   "dict": "legacy",
+   "expected": "a.b"
+  },
+  {
+   "input": "axb",
+   "dict": "tech",
+   "expected": "axb"
+  },
+  {
+   "input": "axb",
+   "dict": "accents",
+   "expected": "axb"
+  },
+  {
+   "input": "axb",
+   "dict": "legacy",
+   "expected": "axb"
+  },
+  {
+   "input": "(x)",
+   "dict": "tech",
+   "expected": "(x)"
+  },
+  {
+   "input": "(x)",
+   "dict": "accents",
+   "expected": "(x)"
+  },
+  {
+   "input": "(x)",
+   "dict": "legacy",
+   "expected": "(x)"
+  },
+  {
+   "input": "x",
+   "dict": "tech",
+   "expected": "x"
+  },
+  {
+   "input": "x",
+   "dict": "accents",
+   "expected": "x"
+  },
+  {
+   "input": "x",
+   "dict": "legacy",
+   "expected": "x"
+  },
+  {
+   "input": "c++",
+   "dict": "tech",
+   "expected": "c++"
+  },
+  {
+   "input": "c++",
+   "dict": "accents",
+   "expected": "c++"
+  },
+  {
+   "input": "c++",
+   "dict": "legacy",
+   "expected": "c++"
+  },
+  {
+   "input": "c+",
+   "dict": "tech",
+   "expected": "c+"
+  },
+  {
+   "input": "c+",
+   "dict": "accents",
+   "expected": "c+"
+  },
+  {
+   "input": "c+",
+   "dict": "legacy",
+   "expected": "c+"
+  },
+  {
+   "input": "cc++",
+   "dict": "tech",
+   "expected": "cc++"
+  },
+  {
+   "input": "cc++",
+   "dict": "accents",
+   "expected": "cc++"
+  },
+  {
+   "input": "cc++",
+   "dict": "legacy",
+   "expected": "cc++"
+  },
+  {
+   "input": "[ok]",
+   "dict": "tech",
+   "expected": "[ok]"
+  },
+  {
+   "input": "[ok]",
+   "dict": "accents",
+   "expected": "[ok]"
+  },
+  {
+   "input": "[ok]",
+   "dict": "legacy",
+   "expected": "[ok]"
+  },
+  {
+   "input": "ok",
+   "dict": "tech",
+   "expected": "ok"
+  },
+  {
+   "input": "ok",
+   "dict": "accents",
+   "expected": "ok"
+  },
+  {
+   "input": "ok",
+   "dict": "legacy",
+   "expected": "ok"
+  },
+  {
+   "input": "a|b",
+   "dict": "tech",
+   "expected": "a|b"
+  },
+  {
+   "input": "a|b",
+   "dict": "accents",
+   "expected": "a|b"
+  },
+  {
+   "input": "a|b",
+   "dict": "legacy",
+   "expected": "a|b"
+  },
+  {
+   "input": "a",
+   "dict": "tech",
+   "expected": "a"
+  },
+  {
+   "input": "a",
+   "dict": "accents",
+   "expected": "a"
+  },
+  {
+   "input": "a",
+   "dict": "legacy",
+   "expected": "a"
+  },
+  {
+   "input": "b",
+   "dict": "tech",
+   "expected": "b"
+  },
+  {
+   "input": "b",
+   "dict": "accents",
+   "expected": "b"
+  },
+  {
+   "input": "b",
+   "dict": "legacy",
+   "expected": "b"
+  },
+  {
+   "input": "vide",
+   "dict": "tech",
+   "expected": "vide"
+  },
+  {
+   "input": "vide",
+   "dict": "accents",
+   "expected": "vide"
+  },
+  {
+   "input": "vide",
+   "dict": "legacy",
+   "expected": "vide"
+  },
+  {
+   "input": "bonjour vide monde",
+   "dict": "tech",
+   "expected": "bonjour vide monde"
+  },
+  {
+   "input": "bonjour vide monde",
+   "dict": "accents",
+   "expected": "bonjour vide monde"
+  },
+  {
+   "input": "bonjour vide monde",
+   "dict": "legacy",
+   "expected": "bonjour vide monde"
+  },
+  {
+   "input": "rien",
+   "dict": "tech",
+   "expected": "rien"
+  },
+  {
+   "input": "rien",
+   "dict": "accents",
+   "expected": "rien"
+  },
+  {
+   "input": "rien",
+   "dict": "legacy",
+   "expected": "rien"
+  },
+  {
+   "input": "à la fois",
+   "dict": "tech",
+   "expected": "à la fois"
+  },
+  {
+   "input": "à la fois",
+   "dict": "accents",
+   "expected": "à la fois"
+  },
+  {
+   "input": "à la fois",
+   "dict": "legacy",
+   "expected": "à la fois"
+  },
+  {
+   "input": "à   la   fois",
+   "dict": "tech",
+   "expected": "à   la   fois"
+  },
+  {
+   "input": "à   la   fois",
+   "dict": "accents",
+   "expected": "à   la   fois"
+  },
+  {
+   "input": "à   la   fois",
+   "dict": "legacy",
+   "expected": "à   la   fois"
+  },
+  {
+   "input": "A LA FOIS",
+   "dict": "tech",
+   "expected": "A LA FOIS"
+  },
+  {
+   "input": "A LA FOIS",
+   "dict": "accents",
+   "expected": "A LA FOIS"
+  },
+  {
+   "input": "A LA FOIS",
+   "dict": "legacy",
+   "expected": "A LA FOIS"
+  },
+  {
+   "input": "école",
+   "dict": "tech",
+   "expected": "école"
+  },
+  {
+   "input": "école",
+   "dict": "accents",
+   "expected": "école"
+  },
+  {
+   "input": "école",
+   "dict": "legacy",
+   "expected": "école"
+  },
+  {
+   "input": "École",
+   "dict": "tech",
+   "expected": "École"
+  },
+  {
+   "input": "École",
+   "dict": "accents",
+   "expected": "École"
+  },
+  {
+   "input": "École",
+   "dict": "legacy",
+   "expected": "École"
+  },
+  {
+   "input": "unicode",
+   "dict": "tech",
+   "expected": "unicode"
+  },
+  {
+   "input": "unicode",
+   "dict": "accents",
+   "expected": "unicode"
+  },
+  {
+   "input": "unicode",
+   "dict": "legacy",
+   "expected": "unicode"
+  },
+  {
+   "input": "ünïcode",
+   "dict": "tech",
+   "expected": "ünïcode"
+  },
+  {
+   "input": "ünïcode",
+   "dict": "accents",
+   "expected": "ünïcode"
+  },
+  {
+   "input": "ünïcode",
+   "dict": "legacy",
+   "expected": "ünïcode"
+  },
+  {
+   "input": "Ünïcode",
+   "dict": "tech",
+   "expected": "Ünïcode"
+  },
+  {
+   "input": "Ünïcode",
+   "dict": "accents",
+   "expected": "Ünïcode"
+  },
+  {
+   "input": "Ünïcode",
+   "dict": "legacy",
+   "expected": "Ünïcode"
+  },
+  {
+   "input": "une école. une école",
+   "dict": "tech",
+   "expected": "une école. une école"
+  },
+  {
+   "input": "une école. une école",
+   "dict": "accents",
+   "expected": "une école. une école"
+  },
+  {
+   "input": "une école. une école",
+   "dict": "legacy",
+   "expected": "une école. une école"
+  },
+  {
+   "input": "\\n",
+   "dict": "tech",
+   "expected": "\\n"
+  },
+  {
+   "input": "\\n",
+   "dict": "accents",
+   "expected": "\\n"
+  },
+  {
+   "input": "\\n",
+   "dict": "legacy",
+   "expected": "\\n"
+  },
+  {
+   "input": "a\\nb",
+   "dict": "tech",
+   "expected": "a\\nb"
+  },
+  {
+   "input": "a\\nb",
+   "dict": "accents",
+   "expected": "a\\nb"
+  },
+  {
+   "input": "a\\nb",
+   "dict": "legacy",
+   "expected": "a\\nb"
+  },
+  {
+   "input": "euh bonjour, c'est euh Marie. je voudrais euh réserver une table pour euh deux personnes demain à 20:30 ? hum voilà",
+   "dict": "tech",
+   "expected": "euh bonjour, c'est euh Marie. je voudrais euh réserver une table pour euh deux personnes demain à 20:30 ? hum voilà"
+  },
+  {
+   "input": "euh bonjour, c'est euh Marie. je voudrais euh réserver une table pour euh deux personnes demain à 20:30 ? hum voilà",
+   "dict": "accents",
+   "expected": "euh bonjour, c'est euh Marie. je voudrais euh réserver une table pour euh deux personnes demain à 20:30 ? hum voilà"
+  },
+  {
+   "input": "euh bonjour, c'est euh Marie. je voudrais euh réserver une table pour euh deux personnes demain à 20:30 ? hum voilà",
+   "dict": "legacy",
+   "expected": "euh bonjour, c'est euh Marie. je voudrais euh réserver une table pour euh deux personnes demain à 20:30 ? hum voilà"
+  },
+  {
+   "input": "um hi, this is uh John, I wanted to um ask about the, the invoice. you know you know it was uh wrong !",
+   "dict": "tech",
+   "expected": "um hi, this is uh John, I wanted to um ask about the, the invoice. you know you know it was uh wrong !"
+  },
+  {
+   "input": "um hi, this is uh John, I wanted to um ask about the, the invoice. you know you know it was uh wrong !",
+   "dict": "accents",
+   "expected": "um hi, this is uh John, I wanted to um ask about the, the invoice. you know you know it was uh wrong !"
+  },
+  {
+   "input": "um hi, this is uh John, I wanted to um ask about the, the invoice. you know you know it was uh wrong !",
+   "dict": "legacy",
+   "expected": "um hi, this is uh John, I wanted to um ask about the, the invoice. you know you know it was uh wrong !"
+  },
+  {
+   "input": "ok. E, donc voilà voilà. du coup du coup j'utilise clode code avec n huit n et git hub, c'est génial !",
+   "dict": "tech",
+   "expected": "ok. E, donc voilà voilà. du coup du coup j'utilise Claude Code avec n8n et GitHub, c'est génial !"
+  },
+  {
+   "input": "ok. E, donc voilà voilà. du coup du coup j'utilise clode code avec n huit n et git hub, c'est génial !",
+   "dict": "accents",
+   "expected": "ok. E, donc voilà voilà. du coup du coup j'utilise clode code avec n huit n et git hub, c'est génial !"
+  },
+  {
+   "input": "ok. E, donc voilà voilà. du coup du coup j'utilise clode code avec n huit n et git hub, c'est génial !",
+   "dict": "legacy",
+   "expected": "ok. E, donc voilà voilà. du coup du coup j'utilise clode code avec n huit n et git hub, c'est génial !"
+  },
+  {
+   "input": "Texte   avec    beaucoup   d'espaces ,et mal ponctué.Voilà !Fin ?Oui;non:ok",
+   "dict": "tech",
+   "expected": "Texte   avec    beaucoup   d'espaces ,et mal ponctué.Voilà !Fin ?Oui;non:ok"
+  },
+  {
+   "input": "Texte   avec    beaucoup   d'espaces ,et mal ponctué.Voilà !Fin ?Oui;non:ok",
+   "dict": "accents",
+   "expected": "Texte   avec    beaucoup   d'espaces ,et mal ponctué.Voilà !Fin ?Oui;non:ok"
+  },
+  {
+   "input": "Texte   avec    beaucoup   d'espaces ,et mal ponctué.Voilà !Fin ?Oui;non:ok",
+   "dict": "legacy",
+   "expected": "Texte   avec    beaucoup   d'espaces ,et mal ponctué.Voilà !Fin ?Oui;non:ok"
+  }
+ ],
+ "normalize": [
+  {
+   "input": [],
+   "expected": []
+  },
+  {
+   "input": null,
+   "expected": []
+  },
+  {
+   "input": null,
+   "expected": []
+  },
+  {
+   "input": [
+    "a",
+    "A",
+    " b ",
+    "",
+    "  ",
+    "a"
+   ],
+   "expected": [
+    {
+     "word": "a",
+     "sounds": []
+    },
+    {
+     "word": "b",
+     "sounds": []
+    }
+   ]
+  },
+  {
+   "input": [
+    {
+     "word": "Foo",
+     "sounds": [
+      "bar",
+      "BAR",
+      "",
+      "foo",
+      "bär"
+     ]
+    },
+    {
+     "word": "foo",
+     "sounds": [
+      "x"
+     ]
+    },
+    {
+     "word": "",
+     "sounds": [
+      "y"
+     ]
+    }
+   ],
+   "expected": [
+    {
+     "word": "Foo",
+     "sounds": [
+      "bar"
+     ]
+    }
+   ]
+  },
+  {
+   "input": [
+    {
+     "word": "Foo",
+     "sounds": "a, b ,a,,"
+    },
+    {
+     "word": "Bar",
+     "sounds": ""
+    },
+    {
+     "word": "Baz"
+    },
+    {
+     "word": "Qux",
+     "sounds": null
+    }
+   ],
+   "expected": [
+    {
+     "word": "Foo",
+     "sounds": [
+      "a",
+      "b"
+     ]
+    },
+    {
+     "word": "Bar",
+     "sounds": []
+    },
+    {
+     "word": "Baz",
+     "sounds": []
+    },
+    {
+     "word": "Qux",
+     "sounds": []
+    }
+   ]
+  },
+  {
+   "input": [
+    {
+     "word": "Éa",
+     "sounds": [
+      "ea",
+      "EA",
+      "éa",
+      "é a"
+     ]
+    }
+   ],
+   "expected": [
+    {
+     "word": "Éa",
+     "sounds": [
+      "é a"
+     ]
+    }
+   ]
+  },
+  {
+   "input": [
+    "x",
+    {
+     "word": "y",
+     "sounds": [
+      "z"
+     ]
+    },
+    3,
+    null,
+    {
+     "sounds": [
+      "q"
+     ]
+    },
+    {
+     "word": 5
+    },
+    {
+     "word": 0,
+     "sounds": [
+      "t"
+     ]
+    }
+   ],
+   "expected": [
+    {
+     "word": "x",
+     "sounds": []
+    },
+    {
+     "word": "y",
+     "sounds": [
+      "z"
+     ]
+    },
+    {
+     "word": "5",
+     "sounds": []
+    }
+   ]
+  },
+  {
+   "input": [
+    {
+     "word": "W",
+     "sounds": [
+      "a",
+      5,
+      null,
+      0,
+      true,
+      " c "
+     ]
+    }
+   ],
+   "expected": [
+    {
+     "word": "W",
+     "sounds": [
+      "a",
+      "5",
+      "true",
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "input": [
+    {
+     "word": "N8N",
+     "sounds": [
+      "n8n",
+      "n huit n"
+     ]
+    },
+    {
+     "word": "n8n"
+    }
+   ],
+   "expected": [
+    {
+     "word": "N8N",
+     "sounds": [
+      "n huit n"
+     ]
+    }
+   ]
+  },
+  {
+   "input": [
+    {
+     "word": " Spaces ",
+     "sounds": [
+      " s "
+     ]
+    }
+   ],
+   "expected": [
+    {
+     "word": "Spaces",
+     "sounds": [
+      "s"
+     ]
+    }
+   ]
+  }
+ ],
+ "parse_sounds": [
+  {
+   "input": "a, b;c\nd",
+   "expected": [
+    "a",
+    "b",
+    "c",
+    "d"
+   ]
+  },
+  {
+   "input": "",
+   "expected": []
+  },
+  {
+   "input": " ",
+   "expected": []
+  },
+  {
+   "input": ",;\n",
+   "expected": []
+  },
+  {
+   "input": "a",
+   "expected": [
+    "a"
+   ]
+  },
+  {
+   "input": " a ,, b ",
+   "expected": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "input": "a;b;c",
+   "expected": [
+    "a",
+    "b",
+    "c"
+   ]
+  },
+  {
+   "input": "a\r\nb",
+   "expected": [
+    "a",
+    "b"
+   ]
+  },
+  {
+   "input": "é, è",
+   "expected": [
+    "é",
+    "è"
+   ]
+  },
+  {
+   "input": "x, y",
+   "expected": [
+    "x",
+    "y"
+   ]
+  }
+ ],
+ "fold": [
+  {
+   "input": "",
+   "expected": ""
+  },
+  {
+   "input": "ABC",
+   "expected": "abc"
+  },
+  {
+   "input": "Éléphant",
+   "expected": "elephant"
+  },
+  {
+   "input": "ÀÂÄÇÑÿ",
+   "expected": "aaacny"
+  },
+  {
+   "input": "ǅ",
+   "expected": "ǆ"
+  },
+  {
+   "input": "İstanbul",
+   "expected": "istanbul"
+  },
+  {
+   "input": "ß",
+   "expected": "ß"
+  },
+  {
+   "input": "é",
+   "expected": "e"
+  },
+  {
+   "input": "Σίσυφος",
+   "expected": "σισυφος"
+  },
+  {
+   "input": "ﬁ",
+   "expected": "ﬁ"
+  },
+  {
+   "input": "x̀ͯͰ",
+   "expected": "xͱ"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+[
+ {
+  "kind": "placeholder_digits",
+  "input": "beta",
+  "dictionary": [
+   {
+    "word": "Bêta",
+    "sounds": [
+     "beta"
+    ]
+   },
+   {
+    "word": "Nul",
+    "sounds": [
+     "zéro"
+    ]
+   }
+  ],
+  "js_output": "Nul"
+ },
+ {
+  "kind": "placeholder_digits",
+  "input": "zero et beta",
+  "dictionary": [
+   {
+    "word": "Bêta",
+    "sounds": [
+     "beta"
+    ]
+   },
+   {
+    "word": "Nul",
+    "sounds": [
+     "zéro"
+    ]
+   }
+  ],
+  "js_output": "Nul et Nul"
+ },
+ {
+  "kind": "snippet_dollar",
+  "input": "bonjour",
+  "snippets": [
+   {
+    "id": "s",
+    "trigger": "bonjour",
+    "expansion": "X$&Y"
+   }
+  ],
+  "js_output": "XbonjourY"
+ },
+ {
+  "kind": "snippet_dollar",
+  "input": "prix 10",
+  "snippets": [
+   {
+    "id": "s",
+    "trigger": "prix",
+    "expansion": "$$"
+   }
+  ],
+  "js_output": "$ 10"
+ },
+ {
+  "kind": "snippet_dollar",
+  "input": "a",
+  "snippets": [
+   {
+    "id": "s",
+    "trigger": "a",
+    "expansion": "$1"
+   }
+  ],
+  "js_output": "$1"
+ },
+ {
+  "kind": "snippet_dollar",
+  "input": "avant mot après",
+  "snippets": [
+   {
+    "id": "s",
+    "trigger": "mot",
+    "expansion": "$`|$'"
+   }
+  ],
+  "js_output": "Avant avant | après après"
+ }
+]
