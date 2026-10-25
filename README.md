@@ -31,7 +31,10 @@ and French.
   the clipboard when pasting is not possible).
 - Custom dictionary, text snippets, automatic text formatting, history.
 - **Weak microphone** setting (automatic by default) and microphone choice.
-- First-launch wizard: language, model (the recommended one is preselected), shortcut.
+- **Light and dark theme**: follows the light or dark preference of your desktop by default (GNOME,
+  KDE Plasma and any desktop that implements the XDG appearance setting), live, or can be forced
+  from the settings or the first-launch wizard.
+- First-launch wizard: language, appearance, model (the recommended one is preselected), shortcut.
 - System tray icon, floating recording pill, launch at login (optional).
 - Only one Whisper model is used at a time. Models are downloaded from Hugging Face when *you*
   ask for it; this is the only network access LinuxFlow ever makes.
@@ -74,6 +77,14 @@ are the real ones; the dictated texts, the statistics and the history are demo d
 ### 7. Settings
 
 ![Settings page](docs/screenshots/settings.png)
+
+### 8. Light and dark theme
+
+LinuxFlow follows the light or dark preference of your desktop, or you can force one in the settings.
+
+| Light | Dark |
+|---|---|
+| ![Home, light theme](docs/screenshots/home.png) | ![Home, dark theme](docs/screenshots/home-dark.png) |
 
 ## Installation
 

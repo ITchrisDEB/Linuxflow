@@ -65,7 +65,7 @@ pub fn demo_state() -> AppState {
         )
     };
     AppState {
-        version: "0.1.0".into(),
+        version: "0.2.0".into(),
         user: Some("alex".into()),
         settings: Settings { first_run_done: true, selected_model: Some("small".into()), ..Settings::default() },
         dictionary: vec![

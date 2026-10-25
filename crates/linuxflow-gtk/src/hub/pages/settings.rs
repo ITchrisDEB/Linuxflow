@@ -9,7 +9,7 @@ use adw::prelude::*;
 use gtk4 as gtk;
 use libadwaita as adw;
 use linuxflow_core::constants::APP_NAME;
-use linuxflow_core::domain::{AppState, MicBoost, MicrophoneInfo, ShortcutMode};
+use linuxflow_core::domain::{AppState, MicBoost, MicrophoneInfo, ShortcutMode, Theme};
 use linuxflow_i18n::{tr, tr_fmt};
 use std::cell::{Cell, RefCell};
 use std::rc::Rc;
@@ -86,6 +86,20 @@ pub fn mic_boost_setting(index: u32) -> &'static str {
         .setting()
 }
 
+/// Position in the "Appearance" selector for the value of the setting.
+pub fn theme_index(theme: Theme) -> u32 {
+    Theme::ALL.iter().position(|t| *t == theme).unwrap_or(0) as u32
+}
+
+/// Value of the setting for a position of the selector (`system`, `light`, `dark`).
+pub fn theme_setting(index: u32) -> &'static str {
+    Theme::ALL
+        .get(index as usize)
+        .copied()
+        .unwrap_or(Theme::System)
+        .setting()
+}
+
 /// Entries of the microphone selector: "default microphone" first, no duplicate.
 pub fn microphone_entries(mics: &[MicrophoneInfo]) -> Vec<(String, String)> {
     let mut out = vec![("default".to_string(), tr("Default microphone"))];
@@ -129,6 +143,7 @@ pub struct SettingsPage {
     history: adw::SwitchRow,
     mic_boost: adw::ComboRow,
     ui_language: adw::ComboRow,
+    theme: adw::ComboRow,
     engine: EngineCells,
     engine_error: gtk::Label,
     cache: gtk::Label,
@@ -266,6 +281,18 @@ impl SettingsPage {
         ui_list.set_selection_mode(gtk::SelectionMode::None);
         ui_list.add_css_class("boxed-list");
         ui_list.append(&ui_language);
+        let theme = adw::ComboRow::new();
+        theme.set_title(&tr("Appearance"));
+        theme.set_subtitle(&tr(
+            "System follows the light or dark preference of your desktop.",
+        ));
+        let (system, light, dark) = (tr("System"), tr("Light"), tr("Dark"));
+        theme.set_model(Some(&gtk::StringList::new(&[
+            system.as_str(),
+            light.as_str(),
+            dark.as_str(),
+        ])));
+        ui_list.append(&theme);
         ic.append(&ui_list);
         page.append(&ic);
 
@@ -320,6 +347,7 @@ impl SettingsPage {
             history,
             mic_boost,
             ui_language,
+            theme,
             engine: EngineCells {
                 state,
                 device,
@@ -410,6 +438,12 @@ impl SettingsPage {
             linuxflow_i18n::set_language(if setting == "auto" { None } else { Some(setting) });
             request_rebuild();
         }));
+        self.theme.connect_selected_notify(with!(t => {
+            if t.updating.get() {
+                return;
+            }
+            t.patch(serde_json::json!({"theme": theme_setting(t.theme.selected())}));
+        }));
         models_b.connect_clicked(move |_| navigate(PageId::Models));
     }
 
@@ -465,6 +499,16 @@ impl SettingsPage {
     }
 
     /// Chooses a weak-microphone boost (like a user click; tests).
+    /// Chooses an appearance (like a user click; tests).
+    pub fn select_theme(&self, index: u32) {
+        self.theme.set_selected(index);
+    }
+
+    /// Displayed position of the "Appearance" selector.
+    pub fn theme_selected(&self) -> u32 {
+        self.theme.selected()
+    }
+
     pub fn select_mic_boost(&self, index: u32) {
         self.mic_boost.set_selected(index);
     }
@@ -562,6 +606,11 @@ impl SettingsPage {
             self.ui_language.set_selected(ui_idx);
         }
 
+        let theme_idx = theme_index(s.theme);
+        if self.theme.selected() != theme_idx {
+            self.theme.set_selected(theme_idx);
+        }
+
         let eng = &state.engine;
         set_label(&self.engine.state, &engine_state_text(eng));
         set_label(&self.engine.device, &engine_device_text(eng));
@@ -608,6 +657,16 @@ mod tests {
             assert_eq!(mic_boost_setting(i as u32), m.setting());
         }
         assert_eq!(mic_boost_setting(99), "off");
+    }
+
+    #[test]
+    fn theme_mapping_round_trips() {
+        for (i, t) in Theme::ALL.iter().enumerate() {
+            assert_eq!(theme_index(*t), i as u32);
+            assert_eq!(theme_setting(i as u32), t.setting());
+        }
+        assert_eq!(theme_index(Theme::default()), 0);
+        assert_eq!(theme_setting(99), "system");
     }
 
     #[test]

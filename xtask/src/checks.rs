@@ -345,7 +345,9 @@ pub fn static_checks(root: &Path) -> Result<bool> {
     if rust_files.iter().any(|(_, t)| perm.is_match(t)) {
         rep.pass("T-PRIV 0600 permissions: present in the code (the real check is a run-time test of the data/log crates)");
     } else {
-        rep.warn("T-PRIV 0600 permissions: no occurrence in the code (history/logs not implemented?)");
+        rep.warn(
+            "T-PRIV 0600 permissions: no occurrence in the code (history/logs not implemented?)",
+        );
     }
     println!("         note: 'no network request outside the download' and 'logs without a personal path' are run-time tests (T-PRIV with the network cut), not covered here.");
 

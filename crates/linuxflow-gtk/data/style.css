@@ -1,18 +1,4 @@
-/* LinuxFlow hub: light theme. All the rules are limited to .lf-hub. */
-@define-color lf_text #1a1a1a;
-@define-color lf_bg #fcfcfb;
-@define-color lf_cream #ffffeb;
-@define-color lf_cream_border #efefd0;
-@define-color lf_lavender #f0d7ff;
-@define-color lf_green #034f46;
-@define-color lf_purple #a550a7;
-@define-color lf_orange #ffa946;
-@define-color lf_grey1 #ebe9ec;
-@define-color lf_grey2 #dfdfdf;
-@define-color lf_grey3 #71716e;
-@define-color lf_red #f87171;
-@define-color lf_red_text #b42318;
-
+/* LinuxFlow hub rules. The colours are named and defined by the light or the dark palette. */
 .lf-hub {
   font-family: Figtree, Cantarell, sans-serif;
   font-size: 14px;
@@ -21,15 +7,15 @@
 }
 
 /* Sidebar */
-.lf-hub .lf-sidebar { background-color: #ffffff; padding: 22px 14px; }
+.lf-hub .lf-sidebar { background-color: @lf_surface; padding: 22px 14px; }
 .lf-hub .lf-brand { padding: 4px 8px 22px 8px; }
 .lf-hub .lf-brand-icon { background-color: @lf_text; color: @lf_cream; border-radius: 9px; }
 .lf-hub .lf-brand-name { font-weight: 800; font-size: 17px; }
 .lf-hub .lf-brand-tag { font-size: 11.5px; color: @lf_grey3; }
 .lf-hub .lf-nav { background: transparent; }
-.lf-hub .lf-nav row { padding: 9px 12px; border-radius: 10px; margin-bottom: 2px; font-weight: 600; color: #3a3a38; background: transparent; }
+.lf-hub .lf-nav row { padding: 9px 12px; border-radius: 10px; margin-bottom: 2px; font-weight: 600; color: @lf_nav_text; background: transparent; }
 .lf-hub .lf-nav row:hover { background-color: @lf_grey1; }
-.lf-hub .lf-nav row:selected { background-color: @lf_cream; color: @lf_text; box-shadow: inset 0 0 0 1px #f0f0d0; }
+.lf-hub .lf-nav row:selected { background-color: @lf_cream; color: @lf_text; box-shadow: inset 0 0 0 1px @lf_cream_edge; }
 .lf-hub .lf-engine { padding: 8px; }
 .lf-hub .lf-engine-text { font-size: 12px; color: @lf_grey3; }
 .lf-hub .lf-dot { min-width: 8px; min-height: 8px; border-radius: 50%; background-color: @lf_orange; box-shadow: 0 0 0 3px alpha(@lf_orange, 0.2); }
@@ -50,11 +36,11 @@
 .lf-hub .lf-empty { color: @lf_grey3; padding: 26px; border: 1px dashed @lf_grey2; border-radius: 14px; }
 
 /* Cards and tiles */
-.lf-hub .lf-card { background-color: #ffffff; border: 1px solid @lf_grey1; border-radius: 16px; padding: 20px; }
+.lf-hub .lf-card { background-color: @lf_surface; border: 1px solid @lf_grey1; border-radius: 16px; padding: 20px; }
 .lf-hub .lf-tile { border-radius: 16px; padding: 18px 18px 16px 18px; min-height: 108px; border: 1px solid transparent; }
 .lf-hub .lf-tile.lavender { background-color: @lf_lavender; }
 .lf-hub .lf-tile.cream { background-color: @lf_cream; border-color: @lf_cream_border; }
-.lf-hub .lf-tile.green { background-color: @lf_green; color: #f4fbf8; }
+.lf-hub .lf-tile.green { background-color: @lf_green; color: @lf_on_green; }
 .lf-hub .lf-tile.grey { background-color: @lf_grey1; }
 .lf-hub .lf-tile-label { font-size: 12.5px; font-weight: 600; opacity: 0.8; }
 .lf-hub .lf-tile-value { font-size: 34px; font-weight: 800; letter-spacing: -0.02em; }
@@ -63,38 +49,38 @@
 
 /* Zone d'essai */
 .lf-hub .lf-mic { min-width: 48px; min-height: 48px; padding: 0; border-radius: 999px; border: none; background-image: none; background-color: @lf_text; color: @lf_cream; box-shadow: none; }
-.lf-hub .lf-mic:hover { background-color: #333333; }
+.lf-hub .lf-mic:hover { background-color: @lf_text_hover; }
 .lf-hub .lf-mic.listening { background-color: @lf_purple; }
 .lf-hub .lf-mic.busy { background-color: @lf_grey3; }
 .lf-hub .lf-try-status { font-weight: 600; color: @lf_grey3; }
 .lf-hub .lf-try-frame { border: 1px solid @lf_grey2; border-radius: 12px; background-color: @lf_bg; }
 .lf-hub .lf-try-frame:focus-within { border-color: @lf_purple; }
 .lf-hub .lf-try-area, .lf-hub .lf-try-area text { background-color: @lf_bg; color: @lf_text; }
-.lf-hub .lf-snippet-text, .lf-hub .lf-snippet-text text { background-color: #ffffff; color: @lf_text; }
+.lf-hub .lf-snippet-text, .lf-hub .lf-snippet-text text { background-color: @lf_surface; color: @lf_text; }
 
 /* Boutons */
-.lf-hub .lf-btn { border: 1px solid @lf_grey2; background-image: none; background-color: #ffffff; color: @lf_text; border-radius: 10px; padding: 8px 14px; font-weight: 600; box-shadow: none; min-height: 0; }
+.lf-hub .lf-btn { border: 1px solid @lf_grey2; background-image: none; background-color: @lf_surface; color: @lf_text; border-radius: 10px; padding: 8px 14px; font-weight: 600; box-shadow: none; min-height: 0; }
 .lf-hub .lf-btn:hover { background-color: @lf_grey1; }
 .lf-hub .lf-btn.primary { background-color: @lf_text; color: @lf_cream; border-color: @lf_text; }
-.lf-hub .lf-btn.primary:hover { background-color: #333333; }
+.lf-hub .lf-btn.primary:hover { background-color: @lf_text_hover; }
 .lf-hub .lf-btn.ghost { background-color: transparent; }
 .lf-hub .lf-btn.ghost:hover { background-color: @lf_grey1; }
 .lf-hub .lf-btn.small { padding: 5px 10px; font-size: 12.5px; border-radius: 8px; }
-.lf-hub .lf-btn.danger:hover { background-color: #fde8e8; border-color: #f5b5b5; color: @lf_red_text; }
+.lf-hub .lf-btn.danger:hover { background-color: @lf_danger_bg; border-color: @lf_danger_border; color: @lf_red_text; }
 .lf-hub .lf-btn.recording { background-color: @lf_lavender; border-color: @lf_purple; }
 .lf-hub .lf-btn:disabled { opacity: 0.45; }
 .lf-hub .lf-rec-dot { color: @lf_red; }
 
 /* Champs */
-.lf-hub entry { border: 1px solid @lf_grey2; border-radius: 10px; padding: 6px 10px; background-color: #ffffff; color: @lf_text; box-shadow: none; min-height: 24px; }
+.lf-hub entry { border: 1px solid @lf_grey2; border-radius: 10px; padding: 6px 10px; background-color: @lf_surface; color: @lf_text; box-shadow: none; min-height: 24px; }
 .lf-hub entry:focus-within { border-color: @lf_purple; outline: none; box-shadow: 0 0 0 3px alpha(@lf_purple, 0.15); }
-.lf-hub dropdown > button { border: 1px solid @lf_grey2; border-radius: 10px; background-image: none; background-color: #ffffff; box-shadow: none; }
+.lf-hub dropdown > button { border: 1px solid @lf_grey2; border-radius: 10px; background-image: none; background-color: @lf_surface; box-shadow: none; }
 .lf-hub switch:checked { background-color: @lf_purple; }
 .lf-hub checkbutton radio:checked { background-color: @lf_purple; border-color: @lf_purple; }
-.lf-hub .lf-switches { background-color: #ffffff; border: 1px solid @lf_grey1; }
+.lf-hub .lf-switches { background-color: @lf_surface; border: 1px solid @lf_grey1; }
 
 /* Shortcut recorder */
-.lf-hub .lf-shortcut-keys { min-height: 48px; padding: 8px 12px; border: 1px dashed @lf_grey2; border-radius: 12px; background-color: #ffffff; }
+.lf-hub .lf-shortcut-keys { min-height: 48px; padding: 8px 12px; border: 1px dashed @lf_grey2; border-radius: 12px; background-color: @lf_surface; }
 .lf-hub .lf-shortcut-keys.recording { border: 1px solid @lf_purple; background-color: @lf_lavender; box-shadow: 0 0 0 3px alpha(@lf_purple, 0.15); }
 .lf-hub .lf-shortcut-keys.pending { border: 1px solid @lf_purple; }
 .lf-hub .lf-shortcut-keys.bad { border: 1px solid @lf_red; }
@@ -102,7 +88,7 @@
 .lf-hub .lf-plus { color: @lf_grey3; font-weight: 700; }
 
 /* Listes */
-.lf-hub .lf-item { background-color: #ffffff; border: 1px solid @lf_grey1; border-radius: 14px; padding: 14px 16px; }
+.lf-hub .lf-item { background-color: @lf_surface; border: 1px solid @lf_grey1; border-radius: 14px; padding: 14px 16px; }
 .lf-hub .lf-word { font-weight: 700; font-size: 15px; }
 .lf-hub .lf-sound { padding: 3px 10px; border-radius: 999px; background-color: @lf_lavender; font-size: 12.5px; font-weight: 600; }
 .lf-hub .lf-sound.none { background-color: @lf_grey1; color: @lf_grey3; }
@@ -121,7 +107,7 @@
 .lf-hub .lf-model-state { font-weight: 600; margin-top: 4px; }
 .lf-hub .lf-badge { font-size: 11.5px; font-weight: 700; padding: 2px 9px; border-radius: 999px; background-color: @lf_grey1; }
 .lf-hub .lf-badge.recommended { background-color: @lf_lavender; }
-.lf-hub .lf-badge.in-use { background-color: @lf_green; color: #f4fbf8; }
+.lf-hub .lf-badge.in-use { background-color: @lf_green; color: @lf_on_green; }
 .lf-hub progressbar.lf-progress { margin-top: 8px; }
 .lf-hub progressbar.lf-progress trough { min-height: 8px; background-color: @lf_grey1; border-radius: 999px; }
 .lf-hub progressbar.lf-progress progress { min-height: 8px; background-color: @lf_purple; border-radius: 999px; }

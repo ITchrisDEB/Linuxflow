@@ -73,6 +73,34 @@ fn main() {
     }
 
     {
+        // Appearance: follows the system by default; the user can force dark or light.
+        let (c, v) = setup();
+        check(
+            "theme_starts_on_system",
+            v.settings().theme_selected() == 0,
+            &mut f,
+        );
+        v.settings().select_theme(2);
+        pump(100);
+        check(
+            "theme_dark_sends_the_setting",
+            c.calls()
+                .iter()
+                .any(|x| x.starts_with("set_settings") && x.contains("\"theme\":\"dark\"")),
+            &mut f,
+        );
+        v.settings().select_theme(1);
+        pump(100);
+        check(
+            "theme_light_sends_the_setting",
+            c.calls()
+                .iter()
+                .any(|x| x.starts_with("set_settings") && x.contains("\"theme\":\"light\"")),
+            &mut f,
+        );
+    }
+
+    {
         // Privacy: the history is turned off from the Settings (`historyEnabled` setting).
         let (c, v) = setup();
         check(

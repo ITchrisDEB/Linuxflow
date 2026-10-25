@@ -47,6 +47,7 @@ pub struct Wizard {
     user_chose: Cell<bool>,
     /// Interface language selector (first step).
     language: gtk::DropDown,
+    theme: gtk::DropDown,
     lang_updating: Cell<bool>,
     request_rebuild: Rc<dyn Fn()>,
     on_finished: Rc<dyn Fn()>,
@@ -86,11 +87,21 @@ impl Wizard {
         c1.append(&hardware);
         // Interface language: chosen from the first step (before, only the system language
         // applied, with no way to change it here).
-        c1.append(&label(&tr("Language"), &["lf-h2"]));
+        let language_title = label(&tr("Language"), &["lf-h2"]);
+        language_title.set_margin_top(14);
+        c1.append(&language_title);
         let automatic = tr("Automatic");
         let language = gtk::DropDown::from_strings(&[automatic.as_str(), "English", "Français"]);
         language.set_halign(gtk::Align::Start);
         c1.append(&language);
+        // Appearance: system (default), light or dark.
+        let theme_title = label(&tr("Appearance"), &["lf-h2"]);
+        theme_title.set_margin_top(10);
+        c1.append(&theme_title);
+        let (system, light, dark) = (tr("System"), tr("Light"), tr("Dark"));
+        let theme = gtk::DropDown::from_strings(&[system.as_str(), light.as_str(), dark.as_str()]);
+        theme.set_halign(gtk::Align::Start);
+        c1.append(&theme);
         stack.add_named(&p1, Some(Step::Welcome.name()));
 
         // 2. Model
@@ -172,6 +183,7 @@ impl Wizard {
             shortcut: RefCell::new(String::new()),
             user_chose: Cell::new(false),
             language,
+            theme,
             lang_updating: Cell::new(false),
             request_rebuild,
             on_finished,
@@ -217,6 +229,23 @@ impl Wizard {
                 Some(setting)
             });
             (t.request_rebuild)();
+        });
+        let weak_theme = weak.clone();
+        self.theme.connect_selected_notify(move |d| {
+            let Some(t) = weak_theme.upgrade() else {
+                return;
+            };
+            if t.lang_updating.get() {
+                return;
+            }
+            let setting = crate::hub::pages::settings::theme_setting(d.selected());
+            if let Err(e) = t
+                .ctx
+                .controller
+                .set_settings(serde_json::json!({"theme": setting}))
+            {
+                t.ctx.toast.show(&e.to_string());
+            }
         });
         let weak2 = weak.clone();
         self.skip.connect_toggled(move |c| {
@@ -289,6 +318,12 @@ impl Wizard {
         if self.language.selected() != wanted {
             self.lang_updating.set(true);
             self.language.set_selected(wanted);
+            self.lang_updating.set(false);
+        }
+        let wanted_theme = crate::hub::pages::settings::theme_index(state.settings.theme);
+        if self.theme.selected() != wanted_theme {
+            self.lang_updating.set(true);
+            self.theme.set_selected(wanted_theme);
             self.lang_updating.set(false);
         }
         *self.shortcut.borrow_mut() = state.settings.shortcut.clone();

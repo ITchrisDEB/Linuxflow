@@ -98,10 +98,11 @@ pub fn markup_fmt(translated: &str, args_markup: &[&str]) -> String {
     out
 }
 
-/// Pango fragment highlighting a shortcut ("kbd" style).
+/// Pango fragment highlighting a shortcut ("kbd" style). The highlight is a translucent tint of the
+/// accent colour, so that the text stays readable in the light and in the dark theme.
 pub fn kbd_markup(text: &str) -> String {
     format!(
-        "<span weight=\"bold\" background=\"#ffffeb\">\u{a0}{}\u{a0}</span>",
+        "<span weight=\"bold\" background=\"#a550a7\" background_alpha=\"22%\">\u{a0}{}\u{a0}</span>",
         gtk::glib::markup_escape_text(text)
     )
 }

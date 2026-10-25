@@ -24,6 +24,33 @@ pub enum ShortcutMode {
     Ptt,
 }
 
+/// Colour theme of the interface.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Theme {
+    /// Follows the light or dark preference of the desktop (the default).
+    #[default]
+    System,
+    /// Always light.
+    Light,
+    /// Always dark.
+    Dark,
+}
+
+impl Theme {
+    /// Offered values, in display order.
+    pub const ALL: [Theme; 3] = [Theme::System, Theme::Light, Theme::Dark];
+
+    /// Value of the setting (`system`, `light`, `dark`).
+    pub fn setting(self) -> &'static str {
+        match self {
+            Theme::System => "system",
+            Theme::Light => "light",
+            Theme::Dark => "dark",
+        }
+    }
+}
+
 /// Boost for a microphone that is too weak, applied at recording time before transcription.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default, Serialize, Deserialize)]
 #[serde(rename_all = "lowercase")]
@@ -152,6 +179,8 @@ pub struct Settings {
     pub history_limit: usize,
     /// Interface language (None = system locale).
     pub ui_language: Option<String>,
+    /// Colour theme: follows the desktop by default, or always light / always dark.
+    pub theme: Theme,
     /// True once the first-launch wizard is finished.
     pub first_run_done: bool,
     /// Global shortcut active (false = suspended from the tray menu, useful when gaming).
@@ -183,6 +212,7 @@ impl Default for Settings {
             history_enabled: true,
             history_limit: HISTORY_MAX,
             ui_language: None,
+            theme: Theme::System,
             first_run_done: false,
             shortcut_enabled: true,
             tray_hint_dismissed: false,

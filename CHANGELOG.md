@@ -2,6 +2,18 @@
 
 Format inspired by [Keep a Changelog](https://keepachangelog.com/); semantic versioning.
 
+## [0.2.0] — light and dark theme
+
+### Added
+- **Light and dark theme** for the whole interface (hub, wizard, dialogs). By default LinuxFlow
+  follows the light or dark preference of the desktop, live, through libadwaita (XDG appearance
+  portal / GSettings); an **Appearance** setting (System / Light / Dark) in the settings and on the
+  first step of the wizard forces one or the other.
+
+### Changed
+- The colours of the interface are now named and defined by two palettes (light and dark) instead of
+  being fixed to the light theme; the shortcut highlight on the home page works in both themes.
+
 ## [0.1.0] — first release candidate
 
 Local voice dictation for Linux, written in Rust (GTK 4 / libadwaita), distributed as a `tar.gz`

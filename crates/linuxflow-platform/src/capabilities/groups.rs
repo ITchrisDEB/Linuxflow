@@ -50,8 +50,7 @@ mod tests {
         let status = "Name:\tx\nGid:\t1000\t1000\t1000\t1000\nGroups:\t10 105 1000\n";
         let gids = parse_status_gids(status);
         assert_eq!(gids, vec![10, 105, 1000]);
-        let groups =
-            parse_group_file("root:x:0:\ninput:x:105:sam\nwheel:x:10:sam\n# bad\n:x:5:\n");
+        let groups = parse_group_file("root:x:0:\ninput:x:105:sam\nwheel:x:10:sam\n# bad\n:x:5:\n");
         assert_eq!(
             group_names_for(&gids, &groups),
             vec!["input".to_string(), "wheel".to_string()]

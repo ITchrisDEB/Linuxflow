@@ -1,0 +1,21 @@
+/* LinuxFlow hub palette: light theme. */
+@define-color lf_text #1a1a1a;
+@define-color lf_text_hover #333333;
+@define-color lf_bg #fcfcfb;
+@define-color lf_surface #ffffff;
+@define-color lf_nav_text #3a3a38;
+@define-color lf_cream #ffffeb;
+@define-color lf_cream_border #efefd0;
+@define-color lf_cream_edge #f0f0d0;
+@define-color lf_lavender #f0d7ff;
+@define-color lf_green #034f46;
+@define-color lf_on_green #f4fbf8;
+@define-color lf_purple #a550a7;
+@define-color lf_orange #ffa946;
+@define-color lf_grey1 #ebe9ec;
+@define-color lf_grey2 #dfdfdf;
+@define-color lf_grey3 #71716e;
+@define-color lf_red #f87171;
+@define-color lf_red_text #b42318;
+@define-color lf_danger_bg #fde8e8;
+@define-color lf_danger_border #f5b5b5;

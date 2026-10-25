@@ -531,6 +531,7 @@ impl HubInner {
         self.wizard.update(state);
         self.models.on_state();
         self.update_pill(state);
+        style::apply_theme(state.settings.theme);
 
         let done = state.settings.first_run_done;
         let previous = self.first_run_seen.replace(Some(done));

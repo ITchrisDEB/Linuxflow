@@ -488,10 +488,7 @@ pub fn run(root: &Path, args: &[String]) -> Result<()> {
         .and_then(|n| n.strip_suffix("-x86_64.tar.gz"))
         .ok_or("unexpected archive name")?
         .to_string();
-    println!(
-        "LinuxFlow {version} AppImage from {}",
-        tarball.display()
-    );
+    println!("LinuxFlow {version} AppImage from {}", tarball.display());
 
     let appdir = std::env::temp_dir().join(format!("linuxflow-appdir-{}", std::process::id()));
     let _ = fs::remove_dir_all(&appdir);

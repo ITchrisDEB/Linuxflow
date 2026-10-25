@@ -1154,6 +1154,30 @@ msgid "Interface language"
 msgstr "Langue de l’interface"
 
 #: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Appearance"
+msgstr "Apparence"
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+msgid "System follows the light or dark preference of your desktop."
+msgstr "« Système » suit la préférence clair ou sombre de ton bureau."
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Dark"
+msgstr "Sombre"
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "Light"
+msgstr "Clair"
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
+#: crates/linuxflow-gtk/src/wizard/mod.rs
+msgid "System"
+msgstr "Système"
+
+#: crates/linuxflow-gtk/src/hub/pages/settings.rs
 msgid "Local engine"
 msgstr "Moteur local"
 
@@ -1667,7 +1691,7 @@ msgstr "{1} {0} {2}"
 msgid "{0} {1}"
 msgstr "{1} {0}"
 
-#. TRANSLATORS: date puis heure. {0} = date courte, {1} = heure HH:MM.
+#. TRANSLATORS: date then time. {0} = short date, {1} = time HH:MM.
 #: crates/linuxflow-i18n/src/lib.rs
 #, rust-format
 msgid "{0}, {1}"

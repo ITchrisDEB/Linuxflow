@@ -510,6 +510,27 @@ mod tests {
     }
 
     #[test]
+    fn theme_follows_the_system_by_default_and_rejects_unknown_values() {
+        use crate::domain::Theme;
+        let d = tempfile::tempdir().unwrap();
+        let s = open(d.path());
+        assert_eq!(s.get().theme, Theme::System);
+        assert_eq!(Settings::default().theme, Theme::System);
+        for (value, theme) in [
+            ("light", Theme::Light),
+            ("dark", Theme::Dark),
+            ("system", Theme::System),
+        ] {
+            assert_eq!(s.patch(json!({"theme": value})).unwrap().theme, theme);
+            assert_eq!(theme.setting(), value);
+        }
+        assert_eq!(open(d.path()).get().theme, Theme::System);
+        assert!(s.patch(json!({"theme": "purple"})).is_err());
+        assert_eq!(s.get().theme, Theme::System);
+        assert_eq!(Theme::ALL.len(), 3);
+    }
+
+    #[test]
     fn mic_boost_is_automatic_by_default_and_a_bad_value_does_not_reset_the_rest() {
         use crate::domain::MicBoost;
         let d = tempfile::tempdir().unwrap();

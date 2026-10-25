@@ -73,6 +73,12 @@ For each case, dictate a sentence of 5 to 10 seconds.
 3. "Launch at login" enabled in the settings: restart the session, the application starts in the background (`--background`) without showing the hub.
 4. System older than the baseline (GTK < 4.12 or libadwaita < 1.4): `install.sh` refuses with a message pointing to BUILD.md.
 
+## 8b. Appearance (light / dark)
+1. Settings → Appearance = System (default): switch the desktop between its light and dark styles while LinuxFlow is open: the hub, the wizard and the dialogs follow immediately, with no restart. Check KDE Plasma, GNOME and at least one other desktop; note the ones whose appearance setting LinuxFlow does not follow (it then stays light).
+2. Appearance = Light or Dark: the choice overrides the desktop and is kept after a restart.
+3. In both themes, read every page (Home, History, Dictionary, Snippets, Models, Settings, Troubleshooting) and the wizard: no unreadable text, no white block in the dark theme, no dark block in the light theme; the shortcut highlight on the Home page is readable.
+4. The recording pill and the tray icon stay readable on a light and on a dark panel/background.
+
 ## 9. Languages
 1. `LANGUAGE=fr linuxflow`: the whole interface, the tray, the pill and the error messages are in French; no residual English text; no truncation. `LANGUAGE=en`: everything in English.
 2. Settings → Interface language (Automatic / English / Français): the change applies immediately in the hub, the tray and the pill. The wizard also offers the language on its first step.

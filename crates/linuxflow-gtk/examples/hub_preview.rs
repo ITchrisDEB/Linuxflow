@@ -124,6 +124,15 @@ fn run() -> Result<(), String> {
     std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
 
     let controller = FakeController::new();
+    // `LINUXFLOW_PREVIEW_THEME=dark|light|system` renders the pages with that appearance.
+    if let Ok(theme) = std::env::var("LINUXFLOW_PREVIEW_THEME") {
+        let theme = match theme.as_str() {
+            "dark" => linuxflow_core::domain::Theme::Dark,
+            "light" => linuxflow_core::domain::Theme::Light,
+            _ => linuxflow_core::domain::Theme::System,
+        };
+        controller.with_state(|s| s.settings.theme = theme);
+    }
     let view: Rc<HubView> = HubView::new(controller.clone());
     let root = view.widget().clone();
     let window = gtk::Window::builder()
