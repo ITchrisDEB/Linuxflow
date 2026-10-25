@@ -88,7 +88,7 @@ pub fn demo_state() -> AppState {
             phase: EnginePhase::Ready,
             ready: true,
             device: DeviceKind::Gpu,
-            device_name: Some("Example GPU".into()),
+            device_name: Some("Vulkan GPU".into()),
             model: Some("small".into()),
             precision: Some("q5_0".into()),
             load_ms: Some(2300),
@@ -178,6 +178,62 @@ pub fn demo_models() -> Vec<ModelStatus> {
     ]
 }
 
+/// The models of the real catalogue (`crates/linuxflow-models/data/models.json`), for the preview.
+/// `wizard`: first launch, nothing installed yet and the GPU model recommended; otherwise the
+/// "Models" page with `small` installed and in use, and `large-v3 (q5_0)` downloading.
+pub fn real_models(wizard: bool) -> Vec<ModelStatus> {
+    let m = |id: &str, name: &str, dl: u64, mem: u64, state, rec, in_use| ModelStatus {
+        id: id.into(),
+        name: name.into(),
+        download_bytes: dl,
+        disk_bytes: dl,
+        memory_bytes: mem,
+        state,
+        recommended: rec,
+        in_use,
+    };
+    vec![
+        m(
+            "small",
+            "Whisper small (multilingual)",
+            487_601_967,
+            1_073_741_824,
+            if wizard {
+                ModelState::NotInstalled
+            } else {
+                ModelState::Installed
+            },
+            false,
+            !wizard,
+        ),
+        m(
+            "large-v3-q5_0",
+            "Whisper large-v3 (quantized q5_0)",
+            1_081_140_203,
+            3_221_225_472,
+            if wizard {
+                ModelState::NotInstalled
+            } else {
+                ModelState::Downloading {
+                    done: 432_000_000,
+                    total: 1_081_140_203,
+                }
+            },
+            false,
+            false,
+        ),
+        m(
+            "large-v3",
+            "Whisper large-v3 (full precision f16)",
+            3_095_033_483,
+            5_368_709_120,
+            ModelState::NotInstalled,
+            true,
+            false,
+        ),
+    ]
+}
+
 pub fn demo_caps() -> Capabilities {
     Capabilities {
         session: "wayland".into(),
@@ -188,7 +244,7 @@ pub fn demo_caps() -> Capabilities {
         layer_shell: false,
         data_control: true,
         vulkan_available: true,
-        vulkan_devices: vec!["Example GPU".into()],
+        vulkan_devices: vec!["Vulkan GPU".into()],
         pipewire: true,
         tray_watcher: false,
         uinput_writable: false,

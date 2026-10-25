@@ -167,6 +167,16 @@ pub fn test_catalog() -> Catalog {
 }
 
 /// Complete service with all the components simulated.
+/// The interface language is global to the process: the tests that change it, or that expect
+/// English texts, hold this guard so that they never overlap. It also forces English, so that
+/// the result does not depend on the system locale or on a catalogue installed on the machine.
+pub fn language_guard() -> std::sync::MutexGuard<'static, ()> {
+    static LANGUAGE_LOCK: std::sync::Mutex<()> = std::sync::Mutex::new(());
+    let guard = LANGUAGE_LOCK.lock().unwrap_or_else(|e| e.into_inner());
+    linuxflow_i18n::set_language(Some("en"));
+    guard
+}
+
 pub struct ServiceRig {
     pub _rt: tokio::runtime::Runtime,
     pub dir: tempfile::TempDir,

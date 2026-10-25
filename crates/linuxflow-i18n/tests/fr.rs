@@ -106,6 +106,8 @@ fn french_catalog_end_to_end() {
     assert_eq!(i18n::tr("Good morning"), "Good morning");
 
     // Invalid folder: English, no panic.
+    // No system catalogue either (a LinuxFlow installed on this machine must not be found).
+    std::env::set_var("XDG_DATA_DIRS", tmp.path());
     std::env::set_var(i18n::LOCALE_DIR_ENV, tmp.path().join("absent"));
     std::env::set_var("LANGUAGE", "fr");
     i18n::init("linuxflow", Some(Path::new("/nonexistent-for-test")));

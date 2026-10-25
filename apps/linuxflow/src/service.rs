@@ -684,7 +684,8 @@ mod tests {
     }
 
     #[test]
-    fn format_preview_language_defaults_to_french_like_the_original() {
+    fn format_preview_language_defaults_to_french() {
+        let _language = language_guard();
         let r = service_rig(None, false);
         let c: &dyn Controller = &*r.service;
         // French: narrow space before "?".
@@ -748,6 +749,7 @@ mod tests {
 
     #[test]
     fn ui_language_values_are_validated() {
+        let _language = language_guard();
         let r = service_rig(None, false);
         let c: &dyn Controller = &*r.service;
         c.set_settings(json!({"uiLanguage": "fr"})).unwrap();
@@ -768,6 +770,7 @@ mod tests {
 
     #[test]
     fn shortcut_test_messages() {
+        let _language = language_guard();
         let r = service_rig(None, false);
         let c: &dyn Controller = &*r.service;
         assert_eq!(

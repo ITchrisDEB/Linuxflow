@@ -13,7 +13,7 @@
 #[path = "support/fake_controller.rs"]
 mod fake_controller;
 
-use fake_controller::FakeController;
+use fake_controller::{real_models, FakeController};
 use gtk::glib;
 use gtk::prelude::*;
 use gtk4 as gtk;
@@ -195,6 +195,7 @@ fn run() -> Result<(), String> {
     shot("09-settings-pending")?;
     rec.cancel();
 
+    *controller.models.lock().unwrap_or_else(|e| e.into_inner()) = real_models(false);
     view.show_page(PageId::Models);
     pump(300);
     shot("10-models")?;
@@ -218,7 +219,10 @@ fn run() -> Result<(), String> {
     pump(50);
     shot("12-home-engine-downloading")?;
 
-    // First-launch wizard.
+    // First-launch wizard: nothing installed yet, the real catalogue.
+    *controller.models.lock().unwrap_or_else(|e| e.into_inner()) = real_models(true);
+    view.wizard().load();
+    pump(300);
     let mut state = controller.state();
     state.settings.first_run_done = false;
     controller.with_state(|s| s.settings.first_run_done = false);

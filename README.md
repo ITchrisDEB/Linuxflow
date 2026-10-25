@@ -44,7 +44,8 @@ simulated desktops, but have not been verified on real sessions yet; reports are
 
 ## Screenshots
 
-In the order of the first launch, then of the application menu. All screenshots show demo data.
+In the order of the first launch, then of the application menu. The interface and the model catalogue
+are the real ones; the dictated texts, the statistics and the history are demo data.
 
 ### 1. First-launch wizard
 
