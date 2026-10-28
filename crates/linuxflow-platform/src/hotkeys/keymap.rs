@@ -281,7 +281,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn aller_retour_sur_toute_la_table() {
+    fn round_trip_over_the_whole_table() {
         for (code, sym, _) in KEYS {
             assert_eq!(evdev_to_keysym(*code), Some(*sym));
             assert_eq!(keysym_to_evdev(*sym), Some(*code), "code {code}");
@@ -292,7 +292,7 @@ mod tests {
     }
 
     #[test]
-    fn pas_de_doublons() {
+    fn no_duplicates() {
         let mut codes: Vec<u16> = KEYS
             .iter()
             .map(|k| k.0)
@@ -324,7 +324,7 @@ mod tests {
     }
 
     #[test]
-    fn libelles_et_noms() {
+    fn labels_and_names() {
         assert_eq!(key_label(30), "A");
         assert_eq!(key_label(57), "Space");
         assert_eq!(key_label(104), "PageUp");

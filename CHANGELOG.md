@@ -2,6 +2,45 @@
 
 Format inspired by [Keep a Changelog](https://keepachangelog.com/); semantic versioning.
 
+## [0.3.0] — GNOME 46 and later, accurate diagnostics
+
+### Fixed
+- **Troubleshooting page no longer shows false alarms.** Every component that was not detected used to be
+  shown as a warning with "Not available" and listed under "How to fix", including ones that do not apply:
+  the GlobalShortcuts portal on GNOME 46 and 47 (LinuxFlow sets its own shortcut in the desktop settings), the
+  layer shell and data-control protocol on GNOME (not offered by that desktop; the recording pill uses a regular
+  window and the clipboard portal is used), the Vulkan GPU in a virtual machine (the model runs on the CPU), and
+  the optional `uinput` and `input` group. These are now neutral rows ("Not needed", "Not offered", "CPU mode",
+  "Optional") that give the reason. A warning and a "How to fix" entry remain only for a real limitation: no way to
+  register the shortcut, no paste or clipboard path, no notification-area host (the hint now names the GNOME
+  AppIndicator extension).
+- **Desktop detection** no longer depends only on `XDG_CURRENT_DESKTOP`: it falls back to `DESKTOP_SESSION` /
+  `GDMSESSION`, then to the owner of `org.gnome.Shell` / `org.kde.KWin` on the session bus, so that the shortcut is
+  registered and the report is accurate when the program is started outside the desktop session's environment.
+- **Clipboard recovers from a lost portal session.** On GNOME 46 the desktop's portal service sometimes crashes right
+  after a paste. Pasting keys already reopened a session; setting and reading the clipboard did not and stayed broken until
+  the application was restarted. They now drop the dead session and retry once on a new one (no new dialog).
+- **The dock shows the AppImage's icon.** Wayland takes the icon from a `.desktop` file, and a plain AppImage has none
+  installed, so GNOME showed a generic gear. When it runs as an AppImage, LinuxFlow now writes its launcher entry and icons
+  under `~/.local/share` at start-up (kept up to date, nothing is written outside an AppImage). The entry is marked
+  (`X-LinuxFlow-AppImage=true`) and is **never written when the application is installed on the system**: an entry in the
+  user's directory takes priority over the system one, so it would hide the installed application in the menu. When a
+  system installation exists, an entry written earlier by an AppImage is removed (also by the installed program).
+
+- **The test suite no longer stops a running LinuxFlow.** The command-line test of `--quit` ran the real binary with the
+  developer's session bus still reachable; because the application is single-instance, the command reached a LinuxFlow
+  running in that session and shut it down. The test now has no bus address and a runtime folder without a `bus`
+  socket. (Verified on a private D-Bus session: before, a running instance was stopped; after, it survives the whole
+  `cargo test --workspace`.)
+
+### Changed
+- Also tested on Ubuntu 24.04 (GNOME 46, Wayland), in a virtual machine; the README says so.
+
+### Documentation
+- New `docs/test-vm.md` (testing on a clean GNOME 46 virtual machine) and a section of `BUILD.md` on building the Vulkan
+  engine without the system headers.
+- New `docs/gnome-support.md`: what LinuxFlow does on GNOME 46 and later, version by version.
+
 ## [0.2.0] — light and dark theme
 
 ### Added
@@ -93,7 +132,7 @@ archive and as an AppImage.
   automated tests with simulated desktops but **not verified on real sessions** (checklist:
   `docs/manual-validation.md`). The GNOME, Sway and Hyprland shortcuts only toggle dictation
   (no hold-to-talk).
-- Vulkan GPU acceleration was tested on a single card (a recent NVIDIA discrete GPU). The GPU engine is a
+- Vulkan GPU acceleration was tested on a single card (a discrete GPU). The GPU engine is a
   separate executable linked to `libvulkan.so.1`: the application and the CPU engine start without Vulkan.
 - Only text is restored to the clipboard after a dictation.
 - No noise suppression (measured: it degrades transcription). A saturated (too loud) signal cannot

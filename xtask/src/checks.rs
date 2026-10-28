@@ -199,7 +199,7 @@ impl Scanner<'_> {
                 println!("         {l}");
             }
             if kept.len() > 20 {
-                println!("         ... ({} de plus)", kept.len() - 20);
+                println!("         ... ({} more)", kept.len() - 20);
             }
         }
     }
@@ -217,7 +217,7 @@ pub fn static_checks(root: &Path) -> Result<bool> {
     };
     let mut rep = Report { fails: 0, warns: 0 };
 
-    println!("### T-HARD : valeurs locales en dur");
+    println!("### T-HARD: hardcoded local values");
     sc.run(
         &mut rep,
         "T-HARD",
@@ -355,7 +355,7 @@ pub fn static_checks(root: &Path) -> Result<bool> {
     sc.run(
         &mut rep,
         "T-NET",
-        "ressources externes de polices/CDN",
+        "external font/CDN resources",
         r"(fonts\.gstatic\.com|fonts\.googleapis\.com|googletagmanager|cdn\.jsdelivr|cdnjs\.|unpkg\.com)",
         true,
         &["crates", "apps", "packaging"],
@@ -421,10 +421,10 @@ fn url_check(rep: &mut Report, root: &Path, allow: &[Allow]) -> Result<()> {
         }
     }
     if bad.is_empty() {
-        rep.pass("T-NET aucune URL externe hors liste admise (w3.org, freedesktop, huggingface, github, docs...)");
+        rep.pass("T-NET no external URL outside the allowed list (w3.org, freedesktop, huggingface, github, docs...)");
     } else {
         rep.fail(format!(
-            "T-NET URLs externes hors liste admise : {}",
+            "T-NET external URLs outside the allowed list: {}",
             bad.len()
         ));
         for l in bad.iter().take(20) {
@@ -490,7 +490,7 @@ fn graph_check(rep: &mut Report, root: &Path) -> Result<()> {
             .filter(|n| !n.is_empty())
             .collect();
         if closure.is_empty() {
-            rep.warn(format!("T-NET cargo tree -p {m} : sortie vide"));
+            rep.warn(format!("T-NET cargo tree -p {m}: empty output"));
             continue;
         }
         let pick = |re: &Regex| {
@@ -738,7 +738,7 @@ pub fn full_check(root: &Path) -> Result<bool> {
         run(root, "cargo", &["test", "--workspace", "--locked"]),
     );
     step(
-        "xtask : tests et clippy",
+        "xtask: tests and clippy",
         run(root, "cargo", &["test", "--manifest-path", &xtask_manifest])
             && run(
                 root,
@@ -769,12 +769,12 @@ pub fn full_check(root: &Path) -> Result<bool> {
         failed += 1;
         eprintln!("FAILURE: {e}");
     }
-    println!("\n== garde-fous statiques (T-HARD/T-ID/T-PRIV/T-NET/T-LIC)");
+    println!("\n== static guards (T-HARD/T-ID/T-PRIV/T-NET/T-LIC)");
     match static_checks(root) {
         Ok(true) => {}
         Ok(false) => {
             failed += 1;
-            eprintln!("FAILURE: garde-fous statiques");
+            eprintln!("FAILURE: static guards");
         }
         Err(e) => {
             failed += 1;

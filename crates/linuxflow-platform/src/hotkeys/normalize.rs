@@ -123,7 +123,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn repetitions_et_boutons_ignores() {
+    fn repeats_and_buttons_ignored() {
         let mut n = KeyNormalizer::new();
         assert!(n.handle(1, 30, 1, 10).unwrap().down);
         assert_eq!(n.handle(1, 30, 2, 20), None);

@@ -282,10 +282,13 @@ mod probe_tests {
 
     #[test]
     fn probe_output_keeps_real_gpus_only() {
-        let json = r#"{"gpus":[{"name":"NVIDIA GeForce RTX","kind":"Discrete"},{"name":"llvmpipe","kind":"Software"},{"name":"AMD iGPU","kind":"Integrated"}],"vulkan_error":null}"#;
+        let json = r#"{"gpus":[{"name":"Test Discrete GPU","kind":"Discrete"},{"name":"llvmpipe","kind":"Software"},{"name":"Test Integrated GPU","kind":"Integrated"}],"vulkan_error":null}"#;
         assert_eq!(
             parse_probe_output(json).unwrap(),
-            vec!["NVIDIA GeForce RTX".to_string(), "AMD iGPU".to_string()]
+            vec![
+                "Test Discrete GPU".to_string(),
+                "Test Integrated GPU".to_string()
+            ]
         );
     }
 

@@ -278,7 +278,7 @@ mod tests {
     /// Interacts with the real portal (may show a dialog): never started automatically.
     #[test]
     #[ignore = "real portal; set LINUXFLOW_TEST_PORTALS=1"]
-    fn portail_reel() {
+    fn real_portal() {
         if std::env::var("LINUXFLOW_TEST_PORTALS").as_deref() != Ok("1") {
             return;
         }

@@ -175,7 +175,7 @@ mod tests {
     }
 
     #[test]
-    fn parse_et_affichage() {
+    fn parse_and_display() {
         let s = HotkeySpec::parse("ctrl+Alt+space").unwrap();
         assert_eq!(s.modifiers, Modifiers::CTRL.union(Modifiers::ALT));
         assert_eq!(s.key, Some(57));
@@ -184,7 +184,7 @@ mod tests {
     }
 
     #[test]
-    fn modificateurs_seuls() {
+    fn modifier_only_keys() {
         let s = HotkeySpec::parse("Ctrl+Super").unwrap();
         assert!(s.is_modifier_only());
         assert_eq!(s.portal_trigger(), None);
@@ -205,7 +205,7 @@ mod tests {
     }
 
     #[test]
-    fn touche_seule_et_fonction() {
+    fn single_key_and_function_key() {
         let s = HotkeySpec::parse("F9").unwrap();
         assert_eq!(s.key, Some(67));
         assert_eq!(HotkeySpec::parse("Shift+F13").unwrap().key, Some(183));

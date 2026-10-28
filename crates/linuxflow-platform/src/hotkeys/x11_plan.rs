@@ -113,7 +113,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn huit_grabs_avec_trois_verrous() {
+    fn eight_grabs_with_three_locks() {
         let s = HotkeySpec::parse("Ctrl+Alt+Space").unwrap();
         let locks = LockMasks {
             num: MASK_MOD2,
@@ -131,7 +131,7 @@ mod tests {
     }
 
     #[test]
-    fn defaut_quatre_grabs_et_deduplication() {
+    fn default_four_grabs_and_deduplication() {
         let s = HotkeySpec::parse("F9").unwrap();
         assert_eq!(plan_grabs(&s, LockMasks::default()).unwrap().len(), 4);
         let same = LockMasks {
@@ -155,13 +155,13 @@ mod tests {
     }
 
     #[test]
-    fn modificateurs_seuls_refuses() {
+    fn modifier_only_refused() {
         let s = HotkeySpec::parse("Ctrl+Super").unwrap();
         assert!(plan_grabs(&s, LockMasks::default()).is_err());
     }
 
     #[test]
-    fn masques_modificateurs() {
+    fn modifier_masks() {
         assert_eq!(
             modifier_mask(Modifiers::SHIFT.union(Modifiers::SUPER)),
             MASK_SHIFT | MASK_MOD4
@@ -169,7 +169,7 @@ mod tests {
     }
 
     #[test]
-    fn table_des_modificateurs() {
+    fn modifier_table() {
         // 2 codes per row: Shift, Lock, Control, Mod1, Mod2 (NumLock = 77), Mod3, Mod4, Mod5 (ScrollLock = 78).
         let mut t = vec![0u8; 16];
         t[8] = 77;

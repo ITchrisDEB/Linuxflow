@@ -9,7 +9,7 @@ pub const DEFAULT_ID: &str = "default";
 /// Raw device as reported by the driver.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct RawDevice {
-    /// Driver identifier (ALSA PCM name: `pipewire`, `sysdefault:CARD=PCH`...).
+    /// Driver identifier (ALSA PCM name: `pipewire`, `sysdefault:CARD=Card`...).
     pub id: String,
     /// Readable name (first line of the driver description).
     pub name: String,
@@ -136,10 +136,10 @@ mod tests {
             dev("null", "Discard all samples", true),
             dev("pipewire", "PipeWire Sound Server", true),
             dev("default", "Default ALSA Output", true),
-            dev("sysdefault:CARD=PCH", "HDA Intel PCH", true),
-            dev("hw:CARD=PCH,DEV=0", "HDA Intel PCH", true),
-            dev("plughw:CARD=PCH,DEV=0", "HDA Intel PCH", true),
-            dev("front:CARD=PCH,DEV=0", "HDA Intel PCH", false),
+            dev("sysdefault:CARD=Card", "Test Sound Card", true),
+            dev("hw:CARD=Card,DEV=0", "Test Sound Card", true),
+            dev("plughw:CARD=Card,DEV=0", "Test Sound Card", true),
+            dev("front:CARD=Card,DEV=0", "Test Sound Card", false),
             dev("sysdefault:CARD=Out", "Speakers only", false),
             dev("dmix", "Direct sample mixing", true),
             dev("usb", "", true),
@@ -161,7 +161,7 @@ mod tests {
             .collect();
         assert_eq!(
             ids,
-            vec!["default", "pipewire", "sysdefault:CARD=PCH", "usb"]
+            vec!["default", "pipewire", "sysdefault:CARD=Card", "usb"]
         );
     }
 
@@ -192,8 +192,8 @@ mod tests {
     #[test]
     fn choose_by_id_then_by_name() {
         assert_eq!(
-            choose_device(Some("sysdefault:CARD=PCH"), &sample()),
-            DeviceChoice::Named("sysdefault:CARD=PCH".into())
+            choose_device(Some("sysdefault:CARD=Card"), &sample()),
+            DeviceChoice::Named("sysdefault:CARD=Card".into())
         );
         assert_eq!(
             choose_device(Some("pipewire sound server"), &sample()),

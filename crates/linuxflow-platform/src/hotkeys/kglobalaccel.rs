@@ -368,7 +368,7 @@ mod tests {
     /// component, releases it. Never started automatically.
     #[test]
     #[ignore = "real KDE session; set LINUXFLOW_TEST_PORTALS=1"]
-    fn kde_reel_enregistre_puis_libere_une_touche() {
+    fn real_kde_registers_then_releases_a_key() {
         if std::env::var("LINUXFLOW_TEST_PORTALS").as_deref() != Ok("1") {
             return;
         }
@@ -425,7 +425,7 @@ mod tests {
     /// Read-only: another application's key is reported, never stolen.
     #[test]
     #[ignore = "real KDE session with another application on Ctrl+Alt+Space"]
-    fn kde_reel_signale_la_touche_d_une_autre_application() {
+    fn real_kde_reports_another_applications_key() {
         if std::env::var("LINUXFLOW_TEST_PORTALS").as_deref() != Ok("1") {
             return;
         }

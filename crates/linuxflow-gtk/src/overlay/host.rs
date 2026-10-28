@@ -486,7 +486,7 @@ mod tests {
         host.push(OverlayMsg::phase(Phase::Listening));
         host.push(OverlayMsg::level(0.5));
         host.push(OverlayMsg::done(600));
-        drop(host); // ferme le pipe, attend la fin de l'enfant
+        drop(host); // closes the pipe, waits for the child to end
         assert_eq!(
             lines(&out),
             vec![

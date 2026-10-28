@@ -25,6 +25,10 @@ pub enum CompatStatus {
 }
 
 /// Builds the rows of the report (pure, testable).
+///
+/// `Missing` (warning) is reserved for a component whose absence really degrades LinuxFlow on this machine.
+/// A component that the desktop does not offer, that is replaced by another mechanism, or that is optional is
+/// reported with a neutral label and the reason, so that nothing looks like a fault when it is not.
 pub fn rows(c: &Capabilities) -> Vec<CompatRow> {
     let yn = |b: bool| {
         if b {
@@ -38,10 +42,11 @@ pub fn rows(c: &Capabilities) -> Vec<CompatRow> {
         detail,
         status,
     };
-    let vulkan_detail = if c.vulkan_devices.is_empty() {
-        tr("Without a usable GPU, the lighter model runs on the CPU.")
-    } else {
-        c.vulkan_devices.join(", ")
+    // Neutral row: label + the reason shown as detail.
+    let neutral = |title: String, label: String, reason: String| CompatRow {
+        title,
+        detail: reason,
+        status: CompatStatus::Info(label),
     };
     let unknown = |s: &str| {
         if s.is_empty() {
@@ -50,7 +55,8 @@ pub fn rows(c: &Capabilities) -> Vec<CompatRow> {
             s.to_string()
         }
     };
-    vec![
+    let desktop = unknown(&c.desktop);
+    let mut out = vec![
         row(
             tr("Session type"),
             tr("Wayland or X11."),
@@ -59,65 +65,208 @@ pub fn rows(c: &Capabilities) -> Vec<CompatRow> {
         row(
             tr("Desktop"),
             tr("The desktop environment in use."),
-            CompatStatus::Info(unknown(&c.desktop)),
+            CompatStatus::Info(desktop.clone()),
         ),
+    ];
+
+    // Global shortcut.
+    let t = tr("Global shortcut portal");
+    out.push(if c.portal_global_shortcuts {
         row(
-            tr("Global shortcut portal"),
+            t,
             tr("Lets the shortcut work while other applications are focused."),
-            yn(c.portal_global_shortcuts),
-        ),
+            CompatStatus::Available,
+        )
+    } else if c.has_native_shortcuts() {
+        let how = match c.desktop.as_str() {
+            "gnome" => {
+                tr("Replaced by the GNOME keyboard shortcuts, where LinuxFlow sets its shortcut.")
+            }
+            "kde" => tr(
+                "Replaced by the KDE global shortcut service, where LinuxFlow sets its shortcut.",
+            ),
+            _ => tr("Replaced by the compositor's own key bindings, which LinuxFlow sets."),
+        };
+        neutral(t, tr("Not needed"), how)
+    } else if c.is_x11() {
+        neutral(
+            t,
+            tr("Not needed"),
+            tr("On X11 the shortcut key is grabbed directly."),
+        )
+    } else {
         row(
-            tr("Remote desktop portal"),
+            t,
+            tr("Lets the shortcut work while other applications are focused."),
+            CompatStatus::Missing,
+        )
+    });
+
+    // Paste key simulation.
+    let t = tr("Remote desktop portal");
+    out.push(if c.portal_remote_desktop {
+        row(
+            t,
             tr("Used to simulate the paste key in the active application."),
-            yn(c.portal_remote_desktop),
-        ),
+            CompatStatus::Available,
+        )
+    } else if c.is_x11() {
+        neutral(
+            t,
+            tr("Not needed"),
+            tr("On X11 the paste key is sent directly."),
+        )
+    } else {
         row(
-            tr("Clipboard portal"),
+            t,
+            tr("Used to simulate the paste key in the active application."),
+            CompatStatus::Missing,
+        )
+    });
+
+    // Clipboard.
+    let t = tr("Clipboard portal");
+    out.push(if c.portal_clipboard {
+        row(
+            t,
             tr("Used to copy the text and restore your clipboard."),
-            yn(c.portal_clipboard),
-        ),
+            CompatStatus::Available,
+        )
+    } else if c.is_x11() {
+        neutral(
+            t,
+            tr("Not needed"),
+            tr("On X11 the regular clipboard is used."),
+        )
+    } else if c.data_control {
+        neutral(
+            t,
+            tr("Not needed"),
+            tr("The compositor's data-control protocol is used instead."),
+        )
+    } else {
         row(
-            tr("Layer shell"),
+            t,
+            tr("Used to copy the text and restore your clipboard."),
+            CompatStatus::Missing,
+        )
+    });
+
+    // Recording pill.
+    let t = tr("Layer shell");
+    out.push(if c.layer_shell {
+        row(
+            t,
             tr("Lets the recording pill float above other windows."),
-            yn(c.layer_shell),
-        ),
+            CompatStatus::Available,
+        )
+    } else if c.is_wayland() {
+        neutral(
+            t,
+            tr("Not offered"),
+            tr("This desktop does not provide it: the recording pill uses a regular window."),
+        )
+    } else {
+        neutral(t, tr("Not applicable"), tr("Only used on Wayland."))
+    });
+
+    // Wayland clipboard access.
+    let t = tr("Clipboard data control");
+    out.push(if c.data_control {
         row(
-            tr("Clipboard data control"),
+            t,
             tr("Alternative clipboard access on Wayland."),
-            yn(c.data_control),
-        ),
-        row(tr("Vulkan GPU"), vulkan_detail, yn(c.vulkan_available)),
+            CompatStatus::Available,
+        )
+    } else if c.portal_clipboard {
+        neutral(
+            t,
+            tr("Not needed"),
+            tr("The clipboard portal is used instead."),
+        )
+    } else if c.is_wayland() {
+        row(
+            t,
+            tr("Alternative clipboard access on Wayland."),
+            CompatStatus::Missing,
+        )
+    } else {
+        neutral(t, tr("Not applicable"), tr("Only used on Wayland."))
+    });
+
+    // GPU: running on the CPU is a normal mode, not a fault.
+    out.push(if c.vulkan_available {
+        row(
+            tr("Vulkan GPU"),
+            c.vulkan_devices.join(", "),
+            CompatStatus::Available,
+        )
+    } else {
+        neutral(
+            tr("Vulkan GPU"),
+            tr("CPU mode"),
+            tr("No usable GPU was found: the lighter model runs on the CPU."),
+        )
+    });
+
+    out.push(if c.pipewire {
         row(
             tr("PipeWire"),
             tr("Audio server; ALSA is used when it is missing."),
-            yn(c.pipewire),
-        ),
-        row(
-            tr("Notification area"),
-            tr("Tray icon support."),
-            yn(c.tray_watcher),
-        ),
+            CompatStatus::Available,
+        )
+    } else {
+        neutral(
+            tr("PipeWire"),
+            tr("Not used"),
+            tr("PipeWire was not found: audio capture uses ALSA."),
+        )
+    });
+
+    out.push(row(
+        tr("Notification area"),
+        tr("Tray icon support."),
+        yn(c.tray_watcher),
+    ));
+
+    out.push(if c.uinput_writable {
         row(
             tr("Direct input access (uinput)"),
             tr("Optional: key simulation without a portal."),
-            yn(c.uinput_writable),
-        ),
+            CompatStatus::Available,
+        )
+    } else {
+        neutral(
+            tr("Direct input access (uinput)"),
+            tr("Optional"),
+            tr("Key simulation without a portal. Not enabled: this is the normal setup."),
+        )
+    });
+    out.push(if c.input_group {
         row(
             tr("Input group membership"),
             tr("Optional: reading keys for hold-to-talk."),
-            yn(c.input_group),
-        ),
-        row(
-            tr("GTK version"),
-            String::new(),
-            CompatStatus::Info(unknown(&c.gtk_version)),
-        ),
-        row(
-            tr("libadwaita version"),
-            String::new(),
-            CompatStatus::Info(unknown(&c.adw_version)),
-        ),
-    ]
+            CompatStatus::Available,
+        )
+    } else {
+        neutral(
+            tr("Input group membership"),
+            tr("Optional"),
+            tr("Reading keys for hold-to-talk. Not enabled: this is the normal setup."),
+        )
+    });
+
+    out.push(row(
+        tr("GTK version"),
+        String::new(),
+        CompatStatus::Info(unknown(&c.gtk_version)),
+    ));
+    out.push(row(
+        tr("libadwaita version"),
+        String::new(),
+        CompatStatus::Info(unknown(&c.adw_version)),
+    ));
+    out
 }
 
 pub struct CompatPage {
@@ -266,23 +415,123 @@ impl CompatPage {
 mod tests {
     use super::*;
 
+    fn status<'a>(r: &'a [CompatRow], title: &str) -> &'a CompatStatus {
+        &r.iter()
+            .find(|r| r.title == title)
+            .unwrap_or_else(|| panic!("row {title}"))
+            .status
+    }
+
+    fn is_info(s: &CompatStatus) -> bool {
+        matches!(s, CompatStatus::Info(_))
+    }
+
     #[test]
-    fn rows_reflect_capabilities() {
-        let none = rows(&Capabilities::default());
+    fn nothing_detected_flags_only_what_really_matters() {
+        let r = rows(&Capabilities::default());
+        // Without any session, the shortcut, paste, clipboard and tray have no way to work.
+        for t in [
+            "Global shortcut portal",
+            "Remote desktop portal",
+            "Clipboard portal",
+            "Notification area",
+        ] {
+            assert_eq!(status(&r, t), &CompatStatus::Missing, "{t}");
+        }
+        // Optional or replaced components are never reported as faults.
+        for t in [
+            "Vulkan GPU",
+            "PipeWire",
+            "Direct input access (uinput)",
+            "Input group membership",
+            "Layer shell",
+            "Clipboard data control",
+        ] {
+            assert!(is_info(status(&r, t)), "{t} must be neutral");
+        }
+        let vulkan = r.iter().find(|r| r.title == "Vulkan GPU");
         assert!(
-            none.iter()
-                .filter(|r| r.status == CompatStatus::Missing)
-                .count()
-                >= 9
+            vulkan.is_some_and(|v| v.detail.contains("CPU")),
+            "CPU mode announced"
         );
-        let vulkan = none
+    }
+
+    #[test]
+    fn gnome_wayland_without_extras_has_no_false_alarm() {
+        // GNOME 46 / 47: no GlobalShortcuts portal, no layer-shell, no data-control, no GPU in a VM.
+        let caps = Capabilities {
+            session: "wayland".into(),
+            desktop: "gnome".into(),
+            portal_remote_desktop: true,
+            portal_clipboard: true,
+            pipewire: true,
+            tray_watcher: true,
+            ..Capabilities::default()
+        };
+        let r = rows(&caps);
+        let missing: Vec<_> = r
             .iter()
-            .find(|r| r.title == "Vulkan GPU")
-            .map(|r| r.detail.clone());
-        assert!(
-            vulkan.is_some_and(|d| d.contains("CPU")),
-            "CPU fallback announced"
+            .filter(|r| r.status == CompatStatus::Missing)
+            .map(|r| r.title.clone())
+            .collect();
+        assert!(missing.is_empty(), "false alarms: {missing:?}");
+        assert_eq!(
+            status(&r, "Global shortcut portal"),
+            &CompatStatus::Info("Not needed".into())
         );
+        assert_eq!(
+            status(&r, "Layer shell"),
+            &CompatStatus::Info("Not offered".into())
+        );
+    }
+
+    #[test]
+    fn missing_tray_is_a_real_limitation() {
+        let caps = Capabilities {
+            session: "wayland".into(),
+            desktop: "gnome".into(),
+            portal_remote_desktop: true,
+            portal_clipboard: true,
+            ..Capabilities::default()
+        };
+        assert_eq!(
+            status(&rows(&caps), "Notification area"),
+            &CompatStatus::Missing
+        );
+    }
+
+    #[test]
+    fn unsupported_wayland_desktop_flags_the_shortcut_and_paste() {
+        let caps = Capabilities {
+            session: "wayland".into(),
+            desktop: "weston".into(),
+            ..Capabilities::default()
+        };
+        let r = rows(&caps);
+        for t in [
+            "Global shortcut portal",
+            "Remote desktop portal",
+            "Clipboard portal",
+            "Clipboard data control",
+        ] {
+            assert_eq!(status(&r, t), &CompatStatus::Missing, "{t}");
+        }
+    }
+
+    #[test]
+    fn x11_needs_none_of_the_wayland_portals() {
+        let caps = Capabilities {
+            session: "x11".into(),
+            desktop: "xfce".into(),
+            tray_watcher: true,
+            ..Capabilities::default()
+        };
+        let r = rows(&caps);
+        assert!(r.iter().all(|r| r.status != CompatStatus::Missing));
+    }
+
+    #[test]
+    fn rows_reflect_gpu_and_versions() {
         let caps = Capabilities {
             session: "wayland".into(),
             vulkan_available: true,
@@ -294,7 +543,7 @@ mod tests {
         assert_eq!(
             r[1].status,
             CompatStatus::Info("—".into()),
-            "bureau inconnu"
+            "unknown desktop"
         );
         let v = r.iter().find(|r| r.title == "Vulkan GPU");
         assert!(v.is_some_and(|v| v.status == CompatStatus::Available && v.detail == "A, B"));

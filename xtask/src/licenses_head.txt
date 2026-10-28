@@ -1,28 +1,23 @@
-LinuxFlow : licences des composants tiers / Third-party licenses
-=================================================================
+LinuxFlow: third-party licenses
+===============================
 
-LinuxFlow est distribué sous licence MIT (voir LICENSE). Il inclut ou utilise les composants
-ci-dessous, chacun sous sa propre licence, dont les textes complets suivent.
 LinuxFlow is distributed under the MIT license (see LICENSE). It includes or uses the components
 below, each under its own license; the full texts follow.
 
 -----------------------------------------------------------------
-A. Composants hors Cargo / Non-Cargo components
+A. Non-Cargo components
 -----------------------------------------------------------------
 
-* whisper.cpp et ggml (moteur d'inférence, compilés dans le binaire) : licence MIT, texte
-  reproduit en section B.1.
-* Poids du modèle Whisper d'OpenAI (téléchargés à la demande, jamais livrés dans l'archive) :
-  licence MIT, https://github.com/openai/whisper (fichiers GGML convertis par le projet whisper.cpp).
-* Modèle de détection de parole Silero VAD (téléchargé à la demande) : licence MIT,
-  https://github.com/snakers4/silero-vad (version GGML : dépôt ggml-org/whisper-vad).
-* GTK 4 et libadwaita : bibliothèques système liées DYNAMIQUEMENT (licence LGPL-2.1-or-later). Elles
-  ne sont pas incluses dans l'archive ; leurs sources sont fournies par la distribution de l'utilisateur
-  et sur https://gitlab.gnome.org/GNOME/gtk et https://gitlab.gnome.org/GNOME/libadwaita.
-  Dynamically linked system libraries (not shipped); sources from your distribution and the URLs above.
-* Pilotes Vulkan, ALSA, PipeWire, Wayland, X11, xkbcommon : bibliothèques système chargées ou liées
-  dynamiquement, fournies par la distribution.
-* Police Figtree (SIL Open Font License 1.1) : livrée dans share/fonts/linuxflow avec son texte de licence
-  (OFL.txt), ses auteurs et ses contributeurs.
-  Figtree font (SIL OFL 1.1): shipped in share/fonts/linuxflow with its licence text.
-
+* whisper.cpp and ggml (inference engine, compiled into the binary): MIT license, text reproduced in
+  section B.1.
+* OpenAI Whisper model weights (downloaded on demand, never shipped in the archive): MIT license,
+  https://github.com/openai/whisper (GGML files converted by the whisper.cpp project).
+* Silero VAD speech-detection model (downloaded on demand): MIT license,
+  https://github.com/snakers4/silero-vad (GGML version: ggml-org/whisper-vad repository).
+* GTK 4 and libadwaita: system libraries linked DYNAMICALLY (LGPL-2.1-or-later). They are not
+  included in the archive; their sources are provided by your distribution and at
+  https://gitlab.gnome.org/GNOME/gtk and https://gitlab.gnome.org/GNOME/libadwaita.
+* Vulkan drivers, ALSA, PipeWire, Wayland, X11, xkbcommon: system libraries loaded or linked
+  dynamically, provided by your distribution.
+* Figtree font (SIL Open Font License 1.1): shipped in share/fonts/linuxflow with its license text
+  (OFL.txt), its authors and its contributors.

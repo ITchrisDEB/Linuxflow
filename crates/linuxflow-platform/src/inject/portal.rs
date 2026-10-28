@@ -386,6 +386,22 @@ impl PortalSession {
         }
     }
 
+    /// Runs a portal operation; if it fails because the session is gone (the portal service crashed or restarted,
+    /// which xdg-desktop-portal-gnome 46 does now and then), the session is abandoned and the operation is repeated
+    /// once on a new one (the restore token means no new dialog). A refusal or an absent portal is not retried.
+    fn with_recovery<T>(
+        &self,
+        mut op: impl FnMut() -> Result<T, InjectError>,
+    ) -> Result<T, InjectError> {
+        match op() {
+            Err(InjectError::Failed(_)) => {
+                self.drop_live();
+                op()
+            }
+            other => other,
+        }
+    }
+
     /// Sends (keysym, pressed) pairs to the portal. A closed or revoked session gives `Blocked`.
     /// On failure or timeout in the middle of the sequence, the keys already pressed are
     /// released (best effort): a Ctrl must never stay stuck in the session.
@@ -444,6 +460,10 @@ impl PortalSession {
 
     /// Announces a new selection (CLIPBOARD) served by this process.
     pub fn clipboard_set(&self, items: Vec<(String, Vec<u8>)>) -> Result<(), InjectError> {
+        self.with_recovery(|| self.clipboard_set_once(items.clone()))
+    }
+
+    fn clipboard_set_once(&self, items: Vec<(String, Vec<u8>)>) -> Result<(), InjectError> {
         if !self.config.clipboard {
             return Err(InjectError::Unavailable(
                 "clipboard portal not requested".into(),
@@ -474,6 +494,10 @@ impl PortalSession {
 
     /// Reads the current selection in the requested MIME type (if the portal allows it).
     pub fn clipboard_read(&self, mime: &str) -> Result<Vec<u8>, InjectError> {
+        self.with_recovery(|| self.clipboard_read_once(mime))
+    }
+
+    fn clipboard_read_once(&self, mime: &str) -> Result<Vec<u8>, InjectError> {
         if !self.config.clipboard {
             return Err(InjectError::Unavailable(
                 "clipboard portal not requested".into(),
@@ -559,6 +583,44 @@ mod tests {
         rt.block_on(async move {
             drop(session);
         });
+    }
+
+    #[test]
+    fn a_lost_session_is_retried_once_and_a_refusal_is_not() {
+        let session = PortalSession::new(PortalConfig::default()).unwrap();
+        // The portal went away: the first call fails, the second one (new session) succeeds.
+        let mut calls = 0;
+        let r = session.with_recovery(|| {
+            calls += 1;
+            if calls == 1 {
+                Err(InjectError::Failed("portal: connection closed".into()))
+            } else {
+                Ok(calls)
+            }
+        });
+        assert_eq!(r.unwrap(), 2);
+        // Still failing: one retry only, the error is returned.
+        let mut calls = 0;
+        let r: Result<(), _> = session.with_recovery(|| {
+            calls += 1;
+            Err(InjectError::Failed("portal: gone".into()))
+        });
+        assert!(r.is_err());
+        assert_eq!(calls, 2);
+        // A refusal, an absent portal or a timeout is never replayed.
+        for e in [
+            InjectError::Blocked("refused".into()),
+            InjectError::Unavailable("absent".into()),
+            InjectError::TimedOut("slow".into()),
+        ] {
+            let mut calls = 0;
+            let r: Result<(), _> = session.with_recovery(|| {
+                calls += 1;
+                Err(e.clone())
+            });
+            assert!(r.is_err());
+            assert_eq!(calls, 1, "{e:?} must not be retried");
+        }
     }
 
     #[test]

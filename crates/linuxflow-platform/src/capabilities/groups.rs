@@ -46,7 +46,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn parse_gids_et_noms() {
+    fn parse_gids_and_names() {
         let status = "Name:\tx\nGid:\t1000\t1000\t1000\t1000\nGroups:\t10 105 1000\n";
         let gids = parse_status_gids(status);
         assert_eq!(gids, vec![10, 105, 1000]);

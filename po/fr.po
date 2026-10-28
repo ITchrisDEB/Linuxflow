@@ -611,10 +611,6 @@ msgid "Troubleshooting"
 msgstr "Dépannage"
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
-msgid "Without a usable GPU, the lighter model runs on the CPU."
-msgstr "Sans GPU utilisable, le modèle léger s’exécute sur le CPU."
-
-#: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Session type"
 msgstr "Type de session"
 
@@ -639,12 +635,36 @@ msgid "Lets the shortcut work while other applications are focused."
 msgstr "Permet au raccourci de fonctionner quand une autre application a le focus."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Replaced by the GNOME keyboard shortcuts, where LinuxFlow sets its shortcut."
+msgstr "Remplacé par les raccourcis clavier de GNOME, où LinuxFlow définit son raccourci."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Replaced by the KDE global shortcut service, where LinuxFlow sets its shortcut."
+msgstr "Remplacé par le service de raccourcis globaux de KDE, où LinuxFlow définit son raccourci."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Replaced by the compositor's own key bindings, which LinuxFlow sets."
+msgstr "Remplacé par les raccourcis propres au compositeur, que LinuxFlow définit."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Not needed"
+msgstr "Non requis"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "On X11 the shortcut key is grabbed directly."
+msgstr "Sous X11, la touche du raccourci est capturée directement."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Remote desktop portal"
 msgstr "Portail de bureau à distance"
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Used to simulate the paste key in the active application."
 msgstr "Sert à simuler la touche de collage dans l’application active."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "On X11 the paste key is sent directly."
+msgstr "Sous X11, la touche de collage est envoyée directement."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Clipboard portal"
@@ -655,12 +675,36 @@ msgid "Used to copy the text and restore your clipboard."
 msgstr "Sert à copier le texte et à restaurer ton presse-papiers."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "On X11 the regular clipboard is used."
+msgstr "Sous X11, le presse-papiers habituel est utilisé."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "The compositor's data-control protocol is used instead."
+msgstr "Le protocole data-control du compositeur est utilisé à la place."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Layer shell"
 msgstr "Layer shell"
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Lets the recording pill float above other windows."
 msgstr "Permet à la pastille d’enregistrement de flotter au-dessus des autres fenêtres."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Not offered"
+msgstr "Non proposé"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "This desktop does not provide it: the recording pill uses a regular window."
+msgstr "Ce bureau ne le propose pas : la pastille d'enregistrement utilise une fenêtre ordinaire."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Not applicable"
+msgstr "Sans objet"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Only used on Wayland."
+msgstr "Utilisé uniquement sous Wayland."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Clipboard data control"
@@ -671,8 +715,20 @@ msgid "Alternative clipboard access on Wayland."
 msgstr "Accès alternatif au presse-papiers sous Wayland."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "The clipboard portal is used instead."
+msgstr "Le portail du presse-papiers est utilisé à la place."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Vulkan GPU"
 msgstr "GPU Vulkan"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "CPU mode"
+msgstr "Mode processeur"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "No usable GPU was found: the lighter model runs on the CPU."
+msgstr "Aucun GPU utilisable n'a été trouvé : le modèle léger s'exécute sur le processeur."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "PipeWire"
@@ -681,6 +737,14 @@ msgstr "PipeWire"
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Audio server; ALSA is used when it is missing."
 msgstr "Serveur audio ; ALSA est utilisé en son absence."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Not used"
+msgstr "Non utilisé"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "PipeWire was not found: audio capture uses ALSA."
+msgstr "PipeWire est introuvable : la capture audio utilise ALSA."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Notification area"
@@ -699,12 +763,24 @@ msgid "Optional: key simulation without a portal."
 msgstr "Facultatif : simulation de touches sans portail."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Optional"
+msgstr "Facultatif"
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Key simulation without a portal. Not enabled: this is the normal setup."
+msgstr "Simulation de touches sans portail. Non activé : c'est la configuration normale."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Input group membership"
 msgstr "Appartenance au groupe input"
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "Optional: reading keys for hold-to-talk."
 msgstr "Facultatif : lecture des touches pour « maintenir pour parler »."
+
+#: crates/linuxflow-gtk/src/hub/pages/compat.rs
+msgid "Reading keys for hold-to-talk. Not enabled: this is the normal setup."
+msgstr "Lecture des touches pour « maintenir pour parler ». Non activé : c'est la configuration normale."
 
 #: crates/linuxflow-gtk/src/hub/pages/compat.rs
 msgid "GTK version"
@@ -1765,52 +1841,28 @@ msgid "The session D-Bus is not reachable: portals and the tray icon are unavail
 msgstr "Le bus D-Bus de session est inaccessible : les portails et l’icône de notification sont indisponibles."
 
 #: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "The GlobalShortcuts portal is missing. Bind a compositor shortcut to the LinuxFlow command line, or enable the optional keyboard-device mode."
-msgstr "Le portail GlobalShortcuts est absent. Associe un raccourci du compositeur à la ligne de commande de LinuxFlow, ou active le mode optionnel de lecture du clavier."
+msgid "No way to register the dictation shortcut was found (no GlobalShortcuts portal and no desktop shortcut manager). Bind a compositor shortcut to the LinuxFlow command line, or enable the optional keyboard-device mode."
+msgstr "Aucun moyen d'enregistrer le raccourci de dictée n'a été trouvé (ni portail GlobalShortcuts, ni gestionnaire de raccourcis du bureau). Associez un raccourci du compositeur à la ligne de commande de LinuxFlow, ou activez le mode facultatif de lecture des périphériques clavier."
 
 #: crates/linuxflow-platform/src/capabilities/mod.rs
 msgid "The RemoteDesktop portal is missing: automatic pasting may be unavailable. The text stays on the clipboard."
 msgstr "Le portail RemoteDesktop est absent : le collage automatique peut être indisponible. Le texte reste dans le presse-papiers."
 
 #: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "The Clipboard portal is missing: copying while another window has focus may fail."
-msgstr "Le portail Clipboard est absent : la copie peut échouer quand une autre fenêtre a le focus."
-
-#: crates/linuxflow-platform/src/capabilities/mod.rs
 msgid "The Wayland compositor could not be queried; overlay and clipboard capabilities are unknown."
 msgstr "Le compositeur Wayland n’a pas pu être interrogé ; les capacités de la pastille et du presse-papiers sont inconnues."
 
 #: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "This compositor does not offer layer-shell: the recording indicator uses a fallback window."
-msgstr "Ce compositeur n’offre pas layer-shell : l’indicateur d’enregistrement utilise une fenêtre de repli."
+msgid "Neither the Clipboard portal nor the data-control protocol is available: copying while another window has focus may fail."
+msgstr "Ni le portail du presse-papiers ni le protocole data-control ne sont disponibles : la copie peut échouer quand une autre fenêtre a le focus."
 
 #: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "This compositor does not offer data-control: clipboard access relies on the portal or on window focus."
-msgstr "Ce compositeur n’offre pas data-control : l’accès au presse-papiers passe par le portail ou par le focus de la fenêtre."
-
-#: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "Vulkan is installed but reports no GPU: transcription runs on the CPU."
-msgstr "Vulkan est installé mais ne signale aucun GPU : la transcription s’exécute sur le CPU."
-
-#: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "Vulkan is not available: transcription runs on the CPU. Install the Vulkan loader and your GPU driver to use the GPU."
-msgstr "Vulkan n’est pas disponible : la transcription s’exécute sur le CPU. Installe le chargeur Vulkan et le pilote de ton GPU pour l’utiliser."
-
-#: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "PipeWire was not found: audio capture falls back to ALSA."
-msgstr "PipeWire est introuvable : la capture audio se replie sur ALSA."
+msgid "No notification-area host was found: there will be no tray icon. Install and enable the \"AppIndicator and KStatusNotifierItem Support\" GNOME extension, or use the main window."
+msgstr "Aucun hôte de zone de notification n'a été trouvé : il n'y aura pas d'icône de notification. Installez et activez l'extension GNOME « AppIndicator and KStatusNotifierItem Support », ou utilisez la fenêtre principale."
 
 #: crates/linuxflow-platform/src/capabilities/mod.rs
 msgid "No notification-area host was found: there will be no tray icon. Use the main window instead."
 msgstr "Aucune zone de notification trouvée : il n’y aura pas d’icône. Utilise la fenêtre principale."
-
-#: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "/dev/uinput is not writable: the keystroke-injection fallback is disabled. A udev rule can grant access."
-msgstr "/dev/uinput n’est pas accessible en écriture : le repli par injection de touches est désactivé. Une règle udev peut accorder l’accès."
-
-#: crates/linuxflow-platform/src/capabilities/mod.rs
-msgid "You are not in the \"input\" group: reading keyboard devices directly is disabled."
-msgstr "Tu n’es pas dans le groupe « input » : la lecture directe des claviers est désactivée."
 
 #: crates/linuxflow-platform/src/hotkeys/compositor.rs
 #, rust-format

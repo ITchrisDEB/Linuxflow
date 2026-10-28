@@ -257,7 +257,7 @@ os_family() {
     printf 'unknown'
 }
 
-pkg_for() { # $1 = famille, $2 = soname -> nom de paquet (vide si inconnu)
+pkg_for() { # $1 = family, $2 = soname -> package name (empty if unknown)
     case $2:$1 in
         libgtk-4.so.1:debian) echo libgtk-4-1 ;;
         libgtk-4.so.1:fedora|libgtk-4.so.1:arch) echo gtk4 ;;

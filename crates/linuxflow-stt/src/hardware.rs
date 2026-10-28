@@ -507,13 +507,13 @@ mod tests {
         let gpus = classify_devices(vec![
             raw("llvmpipe (LLVM 19)", vk::PhysicalDeviceType::CPU, 0, 9),
             raw(
-                "AMD Radeon 610M",
+                "Test Integrated GPU",
                 vk::PhysicalDeviceType::INTEGRATED_GPU,
                 2 * GIB,
                 1,
             ),
             raw(
-                "NVIDIA GeForce RTX",
+                "Test Discrete GPU",
                 vk::PhysicalDeviceType::DISCRETE_GPU,
                 16 * GIB,
                 2,
@@ -530,14 +530,19 @@ mod tests {
         let hw = Hardware {
             gpus: classify_devices(vec![
                 raw("iGPU", vk::PhysicalDeviceType::INTEGRATED_GPU, 2 * GIB, 1),
-                raw("RTX", vk::PhysicalDeviceType::DISCRETE_GPU, 16 * GIB, 2),
+                raw(
+                    "Discrete GPU",
+                    vk::PhysicalDeviceType::DISCRETE_GPU,
+                    16 * GIB,
+                    2,
+                ),
             ]),
             ..Hardware::default()
         };
         let auto = select_device(&hw, DeviceSetting::Auto, true).unwrap();
         let gpu = select_device(&hw, DeviceSetting::Gpu(None), true).unwrap();
         assert_eq!(auto, gpu);
-        assert!(matches!(gpu, DeviceChoice::Gpu { ref name, .. } if name == "RTX"));
+        assert!(matches!(gpu, DeviceChoice::Gpu { ref name, .. } if name == "Discrete GPU"));
     }
 
     #[test]
@@ -553,7 +558,7 @@ mod tests {
             GpuKind::Software
         );
         assert_eq!(classify_kind(discrete, "Lavapipe"), GpuKind::Software);
-        assert_eq!(classify_kind(discrete, "RTX 4070"), GpuKind::Discrete);
+        assert_eq!(classify_kind(discrete, "Discrete GPU X"), GpuKind::Discrete);
     }
 
     #[test]
@@ -586,9 +591,9 @@ mod tests {
     #[test]
     fn duplicate_uuid_is_listed_once_as_usable() {
         let gpus = classify_devices(vec![
-            raw("RTX", vk::PhysicalDeviceType::DISCRETE_GPU, GIB, 7),
+            raw("Discrete GPU", vk::PhysicalDeviceType::DISCRETE_GPU, GIB, 7),
             raw(
-                "RTX (autre pilote)",
+                "Discrete GPU (other driver)",
                 vk::PhysicalDeviceType::DISCRETE_GPU,
                 GIB,
                 7,
@@ -604,9 +609,9 @@ mod tests {
                 ggml_index, name, ..
             }) => {
                 assert_eq!(ggml_index, 1);
-                assert!(name.contains("NVIDIA"));
+                assert!(name.contains("Discrete"));
             }
-            other => panic!("choix inattendu : {other:?}"),
+            other => panic!("unexpected choice: {other:?}"),
         }
     }
 

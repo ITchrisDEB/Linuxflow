@@ -847,7 +847,7 @@ mod tests {
     }
 
     #[test]
-    fn alias_modificateurs() {
+    fn modifier_aliases() {
         for (alias, m) in [
             ("ctrl", Modifier::Ctrl),
             ("Control", Modifier::Ctrl),
@@ -867,7 +867,7 @@ mod tests {
     }
 
     #[test]
-    fn ordre_canonique() {
+    fn canonical_order() {
         assert_eq!(
             p("super+shift+alt+ctrl+space").to_string(),
             "Ctrl+Alt+Shift+Super+Space"
@@ -879,7 +879,7 @@ mod tests {
     }
 
     #[test]
-    fn vide_et_plusieurs_touches() {
+    fn empty_and_several_keys() {
         assert_eq!(parse(""), Err(AcceleratorError::Empty));
         assert_eq!(parse(" + "), Err(AcceleratorError::Empty));
         assert_eq!(parse("Ctrl+A+B"), Err(AcceleratorError::MultipleKeys));
@@ -895,7 +895,7 @@ mod tests {
     }
 
     #[test]
-    fn aller_retour_toutes_les_touches() {
+    fn round_trip_of_every_key() {
         let mut names: Vec<String> = Vec::new();
         names.extend(('A'..='Z').map(|c| c.to_string()));
         names.extend((0..=9).map(|d| d.to_string()));
@@ -944,7 +944,7 @@ mod tests {
     }
 
     #[test]
-    fn casse_et_alias_de_touches() {
+    fn key_case_and_aliases() {
         assert_eq!(p("ctrl+a").to_string(), "Ctrl+A");
         assert_eq!(p("ctrl+f5").to_string(), "Ctrl+F5");
         assert_eq!(p("ctrl+NUM3").to_string(), "Ctrl+num3");
@@ -956,7 +956,7 @@ mod tests {
     }
 
     #[test]
-    fn modificateurs_seuls() {
+    fn modifier_only_keys() {
         let a = p("ctrl+super");
         assert!(a.is_modifier_only());
         assert_eq!(a.to_string(), "Ctrl+Super");
@@ -964,7 +964,7 @@ mod tests {
     }
 
     #[test]
-    fn validation_modificateurs_seuls() {
+    fn validation_of_modifier_only_keys() {
         for mode in [ShortcutMode::Toggle, ShortcutMode::Ptt] {
             assert_eq!(
                 validate(&p("ctrl"), mode),
@@ -984,7 +984,7 @@ mod tests {
     }
 
     #[test]
-    fn validation_touche_sans_modificateur() {
+    fn validation_of_a_key_without_modifier() {
         for mode in [ShortcutMode::Toggle, ShortcutMode::Ptt] {
             assert_eq!(
                 validate(&p("A"), mode),
@@ -1007,7 +1007,7 @@ mod tests {
     }
 
     #[test]
-    fn validation_f13_et_au_dela() {
+    fn validation_of_f13_and_beyond() {
         // The original regex `F\d{1,2}` accepts F13..F99 without a modifier.
         assert_eq!(validate(&p("F24"), ShortcutMode::Ptt), Ok(()));
         assert_eq!(validate(&p("F13"), ShortcutMode::Toggle), Ok(()));
@@ -1020,7 +1020,7 @@ mod tests {
     }
 
     #[test]
-    fn validation_touche_inconnue_en_ptt() {
+    fn validation_of_an_unknown_key_in_hold_mode() {
         let a = p("ctrl+Esc");
         assert_eq!(validate(&a, ShortcutMode::Toggle), Ok(()));
         assert_eq!(
@@ -1035,7 +1035,7 @@ mod tests {
     }
 
     #[test]
-    fn evdev_aller_retour() {
+    fn evdev_round_trip() {
         let mut keys: Vec<Key> = Vec::new();
         keys.extend(('A'..='Z').map(Key::Letter));
         keys.extend((0..=9).map(Key::Digit));
@@ -1106,7 +1106,7 @@ mod tests {
     }
 
     #[test]
-    fn modificateurs_evdev() {
+    fn evdev_modifiers() {
         use evdev::*;
         for (code, m) in [
             (KEY_LEFTCTRL, Modifier::Ctrl),
@@ -1125,7 +1125,7 @@ mod tests {
     }
 
     #[test]
-    fn keysym_aller_retour() {
+    fn keysym_round_trip() {
         let mut keys: Vec<Key> = Vec::new();
         keys.extend(('A'..='Z').map(Key::Letter));
         keys.extend((0..=9).map(Key::Digit));

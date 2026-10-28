@@ -100,7 +100,7 @@ mod tests {
     }
 
     #[test]
-    fn kde_service_natif_puis_portail() {
+    fn kde_native_service_then_portal() {
         let c = detect(&MockEnv::kde());
         let o = HotkeyOptions::default();
         assert_eq!(
@@ -123,7 +123,7 @@ mod tests {
     }
 
     #[test]
-    fn gnome_wayland_raccourci_personnalise_puis_portail() {
+    fn gnome_wayland_custom_shortcut_then_portal() {
         let c = detect(&MockEnv::gnome());
         assert_eq!(
             plan_chain(&c, &HotkeyOptions::default(), &spec("Ctrl+Alt+Space")),
@@ -136,7 +136,7 @@ mod tests {
     }
 
     #[test]
-    fn evdev_desactive_par_defaut_et_opt_in() {
+    fn evdev_off_by_default_and_opt_in() {
         let c = detect(&MockEnv::kde());
         let o = HotkeyOptions {
             allow_evdev: true,
@@ -155,7 +155,7 @@ mod tests {
     }
 
     #[test]
-    fn modificateurs_seuls_sous_wayland() {
+    fn modifier_only_on_wayland() {
         let c = detect(&MockEnv::gnome());
         assert_eq!(
             plan_chain(&c, &HotkeyOptions::default(), &spec("Ctrl+Super")),
@@ -172,7 +172,7 @@ mod tests {
     }
 
     #[test]
-    fn x11_et_sway_sans_portail() {
+    fn x11_and_sway_without_portal() {
         let o = HotkeyOptions::default();
         assert_eq!(
             plan_chain(&detect(&MockEnv::x11()), &o, &spec("F9")),
@@ -194,7 +194,7 @@ mod tests {
     }
 
     #[test]
-    fn rien_du_tout() {
+    fn nothing_at_all() {
         let c = detect(&MockEnv::empty());
         assert_eq!(
             plan_chain(&c, &HotkeyOptions::default(), &spec("F9")),

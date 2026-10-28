@@ -18,6 +18,11 @@ fn run(args: &[&str]) -> std::process::Output {
         .env("LANGUAGE", "en")
         .env_remove("DISPLAY")
         .env_remove("WAYLAND_DISPLAY")
+        // Cut every way to the user's session: the application is a single-instance one, so `--quit` sent over the
+        // session bus would stop a LinuxFlow that is really running. No bus address, and a runtime folder without the
+        // `bus` socket, leave the binary with nobody to talk to.
+        .env_remove("DBUS_SESSION_BUS_ADDRESS")
+        .env("XDG_RUNTIME_DIR", tmp.join("run"))
         .output()
         .unwrap()
 }

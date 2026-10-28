@@ -95,6 +95,16 @@ pub fn detect_desktop(env: &dyn Env) -> String {
             return first;
         }
     }
+    // XDG_CURRENT_DESKTOP is missing when the program is started from a context that did not inherit the session
+    // environment (autostart entry, service, remote shell): the session name is the next best indication.
+    for var in ["DESKTOP_SESSION", "GDMSESSION"] {
+        if let Some(raw) = env.var(var) {
+            let p = raw.trim().to_lowercase();
+            if let Some((_, id)) = DESKTOPS.iter().find(|(k, _)| p.starts_with(k)) {
+                return (*id).into();
+            }
+        }
+    }
     if env.var("SWAYSOCK").is_some() {
         "sway".into()
     } else if env.var("HYPRLAND_INSTANCE_SIGNATURE").is_some() {
@@ -130,6 +140,15 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
     let mut portals = PortalVersions::default();
     let bus = env.dbus_name_has_owner("org.freedesktop.DBus");
     let session_bus = bus;
+    if caps.desktop == "unknown" && bus.is_some() {
+        // Last resort: who owns the shell's well-known name on the session bus.
+        for (name, desktop) in [("org.gnome.Shell", "gnome"), ("org.kde.KWin", "kde")] {
+            if env.dbus_name_has_owner(name) == Some(true) {
+                caps.desktop = desktop.into();
+                break;
+            }
+        }
+    }
     if bus.is_some() {
         portals.global_shortcuts = env.portal_interface_version("GlobalShortcuts");
         portals.remote_desktop = env.portal_interface_version("RemoteDesktop");
@@ -146,11 +165,13 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
     caps.portal_remote_desktop = portals.remote_desktop.is_some();
     caps.portal_clipboard = portals.clipboard.is_some();
     if bus.is_some() {
-        if !caps.portal_global_shortcuts {
+        // Only a problem when nothing else can register the shortcut: GNOME, KDE, sway and Hyprland have their own
+        // shortcut manager, and X11 grabs the key directly.
+        if !caps.can_register_shortcut() {
             hint(
                 &mut caps,
                 "portal.global_shortcuts",
-                tr("The GlobalShortcuts portal is missing. Bind a compositor shortcut to the LinuxFlow command line, or enable the optional keyboard-device mode."),
+                tr("No way to register the dictation shortcut was found (no GlobalShortcuts portal and no desktop shortcut manager). Bind a compositor shortcut to the LinuxFlow command line, or enable the optional keyboard-device mode."),
             );
         }
         if !caps.portal_remote_desktop && wayland {
@@ -158,13 +179,6 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
                 &mut caps,
                 "portal.remote_desktop",
                 tr("The RemoteDesktop portal is missing: automatic pasting may be unavailable. The text stays on the clipboard."),
-            );
-        }
-        if !caps.portal_clipboard && wayland {
-            hint(
-                &mut caps,
-                "portal.clipboard",
-                tr("The Clipboard portal is missing: copying while another window has focus may fail."),
             );
         }
     }
@@ -184,18 +198,12 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
                 tr("The Wayland compositor could not be queried; overlay and clipboard capabilities are unknown."),
             ),
         }
-        if !caps.layer_shell {
+        // Missing layer-shell is not a problem: the recording indicator then uses a regular window.
+        if bus.is_some() && !caps.can_copy_text() {
             hint(
                 &mut caps,
-                "layer_shell",
-                tr("This compositor does not offer layer-shell: the recording indicator uses a fallback window."),
-            );
-        }
-        if !caps.data_control {
-            hint(
-                &mut caps,
-                "data_control",
-                tr("This compositor does not offer data-control: clipboard access relies on the portal or on window focus."),
+                "portal.clipboard",
+                tr("Neither the Clipboard portal nor the data-control protocol is available: copying while another window has focus may fail."),
             );
         }
     }
@@ -206,12 +214,8 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
             caps.vulkan_available = true;
             caps.vulkan_devices = devices;
         }
-        Ok(_) => hint(&mut caps, "vulkan", tr("Vulkan is installed but reports no GPU: transcription runs on the CPU.")),
-        Err(_) => hint(
-            &mut caps,
-            "vulkan",
-            tr("Vulkan is not available: transcription runs on the CPU. Install the Vulkan loader and your GPU driver to use the GPU."),
-        ),
+        // No GPU is a normal mode (virtual machines, servers): the lighter model runs on the CPU, nothing to fix.
+        Ok(_) | Err(_) => {}
     }
 
     // --- PipeWire ---
@@ -226,13 +230,7 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
         };
         caps.pipewire = env.path_exists(&socket);
     }
-    if !caps.pipewire {
-        hint(
-            &mut caps,
-            "pipewire",
-            tr("PipeWire was not found: audio capture falls back to ALSA."),
-        );
-    }
+    // Without PipeWire, audio capture uses ALSA: nothing to fix.
 
     // --- Notification icon ---
     if bus.is_some() {
@@ -240,31 +238,20 @@ pub fn detect_detailed(env: &dyn Env) -> Detection {
             .dbus_name_has_owner("org.kde.StatusNotifierWatcher")
             .unwrap_or(false);
         if !caps.tray_watcher {
-            hint(
-                &mut caps,
-                "tray",
-                tr("No notification-area host was found: there will be no tray icon. Use the main window instead."),
-            );
+            let msg = if caps.desktop == "gnome" {
+                tr("No notification-area host was found: there will be no tray icon. Install and enable the \"AppIndicator and KStatusNotifierItem Support\" GNOME extension, or use the main window.")
+            } else {
+                tr("No notification-area host was found: there will be no tray icon. Use the main window instead.")
+            };
+            hint(&mut caps, "tray", msg);
         }
     }
 
     // --- Input devices ---
     caps.uinput_writable = env.path_writable(std::path::Path::new("/dev/uinput"));
-    if !caps.uinput_writable {
-        hint(
-            &mut caps,
-            "uinput",
-            tr("/dev/uinput is not writable: the keystroke-injection fallback is disabled. A udev rule can grant access."),
-        );
-    }
+    // Both are optional features (key simulation without a portal, hold-to-talk through the keyboard devices):
+    // not having them is the default and is reported as such, not as a problem.
     caps.input_group = env.user_groups().iter().any(|g| g == "input");
-    if !caps.input_group {
-        hint(
-            &mut caps,
-            "input_group",
-            tr("You are not in the \"input\" group: reading keyboard devices directly is disabled."),
-        );
-    }
 
     Detection {
         capabilities: caps,
@@ -283,7 +270,7 @@ mod tests {
     }
 
     #[test]
-    fn x11_pur() {
+    fn plain_x11() {
         let c = detect(&MockEnv::x11());
         assert_eq!(c.session, "x11");
         assert!(!c.layer_shell && !c.data_control);
@@ -293,7 +280,16 @@ mod tests {
             !has_hint(&c, "layer_shell"),
             "no layer-shell hint outside Wayland"
         );
-        assert!(has_hint(&c, "portal.global_shortcuts"));
+        assert!(
+            !has_hint(&c, "portal.global_shortcuts"),
+            "X11 grabs the key itself: no portal needed"
+        );
+        // The mock has no notification-area host: that is the only real limitation left.
+        assert!(
+            c.hints.iter().all(|(b, _)| b == "tray"),
+            "only the tray is reported on a plain X11 session: {:?}",
+            c.hints
+        );
     }
 
     #[test]
@@ -305,8 +301,19 @@ mod tests {
         );
         assert!(c.portal_global_shortcuts && c.portal_remote_desktop && c.portal_clipboard);
         assert!(!c.layer_shell && !c.data_control);
-        assert!(has_hint(&c, "layer_shell") && has_hint(&c, "data_control"));
+        // GNOME has no layer-shell and no data-control by design, and no GlobalShortcuts portal before GNOME 48:
+        // none of this is a problem, the desktop's own shortcut settings and the portals are used.
+        for brick in ["layer_shell", "data_control", "portal.global_shortcuts"] {
+            assert!(!has_hint(&c, brick), "false alarm: {brick}");
+        }
         assert!(!c.tray_watcher && has_hint(&c, "tray"));
+        assert!(
+            c.hints
+                .iter()
+                .any(|(b, m)| b == "tray" && m.contains("AppIndicator")),
+            "the GNOME tray hint names the extension"
+        );
+        assert!(c.has_native_shortcuts() && c.can_register_shortcut() && c.can_copy_text());
     }
 
     #[test]
@@ -318,7 +325,7 @@ mod tests {
     }
 
     #[test]
-    fn sway_et_hyprland() {
+    fn sway_and_hyprland() {
         let c = detect(&MockEnv::sway());
         assert_eq!(c.desktop, "sway");
         assert!(c.layer_shell && c.data_control && !c.portal_global_shortcuts);
@@ -328,7 +335,7 @@ mod tests {
     }
 
     #[test]
-    fn rien_du_tout() {
+    fn nothing_at_all() {
         let d = detect_detailed(&MockEnv::empty());
         let c = d.capabilities;
         assert_eq!(
@@ -339,20 +346,17 @@ mod tests {
         assert!(!c.vulkan_available && !c.pipewire && !c.tray_watcher);
         assert!(!c.uinput_writable && !c.input_group);
         assert_eq!(d.session_bus, None);
-        for brick in [
-            "session",
-            "dbus",
-            "vulkan",
-            "pipewire",
-            "uinput",
-            "input_group",
-        ] {
-            assert!(has_hint(&c, brick), "hint manquant : {brick}");
+        for brick in ["session", "dbus"] {
+            assert!(has_hint(&c, brick), "missing hint: {brick}");
+        }
+        // Optional or replaced components never produce a "How to fix" entry.
+        for brick in ["vulkan", "pipewire", "uinput", "input_group"] {
+            assert!(!has_hint(&c, brick), "false alarm: {brick}");
         }
     }
 
     #[test]
-    fn session_deduite_si_type_absent_ou_tty() {
+    fn session_deduced_when_type_is_missing_or_tty() {
         let mut e = MockEnv::empty();
         e.set("XDG_SESSION_TYPE", "tty");
         e.set("WAYLAND_DISPLAY", "wayland-1");
@@ -363,7 +367,7 @@ mod tests {
     }
 
     #[test]
-    fn bureau_composite_et_variables_compositeur() {
+    fn composite_desktop_and_compositor_variables() {
         let mut e = MockEnv::empty();
         e.set("XDG_CURRENT_DESKTOP", "ubuntu:GNOME");
         assert_eq!(detect_desktop(&e), "gnome");
@@ -377,7 +381,41 @@ mod tests {
     }
 
     #[test]
-    fn pipewire_remote_personnalise() {
+    fn desktop_from_session_name_when_xdg_current_desktop_is_missing() {
+        let mut e = MockEnv::empty();
+        e.set("DESKTOP_SESSION", "ubuntu");
+        assert_eq!(detect_desktop(&e), "gnome");
+        let mut e = MockEnv::empty();
+        e.set("GDMSESSION", "plasmawayland");
+        assert_eq!(detect_desktop(&e), "kde");
+        // XDG_CURRENT_DESKTOP still wins when it is there.
+        let mut e = MockEnv::empty();
+        e.set("XDG_CURRENT_DESKTOP", "KDE");
+        e.set("DESKTOP_SESSION", "gnome");
+        assert_eq!(detect_desktop(&e), "kde");
+    }
+
+    #[test]
+    fn desktop_from_the_shell_bus_name_as_last_resort() {
+        // GNOME 46/47 without the GlobalShortcuts portal, started without XDG_CURRENT_DESKTOP.
+        let mut e = MockEnv::gnome();
+        e.vars.remove("XDG_CURRENT_DESKTOP");
+        e.portals.remove("GlobalShortcuts");
+        // Nothing to go on: the desktop stays unknown and the missing shortcut path is reported.
+        let c = detect(&e);
+        assert_eq!(c.desktop, "unknown");
+        assert!(has_hint(&c, "portal.global_shortcuts"));
+        // The shell owns its name on the bus: GNOME is recognised and nothing is reported.
+        if let Some(n) = e.dbus_names.as_mut() {
+            n.insert("org.gnome.Shell".to_string());
+        }
+        let c = detect(&e);
+        assert_eq!(c.desktop, "gnome");
+        assert!(!has_hint(&c, "portal.global_shortcuts"));
+    }
+
+    #[test]
+    fn custom_pipewire_remote() {
         let mut e = MockEnv::empty();
         e.set("XDG_RUNTIME_DIR", "/run/user/x");
         e.set("PIPEWIRE_REMOTE", "pw-test");
@@ -386,14 +424,14 @@ mod tests {
     }
 
     #[test]
-    fn versions_de_portail_rapportees() {
+    fn portal_versions_are_reported() {
         let d = detect_detailed(&MockEnv::kde());
         assert_eq!(d.portals.global_shortcuts, Some(2));
         assert_eq!(d.portals.clipboard, Some(1));
     }
 
     #[test]
-    fn data_control_ext_accepte() {
+    fn ext_data_control_is_accepted() {
         let mut e = MockEnv::sway();
         e.set_wayland_globals(&[("ext_data_control_manager_v1", 1)]);
         let c = detect(&e);
@@ -401,7 +439,7 @@ mod tests {
     }
 
     #[test]
-    fn compositeur_injoignable() {
+    fn compositor_unreachable() {
         let mut e = MockEnv::gnome();
         e.wayland = None;
         let c = detect(&e);

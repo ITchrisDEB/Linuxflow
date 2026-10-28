@@ -1,20 +1,20 @@
 # Performance and memory measurements
 
 Real measurements, taken on 2026-10-25 with the installed archive (`cargo xtask dist`), on ONE machine:
-a recent 16-core desktop CPU (32 threads), 30 GB of RAM, a recent NVIDIA discrete GPU (Vulkan driver), KDE Plasma.
+a recent multi-core desktop CPU, a recent discrete GPU (Vulkan driver), KDE Plasma.
 Protocol: `linuxflow --test-pipeline` on 10 s of French speech (an excerpt of a test sentence read by a
 synthetic voice), one model loaded at a time, a single run per row (no averaging: these are orders of
 magnitude, not a guarantee).
 
 | Device | Model (file) | Load time | Transcription of 10 s of audio | Memory |
 |---|---|---|---|---|
-| Vulkan GPU (recent NVIDIA) | `large-v3` quantised q5_0 (1.08 GB) | 0.5 s | **0.88 s** | process RAM ≈ 270 MB; VRAM ≈ 1.8 GB (model 1,080 MB + compute buffers and cache ≈ 740 MB, read from the whisper.cpp log) |
-| CPU (16 cores) | `small` f16 (488 MB) | 1.2 s | **2.3 s** | process RAM ≈ 890 MB |
+| Vulkan GPU (recent discrete) | `large-v3` quantised q5_0 (1.08 GB) | 0.5 s | **0.88 s** | process RAM ≈ 270 MB; VRAM ≈ 1.8 GB (model 1,080 MB + compute buffers and cache ≈ 740 MB, read from the whisper.cpp log) |
+| CPU (multi-core desktop) | `small` f16 (488 MB) | 1.2 s | **2.3 s** | process RAM ≈ 890 MB |
 
 Goal (P1): "10 s of audio in under 2 s on a GPU" → **met** on this GPU (0.88 s).
 
 ## What these figures do not tell
-- One graphics card (NVIDIA) and a very powerful processor. AMD and Intel GPUs, modest processors and
+- One graphics card and a very powerful processor. Other GPU vendors, modest processors and
   the fallback engine for CPUs without AVX2 (about 6.5 times slower than the normal engine, measured
   during development) were not measured here: fill them in with the checklist in `docs/manual-validation.md`.
 - Unquantised `large-v3` (3.1 GB) was not timed; it needs about 3.5 GB of VRAM.

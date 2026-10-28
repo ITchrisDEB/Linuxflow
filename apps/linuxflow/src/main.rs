@@ -95,6 +95,12 @@ fn main() -> ExitCode {
     linuxflow_i18n::set_language(ui_language.as_deref());
     tracing::info!(version = env!("CARGO_PKG_VERSION"), "starting");
 
+    // An AppImage that is only run is not installed anywhere: register its launcher entry and icon for the user so the
+    // dock and the task switcher show the icon (no effect outside an AppImage).
+    if let Err(e) = linuxflow_platform::appimage::integrate(linuxflow_core::constants::APP_ID) {
+        tracing::warn!(error = %e, "could not register the AppImage launcher entry");
+    }
+
     // 6. Development tools, otherwise the application.
     if let Some(wav) = &cli.test_pipeline {
         return exit_code(devtools::test_pipeline(wav, &paths));

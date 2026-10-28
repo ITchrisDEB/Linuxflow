@@ -53,7 +53,7 @@ For each case, dictate a sentence of 5 to 10 seconds.
 3. Choose Off, restart the application: the choice is kept.
 
 ## 6. Engine, GPU and hardware
-1. Archive built with the GPU engine (default): dictation runs on the GPU (Settings > Local engine names the GPU). Already verified on a recent NVIDIA discrete GPU; to redo on AMD (Mesa RADV) and Intel. Measure: 10 s of audio in under 2 s on a common GPU; note model, GPU and time.
+1. Archive built with the GPU engine (default): dictation runs on the GPU (Settings > Local engine names the GPU). Already verified on one discrete GPU; to redo on other GPU vendors (Mesa RADV, ANV) and drivers. Measure: 10 s of audio in under 2 s on a common GPU; note model, GPU and time.
 2. Force a device: `LINUXFLOW_DEVICE=gpu:1` (second GPU), `LINUXFLOW_DEVICE=cpu`. `LINUXFLOW_DEVICE=cuda` must give an explicit error (no silent fallback).
 3. Machine WITHOUT a Vulkan loader (minimal VM): only `linuxflow-engine-vulkan` is linked to `libvulkan.so.1` (`readelf -d` on each binary); the application and the CPU engine start, the compatibility report flags the missing Vulkan and the light model is used. (Verified by simulation: with an unusable `libvulkan.so.1`, the CPU engine and hardware detection answer normally.)
 4. CPU without AVX2: the `linuxflow-engine-v2` engine is chosen and works (6 to 7 times slower expected); never an "illegal instruction" crash (`dmesg | grep -i "invalid opcode"`).
@@ -89,7 +89,7 @@ For each case, dictate a sentence of 5 to 10 seconds.
 |---|---|---|---|---|---|---|---|---|
 | KDE Plasma 6 Wayland | | | | | | | | |
 | GNOME 48+ Wayland | | | | | | | | |
-| GNOME < 48 | | | | | | | | |
+| GNOME 46 Wayland (Ubuntu 24.04 VM, 2026-10-28) | OK (AppImage) | shortcut starts and stops listening; paste not tested (no microphone) | hands-free OK; hold not available on GNOME | not checked | notification-area host present; icon not checked | none (CPU mode shown as such) | not tested | see docs/gnome-support.md |
 | Sway | | | | | | | | |
 | Hyprland | | | | | | | | |
 | X11 (with compositor) | | | | | | | | |

@@ -9,8 +9,8 @@ Status: the whole workspace builds and its tests pass on the development machine
 GTK 4.24, libadwaita 1.10, glibc 2.44). The release archive builds with
 `cargo xtask dist` (several minutes: whisper.cpp is compiled three times from source: the
 CPU engine, the fallback engine for CPUs without AVX2, and the Vulkan engine). The GPU engine was
-checked on a recent NVIDIA discrete GPU (real transcription with `large-v3` q5_0, detection of both the
-NVIDIA and the AMD integrated GPU); other GPUs and drivers have not been tried.
+checked on one discrete GPU (real transcription with `large-v3` q5_0, detection of both the discrete and the
+integrated GPU); other GPUs and drivers have not been tried.
 
 ## Prerequisites
 
@@ -82,6 +82,22 @@ by default the date of the last commit), with GNU tar and `gzip -n`. Local build
 remapped out of the binary. Two builds of the packaging step with the same inputs give the same
 SHA-256 (verified with a fake binary; a full two-build comparison of the compiled binary has not
 been done).
+
+## Building the Vulkan engine without the system headers
+
+`cargo xtask dist` needs the Vulkan headers and `glslc`. When the distribution does not provide the headers (package
+`vulkan-headers` / `libvulkan-dev`), fetch Khronos' ones into a temporary folder and point **both** variables at it: CMake's
+`FindVulkan` reads `VULKAN_SDK` and ignores `CPATH`, while the compiler needs `CPATH`.
+
+```sh
+git clone --depth 1 --branch v1.4.366 https://github.com/KhronosGroup/Vulkan-Headers /tmp/vkh
+CPATH=/tmp/vkh/include VULKAN_SDK=/tmp/vkh cargo xtask dist
+```
+
+`cargo xtask appimage` repackages the archive that is already in `target/dist`, it does not rebuild it: always run
+`cargo xtask dist` first, otherwise the AppImage contains the previous code. Check that a new string is in
+`squashfs-root/usr/bin/linuxflow` (`--appimage-extract`). A GNOME 46 virtual machine for testing the result is described in
+[docs/test-vm.md](docs/test-vm.md).
 
 ## Oldest-glibc builds
 

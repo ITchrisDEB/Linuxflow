@@ -334,7 +334,7 @@ mod tests {
     /// Sets real grabs on the X server: never started automatically.
     #[test]
     #[ignore = "real X server; set LINUXFLOW_TEST_PORTALS=1"]
-    fn grab_reel() {
+    fn real_grab() {
         if std::env::var("LINUXFLOW_TEST_PORTALS").as_deref() != Ok("1") {
             return;
         }

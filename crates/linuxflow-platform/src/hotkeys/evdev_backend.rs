@@ -261,7 +261,7 @@ mod tests {
     /// Opens the real keyboards (read-only, without recording): never started automatically.
     #[test]
     #[ignore = "real input devices; set LINUXFLOW_TEST_PORTALS=1"]
-    fn evdev_reel() {
+    fn real_evdev() {
         if std::env::var("LINUXFLOW_TEST_PORTALS").as_deref() != Ok("1") {
             return;
         }

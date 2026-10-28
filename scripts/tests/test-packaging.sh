@@ -15,7 +15,7 @@ check() { # check "nom" commande...
     name=$1; shift
     if "$@" >"$T/last.log" 2>&1; then ok "$name"; else ko "$name"; sed 's/^/      | /' "$T/last.log" | head -20; fi
 }
-check_not() { # la commande doit ÉCHOUER
+check_not() { # the command must FAIL
     name=$1; shift
     if "$@" >"$T/last.log" 2>&1; then ko "$name (should have failed)"; sed 's/^/      | /' "$T/last.log" | head -20; else ok "$name"; fi
 }

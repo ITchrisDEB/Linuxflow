@@ -422,7 +422,7 @@ mod tests {
     }
 
     #[test]
-    fn portail_choisi_sur_kde() {
+    fn portal_chosen_on_kde() {
         let (m, log) = manager(
             MockEnv::kde(),
             HotkeyOptions::default(),
@@ -443,7 +443,7 @@ mod tests {
     }
 
     #[test]
-    fn repli_sur_evdev_si_portail_refuse() {
+    fn evdev_fallback_when_portal_refused() {
         let opts = HotkeyOptions {
             allow_evdev: true,
             ..Default::default()
@@ -473,7 +473,7 @@ mod tests {
     }
 
     #[test]
-    fn portail_refuse_sans_evdev_donne_aucun_backend() {
+    fn portal_refused_without_evdev_gives_no_backend() {
         let (m, _) = manager(
             MockEnv::kde(),
             HotkeyOptions::default(),
@@ -514,7 +514,7 @@ mod tests {
     }
 
     #[test]
-    fn aucun_backend_explique_quoi_faire() {
+    fn no_backend_explains_what_to_do() {
         let (m, log) = manager(MockEnv::empty(), HotkeyOptions::default(), vec![]);
         let st = m.start(
             &spec("F9"),
@@ -526,7 +526,7 @@ mod tests {
     }
 
     #[test]
-    fn modificateurs_seuls_wayland_sans_evdev() {
+    fn modifier_only_on_wayland_without_evdev() {
         let (m, _) = manager(
             MockEnv::gnome(),
             HotkeyOptions::default(),
@@ -542,7 +542,7 @@ mod tests {
     }
 
     #[test]
-    fn raccourci_invalide() {
+    fn invalid_shortcut() {
         let (m, _) = manager(
             MockEnv::kde(),
             HotkeyOptions::default(),
@@ -559,7 +559,7 @@ mod tests {
     }
 
     #[test]
-    fn suspension_filtre_les_evenements_et_previent_le_backend() {
+    fn suspension_filters_events_and_warns_the_backend() {
         let (m, log) = manager(
             MockEnv::kde(),
             HotkeyOptions::default(),
@@ -592,7 +592,7 @@ mod tests {
     }
 
     #[test]
-    fn stop_et_redemarrage() {
+    fn stop_and_restart() {
         let (m, log) = manager(
             MockEnv::kde(),
             HotkeyOptions::default(),

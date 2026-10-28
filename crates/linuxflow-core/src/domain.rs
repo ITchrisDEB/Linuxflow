@@ -402,6 +402,31 @@ pub struct Capabilities {
     pub input_group: bool,
     pub gtk_version: String,
     pub adw_version: String,
-    /// Help text per missing component: (component, message to show).
+    /// Help text per component with a real problem: (component, message to show).
     pub hints: Vec<(String, String)>,
+}
+
+impl Capabilities {
+    pub fn is_wayland(&self) -> bool {
+        self.session == "wayland"
+    }
+
+    pub fn is_x11(&self) -> bool {
+        self.session == "x11"
+    }
+
+    /// The desktop offers its own shortcut manager, which LinuxFlow drives without the GlobalShortcuts portal.
+    pub fn has_native_shortcuts(&self) -> bool {
+        self.is_wayland() && matches!(self.desktop.as_str(), "kde" | "gnome" | "sway" | "hyprland")
+    }
+
+    /// A way to register the dictation shortcut exists (portal, desktop manager or X11 grab).
+    pub fn can_register_shortcut(&self) -> bool {
+        self.portal_global_shortcuts || self.has_native_shortcuts() || self.is_x11()
+    }
+
+    /// Text can reach the clipboard (portal, data-control protocol or the X11 selection).
+    pub fn can_copy_text(&self) -> bool {
+        self.portal_clipboard || self.data_control || self.is_x11()
+    }
 }

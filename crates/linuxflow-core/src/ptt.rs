@@ -305,7 +305,7 @@ mod tests {
     // ---- push-to-talk, raw keys ----
 
     #[test]
-    fn ptt_maintien_2s_stop_au_relachement() {
+    fn ptt_hold_2s_stops_on_release() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         assert_eq!(dn(&mut m, KEY_LEFTCTRL, 1000), None);
         assert_eq!(dn(&mut m, KEY_SPACE, 1010), Some(PttAction::Start));
@@ -317,7 +317,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_appui_200ms_mains_libres_puis_nouvel_appui_stop() {
+    fn ptt_press_200ms_is_hands_free_then_new_press_stops() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 1000);
         assert_eq!(dn(&mut m, KEY_SPACE, 1000), Some(PttAction::Start));
@@ -350,7 +350,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_autre_touche_avant_700ms_annule() {
+    fn ptt_other_key_before_700ms_cancels() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 1000);
         assert_eq!(dn(&mut m, KEY_LEFTMETA, 1010), Some(PttAction::Start));
@@ -363,7 +363,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_spoiled_court_annule_aussi_sous_300ms() {
+    fn ptt_short_spoiled_press_also_cancels_under_300ms() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_LEFTMETA, 0);
@@ -374,7 +374,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_spoiled_700ms_ou_plus_stop_normal() {
+    fn ptt_spoiled_700ms_or_more_stops_normally() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 1000);
         assert_eq!(dn(&mut m, KEY_LEFTMETA, 1000), Some(PttAction::Start));
@@ -392,7 +392,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_touche_etrangere_maintenue_attend() {
+    fn ptt_foreign_key_held_waits() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_SPACE, 0);
@@ -406,7 +406,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_touche_etrangere_deja_enfoncee_empeche_le_demarrage() {
+    fn ptt_foreign_key_already_down_prevents_start() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_A, 0);
         dn(&mut m, KEY_LEFTCTRL, 10);
@@ -424,7 +424,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_purge_des_touches_fantomes_apres_8s() {
+    fn ptt_purge_of_phantom_keys_after_8s() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         // A stays "pressed" (missed release).
         dn(&mut m, KEY_A, 0);
@@ -438,7 +438,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_purge_limite_exacte_8000ms_non_purgee() {
+    fn ptt_purge_exact_limit_8000ms_not_purged() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_A, 0);
         // Purged if strictly > 8000 ms: at 8000 the key is kept.
@@ -447,7 +447,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_pas_de_purge_pendant_l_accord() {
+    fn ptt_no_purge_during_the_chord() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_SPACE, 0);
@@ -458,7 +458,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_repetitions_automatiques_ignorees() {
+    fn ptt_auto_repeats_ignored() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 0);
         assert_eq!(dn(&mut m, KEY_SPACE, 0), Some(PttAction::Start));
@@ -470,7 +470,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_repetition_apres_mains_libres_n_arrete_pas() {
+    fn ptt_repeat_after_hands_free_does_not_stop() {
         let mut m = machine("F9", ShortcutMode::Ptt);
         dn(&mut m, KEY_F9, 0);
         up(&mut m, KEY_F9, 100); // mains libres
@@ -480,7 +480,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_modificateurs_gauche_droite() {
+    fn ptt_left_and_right_modifiers() {
         let mut m = machine("Ctrl+Alt", ShortcutMode::Ptt);
         dn(&mut m, KEY_RIGHTCTRL, 0);
         assert_eq!(dn(&mut m, KEY_RIGHTALT, 0), Some(PttAction::Start));
@@ -488,7 +488,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_modificateurs_surnumeraires_ou_manquants_ne_declenchent_pas() {
+    fn ptt_extra_or_missing_modifiers_do_not_trigger() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_LEFTSHIFT, 0);
@@ -498,7 +498,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_modificateurs_seuls() {
+    fn ptt_modifier_only_keys() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Ptt);
         dn(&mut m, KEY_LEFTCTRL, 0);
         assert_eq!(dn(&mut m, KEY_LEFTMETA, 5), Some(PttAction::Start));
@@ -507,7 +507,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_pas_de_demarrage_hors_repos() {
+    fn ptt_no_start_when_not_idle() {
         let mut m = machine("F9", ShortcutMode::Ptt);
         m.set_phase(Phase::Transcribing);
         assert_eq!(dn(&mut m, KEY_F9, 0), None);
@@ -517,7 +517,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_fin_externe_de_la_dictee_reinitialise_mains_libres() {
+    fn ptt_external_end_of_dictation_resets_hands_free() {
         let mut m = machine("F9", ShortcutMode::Ptt);
         dn(&mut m, KEY_F9, 0);
         up(&mut m, KEY_F9, 100);
@@ -528,7 +528,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_reset_oublie_les_touches() {
+    fn ptt_reset_forgets_the_keys() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         dn(&mut m, KEY_A, 0);
         m.reset();
@@ -537,7 +537,7 @@ mod tests {
     }
 
     #[test]
-    fn ptt_touche_inconnue_refusee() {
+    fn ptt_unknown_key_refused() {
         let acc = parse("Ctrl+Esc").unwrap();
         assert_eq!(
             PttMachine::new(&acc, ShortcutMode::Ptt, true).unwrap_err(),
@@ -548,7 +548,7 @@ mod tests {
     // ---- toggle, raw keys ----
 
     #[test]
-    fn toggle_touche_normale_a_l_appui() {
+    fn toggle_normal_key_acts_on_press() {
         let mut m = machine("Ctrl+Alt+Space", ShortcutMode::Toggle);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_LEFTALT, 0);
@@ -559,7 +559,7 @@ mod tests {
     }
 
     #[test]
-    fn toggle_modificateurs_seuls_au_relachement() {
+    fn toggle_modifier_only_acts_on_release() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Toggle);
         assert_eq!(dn(&mut m, KEY_LEFTCTRL, 0), None);
         assert_eq!(dn(&mut m, KEY_LEFTMETA, 10), None);
@@ -572,7 +572,7 @@ mod tests {
     }
 
     #[test]
-    fn toggle_modificateurs_seuls_spoiled_ne_declenche_pas() {
+    fn toggle_modifier_only_spoiled_does_not_trigger() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Toggle);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_LEFTMETA, 0);
@@ -587,7 +587,7 @@ mod tests {
     }
 
     #[test]
-    fn toggle_modificateurs_seuls_touche_etrangere_maintenue_apres_relachement() {
+    fn toggle_modifier_only_foreign_key_held_after_release() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Toggle);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_LEFTMETA, 0);
@@ -598,7 +598,7 @@ mod tests {
     }
 
     #[test]
-    fn toggle_modificateurs_seuls_ignore_repetitions() {
+    fn toggle_modifier_only_ignores_repeats() {
         let mut m = machine("Ctrl+Super", ShortcutMode::Toggle);
         dn(&mut m, KEY_LEFTCTRL, 0);
         dn(&mut m, KEY_LEFTMETA, 0);
@@ -611,7 +611,7 @@ mod tests {
     // ---- portail ----
 
     #[test]
-    fn portail_ptt_maintien_stop() {
+    fn portal_ptt_hold_stops() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         assert_eq!(act(&mut m, 1000), Some(PttAction::Start));
         assert_eq!(deact(&mut m, 3000), Some(PttAction::Stop));
@@ -619,7 +619,7 @@ mod tests {
     }
 
     #[test]
-    fn portail_ptt_appui_court_mains_libres() {
+    fn portal_ptt_short_press_is_hands_free() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         assert_eq!(act(&mut m, 1000), Some(PttAction::Start));
         assert_eq!(deact(&mut m, 1200), None);
@@ -630,7 +630,7 @@ mod tests {
     }
 
     #[test]
-    fn portail_ptt_sans_annulation_spoiled() {
+    fn portal_ptt_without_cancel_spoiled() {
         // No spoiled detection: 500 ms of hold = Stop, never Cancel.
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         act(&mut m, 0);
@@ -638,7 +638,7 @@ mod tests {
     }
 
     #[test]
-    fn portail_activations_repetees_ignorees() {
+    fn portal_repeated_activations_ignored() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Ptt);
         assert_eq!(act(&mut m, 0), Some(PttAction::Start));
         assert_eq!(act(&mut m, 30), None);
@@ -648,7 +648,7 @@ mod tests {
     }
 
     #[test]
-    fn portail_toggle() {
+    fn portal_toggle() {
         let mut m = machine("Ctrl+Space", ShortcutMode::Toggle);
         assert_eq!(act(&mut m, 0), Some(PttAction::Toggle));
         assert_eq!(deact(&mut m, 50), None);
@@ -656,7 +656,7 @@ mod tests {
     }
 
     #[test]
-    fn repli_toggle_sans_relachement() {
+    fn toggle_fallback_without_release() {
         let mut m =
             PttMachine::new(&parse("Ctrl+Space").unwrap(), ShortcutMode::Ptt, false).unwrap();
         assert_eq!(act(&mut m, 0), Some(PttAction::Toggle));

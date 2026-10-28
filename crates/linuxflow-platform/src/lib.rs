@@ -1,4 +1,5 @@
 //! linuxflow-platform: system integration (shortcuts, paste, clipboard, tray).
+pub mod appimage;
 pub mod autostart;
 pub mod capabilities;
 pub mod clipboard;

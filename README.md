@@ -41,8 +41,9 @@ and French.
 
 ## Status
 
-LinuxFlow is developed and tested mainly on KDE Plasma (Wayland) with x86-64 and an NVIDIA GPU.
-The GNOME, Sway, Hyprland and X11 shortcut and paste paths are covered by automated tests with
+LinuxFlow is developed and tested mainly on KDE Plasma (Wayland) on x86-64. It has also been tested on Ubuntu 24.04
+(GNOME 46, Wayland), in a virtual machine.
+The Sway, Hyprland and X11 shortcut and paste paths are covered by automated tests with
 simulated desktops, but have not been verified on real sessions yet; reports are welcome.
 
 ## Screenshots
@@ -189,7 +190,7 @@ linuxflow --quit     # quit the running instance
 |---|---|
 | X11 (XFCE, Cinnamon, MATE, KDE, GNOME) | key grab by LinuxFlow |
 | KDE Plasma (Wayland) | KDE global shortcut service (`KGlobalAccel`) |
-| GNOME (Wayland) | custom keyboard shortcut calling `linuxflow --toggle` (toggle only) |
+| GNOME 46 and later (Wayland) | custom keyboard shortcut calling `linuxflow --toggle` (toggle only); see [docs/gnome-support.md](docs/gnome-support.md) |
 | Sway, Hyprland | key binding set through the compositor's own control socket |
 | Others | XDG GlobalShortcuts portal, otherwise optional evdev capture |
 
@@ -204,8 +205,18 @@ groups.
 - **Text not pasted.** Pasting needs permission to send keys (a portal consent on Wayland). If it is
   refused or revoked, the text is left in the clipboard. Some desktops show a notice such as
   "remote control started" while LinuxFlow sends the paste keys.
-- **No tray icon on GNOME.** GNOME needs the AppIndicator extension to show tray icons; the
-  application stays fully usable from its window.
+- **Generic gear icon in the dock with the AppImage.** The AppImage registers its launcher entry and icon under
+  `~/.local/share` the first time it runs; restart it (and log out and in if GNOME keeps the old cache). It does
+  nothing when LinuxFlow is installed system-wide (`install.sh`), and removes the entry it wrote earlier. Delete
+  `~/.local/share/applications/io.github.ITchrisDEB.LinuxFlow.desktop` and the matching icons to undo it.
+- **No tray icon on GNOME.** GNOME needs the AppIndicator extension to show tray icons (Ubuntu
+  ships it enabled); the application stays fully usable from its window.
+- **"Not needed", "Not offered", "CPU mode" or "Optional" in the compatibility report** are not faults: they mean
+  the component does not apply on your desktop or is replaced by another mechanism. Only a warning with a
+  "How to fix" entry is a real limitation.
+- **"Sorry, Ubuntu has experienced an internal error" after a paste (Ubuntu 24.04, GNOME 46).** The desktop's own portal
+  service (`xdg-desktop-portal`) crashed, not LinuxFlow; choose "Do not send". LinuxFlow reconnects on its own. Details in
+  [docs/gnome-support.md](docs/gnome-support.md).
 - **Clipboard managers** (Klipper, cliphist) may record the text LinuxFlow places in the
   clipboard to paste it.
 
